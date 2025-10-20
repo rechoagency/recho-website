@@ -1,0 +1,429 @@
+/* Custom CSS for RECHO Reddit Agency */
+:root {
+    --primary-orange: #E6462F;
+    --primary-light: #FF5722;
+    --primary-dark: #D32F2F;
+    --bg-white: #FFFFFF;
+    --bg-orange-light: #FFF5F3;
+    --text-dark: #1F2937;
+    --text-gray: #6B7280;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-white);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header animations */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-orange);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Hero animations */
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.delay-300 {
+    animation-delay: 300ms;
+}
+
+/* Counter animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+[data-count] {
+    animation: countUp 0.5s ease-out;
+}
+
+/* Service cards hover effect */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(230, 70, 47, 0.15);
+}
+
+/* Portfolio filter animations */
+.portfolio-filter {
+    transition: all 0.3s ease;
+}
+
+.portfolio-filter.active {
+    background-color: var(--primary-orange);
+    color: white;
+    box-shadow: 0 4px 12px rgba(230, 70, 47, 0.3);
+}
+
+.portfolio-filter:not(.active):hover {
+    background-color: var(--primary-light);
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+}
+
+/* Portfolio items animation */
+@keyframes portfolioFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.portfolio-item {
+    animation: portfolioFadeIn 0.5s ease-out;
+}
+
+.portfolio-item.hidden {
+    display: none;
+}
+
+/* Team member hover effects */
+.team-member-card {
+    transition: all 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact form focus effects */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary-orange);
+    ring: 2px;
+    ring-color: rgba(230, 70, 47, 0.3);
+    outline: none;
+}
+
+/* Button animations */
+button,
+.btn {
+    transition: all 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 70, 47, 0.3);
+}
+
+button:active,
+.btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(230, 70, 47, 0.2);
+}
+
+/* Loading spinner */
+.spinner {
+    border: 3px solid rgba(230, 70, 47, 0.1);
+    border-radius: 50%;
+    border-top: 3px solid var(--primary-orange);
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Toast notification */
+.toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.toast.success {
+    border-left: 4px solid #10B981;
+}
+
+.toast.error {
+    border-left: 4px solid #EF4444;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-orange);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Mobile menu animation */
+#mobile-menu {
+    transition: all 0.3s ease;
+}
+
+#mobile-menu.active {
+    display: block;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-light) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(230, 70, 47, 0.15);
+}
+
+/* Stats counter animation */
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    line-height: 1;
+}
+
+/* Section transitions */
+section {
+    opacity: 0;
+    animation: sectionFadeIn 0.8s ease-out forwards;
+}
+
+@keyframes sectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Technology dashboard styling */
+.tech-dashboard {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Responsive design helpers */
+@media (max-width: 768px) {
+    .hero-text {
+        text-align: center;
+    }
+    
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Print styles */
+@media print {
+    header,
+    footer,
+    #contact {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    * {
+        color: black !important;
+    }
+}
+
+/* Accessibility improvements */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--primary-orange);
+    outline-offset: 2px;
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-orange: #D32F2F;
+        --text-gray: #000000;
+    }
+    
+    button,
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+    /* Uncomment if dark mode is needed
+    :root {
+        --bg-white: #1F2937;
+        --text-dark: #F9FAFB;
+        --text-gray: #D1D5DB;
+    }
+    */
+}

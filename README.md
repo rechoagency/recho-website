@@ -1,81 +1,103 @@
 # RECHO - Full-Service Reddit Marketing Agency
 
-A modern, professional, and responsive website for RECHO, the premier Reddit marketing agency specializing in organic community building, paid advertising management, and proprietary technology solutions for authentic Reddit success.
+A modern, professional, multi-page website for RECHO, the premier Reddit marketing agency specializing in organic community management, paid advertising, and proprietary technology solutions for authentic Reddit success.
 
 ## 🎯 Project Overview
 
 - **Agency Name**: RECHO (all caps)
 - **Tagline**: Full-Service Reddit Marketing Agency
 - **Color Scheme**: RECHO Orange (#E6462F) with white background
-- **Platform**: WordPress-compatible static website
+- **Architecture**: Multi-page website with WordPress integration ready
 - **Target Audience**: Brands seeking professional Reddit marketing services
 
-## 🚀 Core Services
+## 🌐 Live Preview
 
-1. **Organic Community Building**
-   - Authentic Reddit engagement
-   - Community participation strategies
-   - Brand reputation management
+- **Development URL**: https://3000-iztdddk4ts3h4ab0pbxf1-b9b802c4.sandbox.novita.ai
+- **Homepage**: index.html
+- **FAQs**: faq.html
+- **Blog**: blog.html (WordPress integration ready)
+- **Contact**: contact.html (Book a Call form)
 
-2. **Reddit Paid Advertising Management**
-   - Campaign setup and optimization
-   - Advanced targeting strategies
-   - Performance tracking and reporting
+## ✅ Completed Features
 
-3. **Proprietary Technology Platform**
-   - Advanced Reddit analytics
-   - Automation tools
-   - Real-time monitoring and insights
+### Current Implementation Status
 
-4. **Profile Management**
-   - Brand Reddit account setup
-   - Sub-profile management
-   - Compliance monitoring
+#### ✅ Logo & Branding
+- Created SVG logo (`recho-logo.svg`) with transparent background
+- RECHO orange text (#E6462F) instead of red background
+- Consistent branding across all pages
 
-5. **Subreddit Management**
-   - Subreddit creation and setup
-   - Community moderation
-   - Engagement strategies
+#### ✅ Multi-Page Architecture
+- **index.html**: Homepage with services and Reddit platform statistics
+- **faq.html**: FAQ page with accordion dropdowns (~20 questions)
+- **blog.html**: Blog page with WordPress integration placeholder
+- **contact.html**: Contact form ("Book a Call") ready for WordPress email integration
 
-6. **Professional Services**
-   - Strategic consultation
-   - Training and workshops
-   - Ongoing support
+#### ✅ Navigation Updates
+- Removed: Case Studies, Team, Contact (from old version)
+- Added: FAQs (accordion page), Blog (WordPress ready), "Book a Call" (replaces "Get Started")
+- All menu items are clickable standalone pages
+- Consistent header/footer across all pages
 
-## 🎨 Design Features
+#### ✅ Content - Reddit Platform Statistics
+All agency success metrics replaced with Reddit internal platform data:
+- **400M+** Weekly Active Users
+- **51%** of all online purchase discussions
+- **25 min** average daily engagement time
+- **31%** year-over-year growth
+- **#1** platform for product conversations
+- **60%** of users open to brand advertising
+- **+19%** trust increase for brands on Reddit
 
-### Color Palette
-- **Primary Orange**: #E6462F (RECHO brand color)
-- **Light Orange**: #FF5722 (accents and hover states)
-- **Dark Orange**: #D32F2F (emphasis elements)
-- **Background**: White (#FFFFFF)
-- **Light Background**: #FFF5F3 (section alternation)
+#### ✅ Services Restructuring - 3 Core Products
 
-### Typography
-- **Font Family**: Poppins (Google Fonts)
-- **Weights**: 300, 400, 500, 600, 700, 800
+1. **Reddit Organic Management**
+   - Community posting in relevant subreddits
+   - Active engagement through replies and upvoting
+   - Managing brand's subreddit
+   - Managing brand's Reddit user profiles and sub-profiles
+   - Topic monitoring and relevant engagement
+   - **Measurement**: Brand engagement metrics, organic impressions, sentiment analysis, community growth, brand recall
 
-### Key Visual Elements
-- Clean, modern design with professional aesthetics
-- Reddit-themed icons and imagery
-- Gradient effects using RECHO orange palette
-- Smooth animations and transitions
-- Fully responsive mobile-first design
+2. **Reddit Paid Advertising**
+   - All ad formats from reddit.com/business:
+     - Promoted Posts
+     - Video Ads
+     - Carousel Ads
+     - Dynamic Product Ads
+     - Conversation Ads
+     - Lead Generation Forms
+     - Takeover Ads
+   - **Measurement**: CPCs, conversion rates, ad performance metrics
+
+3. **Proprietary Technology**
+   - Performance dashboard
+   - Cross-channel optimization
+   - Real-time analytics
+   - Campaign automation
+   - **Measurement**: Shows how technology maximizes impact across both organic and paid channels
 
 ## 📁 Project Structure
 
 ```
 webapp/
-├── index.html              # Main HTML file
+├── index.html              # Homepage with services & Reddit stats
+├── faq.html               # FAQ page with accordion UI
+├── blog.html              # Blog page (WordPress integration ready)
+├── contact.html           # Contact form ("Book a Call")
 ├── css/
-│   └── style.css          # Custom CSS styles
+│   └── style.css         # Custom CSS styles
 ├── js/
-│   └── main.js            # JavaScript functionality
-├── images/                # Logo and visual assets
-│   ├── recho-logo.png     # RECHO logo (needs to be added)
-│   └── recho-favicon.png  # Favicon (needs to be added)
-├── .gitignore            # Git ignore file
-└── README.md             # Project documentation
+│   └── main.js           # JavaScript functionality (mobile menu, animations)
+├── images/
+│   ├── recho-logo.svg    # NEW: Transparent SVG logo with orange text
+│   ├── recho-logo.png    # OLD: Original logo with red background
+│   └── recho-favicon.png # Browser favicon
+├── .git/                 # Git repository
+├── .gitignore           # Git ignore file
+├── README.md            # This file
+├── CHANGELOG.md         # Change history
+└── DEPLOYMENT.md        # Deployment instructions
 ```
 
 ## 🛠️ Technologies Used
@@ -83,58 +105,55 @@ webapp/
 - **HTML5**: Semantic markup structure
 - **Tailwind CSS**: Utility-first CSS framework (via CDN)
 - **Custom CSS**: Additional styling and animations
-- **Vanilla JavaScript**: Interactive functionality
+- **Vanilla JavaScript**: Interactive functionality (accordions, mobile menu)
 - **Font Awesome**: Icon library
-- **Google Fonts**: Poppins typography
+- **Python HTTP Server**: Simple development server
 
-## ✨ Key Features
+## ✨ Key Features by Page
 
-### Navigation
-- Fixed header with smooth scrolling
-- Mobile-responsive hamburger menu
-- Active link highlighting
+### Homepage (index.html)
+- Hero section with Reddit platform statistics
+- 3 core services with detailed descriptions and measurements
+- All Reddit ad types with comprehensive details
+- "How It Works" 4-step process
+- Technology dashboard mockup
+- All CTAs point to contact.html
+- Counter animations for statistics
 
-### Hero Section
-- Compelling value proposition
-- Call-to-action buttons
-- Animated statistics counter
-- Engaging visual design
+### FAQ Page (faq.html)
+- ~20 comprehensive FAQs across 4 sections:
+  1. Reddit Marketing Basics
+  2. Reddit Advertising
+  3. Working with RECHO
+  4. Getting Started
+- Custom accordion implementation with CSS transitions
+- Smooth expand/collapse animations
+- Mobile-responsive design
 
-### Services Section
-- 6 comprehensive service cards
-- Hover effects and animations
-- Detailed service descriptions
-- Feature lists with checkmarks
+### Blog Page (blog.html)
+- WordPress integration notice with setup instructions
+- Category filter buttons (Reddit Strategy, Advertising Tips, Case Studies, etc.)
+- Featured article section
+- Blog post grid with 6+ placeholder articles
+- Search functionality (ready for WordPress)
+- Newsletter subscription section
+- Modern card-based layout
 
-### Technology Section
-- Proprietary platform showcase
-- Advanced analytics dashboard mockup
-- Key technology features
-- Competitive advantages
-
-### Portfolio/Case Studies
-- Filterable project gallery
-- Success metrics display
-- Category-based filtering
-- Industry-specific examples
-
-### Team Section
-- Team member profiles
-- Social media links
-- Professional credentials
-- Team statistics
-
-### Contact Section
-- Professional contact form
+### Contact Page (contact.html)
+- Comprehensive form fields:
+  - Name, email, phone
+  - Company name and website
+  - Service interest dropdown
+  - Budget range selector
+  - Message textarea
+  - Referral source
+  - Newsletter opt-in
+  - Privacy policy checkbox
+- WordPress email integration ready
+- Success message display
 - Form validation
-- Contact information display
-- Why choose RECHO section
-
-### Footer
-- Company information
-- Service links
-- Quick navigation
-- Social media links
+- "What Happens Next" 4-step process
+- Contact information sidebar
 
 ## 🔧 Setup Instructions
 
@@ -146,31 +165,79 @@ webapp/
    cd webapp
    ```
 
-2. **Add RECHO logo files**
-   - Place `recho-logo.png` in `images/` folder
-   - Place `recho-favicon.png` in `images/` folder
-
-3. **Open in browser**
+2. **Start local server**
    ```bash
-   # Simply open index.html in your web browser
-   # Or use a local server:
-   python -m http.server 8000
-   # Then visit http://localhost:8000
+   # Using Python HTTP server
+   python3 -m http.server 3000
+   
+   # Then visit http://localhost:3000
    ```
+
+3. **View pages**
+   - Homepage: http://localhost:3000/index.html
+   - FAQs: http://localhost:3000/faq.html
+   - Blog: http://localhost:3000/blog.html
+   - Contact: http://localhost:3000/contact.html
 
 ### WordPress Integration
 
-To integrate this website into WordPress:
+#### Blog Integration (blog.html)
 
-1. **Convert to WordPress Theme**
-   - Create `style.css` with WordPress theme header
-   - Break HTML into template parts (header.php, footer.php, etc.)
-   - Convert sections into WordPress template files
+1. **Option 1: WordPress Subdirectory**
+   ```bash
+   # Install WordPress in /blog/ subdirectory
+   # Configure WordPress theme to match RECHO design
+   ```
 
-2. **Or Use as Static Pages**
-   - Install "Insert Headers and Footers" plugin
-   - Add custom CSS and JavaScript
-   - Create pages using Custom HTML blocks
+2. **Option 2: WordPress REST API**
+   ```javascript
+   // Fetch WordPress posts via REST API
+   fetch('https://your-wordpress.com/wp-json/wp/v2/posts')
+     .then(response => response.json())
+     .then(posts => {
+       // Replace placeholder cards with real posts
+     });
+   ```
+
+3. **Option 3: WordPress Page Template**
+   - Create custom WordPress page template
+   - Use blog.html structure as base
+   - Integrate WordPress Loop for dynamic content
+
+#### Contact Form Integration (contact.html)
+
+1. **WordPress Plugin Method**
+   ```bash
+   # Install Contact Form 7 or WPForms plugin
+   # Configure email settings
+   # Update form action URL in contact.html
+   ```
+
+2. **Custom WordPress Endpoint**
+   ```php
+   // In functions.php or custom plugin
+   add_action('rest_api_init', function () {
+     register_rest_route('contact-form/v1', '/submit', array(
+       'methods' => 'POST',
+       'callback' => 'handle_contact_form',
+     ));
+   });
+   
+   function handle_contact_form($request) {
+     // Process form data
+     // Send email
+     // Return success response
+   }
+   ```
+
+3. **Update JavaScript in contact.html**
+   ```javascript
+   // Replace placeholder with actual endpoint
+   fetch('/wp-json/contact-form/v1/submit', {
+     method: 'POST',
+     body: formData
+   })
+   ```
 
 ## 📱 Responsive Design
 
@@ -180,115 +247,128 @@ The website is fully responsive and optimized for:
 - Tablet (768px - 1023px)
 - Mobile (320px - 767px)
 
-## 🎯 Key Advantages Highlighted
+## 🎨 Design Features
 
-1. **Full-Service Reddit Specialization**: Comprehensive Reddit marketing solutions
-2. **Integrated Approach**: Combining organic and paid strategies
-3. **Proprietary Technology**: Advanced analytics and automation platform
-4. **Expert Team**: Reddit specialists with proven track records
-5. **Authentic Growth**: Focus on genuine community engagement
-6. **Measurable Results**: Data-driven campaigns with clear ROI
+### Color Palette
+- **Primary Orange**: #E6462F (RECHO brand color)
+- **Background**: White (#FFFFFF) and Gray (#F9FAFB)
+- **Text**: Gray-800 (#1F2937) for headings, Gray-600 (#4B5563) for body
 
-## 📊 Performance Features
+### Typography
+- Default: System fonts (Tailwind CSS defaults)
+- Professional and readable across all devices
 
-- Fast loading times with optimized assets
-- Lazy loading for images
-- Debounced scroll events
-- Intersection Observer for animations
-- Smooth scrolling and transitions
-
-## ♿ Accessibility Features
-
-- Semantic HTML structure
-- ARIA labels where appropriate
-- Keyboard navigation support
-- Focus visible indicators
-- Screen reader friendly
-- Reduced motion support
-- High contrast mode support
-
-## 🔐 Security Considerations
-
-- Form validation (client-side and server-side needed)
-- No sensitive data in client-side code
-- HTTPS recommended for production
-- Regular security updates for dependencies
-
-## 📈 Analytics Integration
-
-Ready for integration with:
-- Google Analytics
-- Facebook Pixel
-- Reddit Pixel
-- Custom analytics platforms
+### Key Visual Elements
+- Clean, modern multi-page design
+- Reddit-themed icons and imagery
+- Gradient effects using RECHO orange palette
+- Smooth animations and transitions
+- Custom accordion implementation
+- Form validation states
+- Hover effects on cards and buttons
 
 ## 🚀 Deployment
 
-### Static Hosting
+### Current Development Server
+- Python HTTP server on port 3000
+- Public URL: https://3000-iztdddk4ts3h4ab0pbxf1-b9b802c4.sandbox.novita.ai
+
+### Static Hosting Options
 Can be deployed to:
-- GitHub Pages
-- Netlify
-- Vercel
-- AWS S3 + CloudFront
-- Any static hosting provider
+- **GitHub Pages**: Free hosting for static sites
+- **Netlify**: Continuous deployment from Git
+- **Vercel**: Fast global CDN
+- **AWS S3 + CloudFront**: Enterprise-grade hosting
+- **Any static hosting provider**
 
 ### WordPress Hosting
 Compatible with any WordPress hosting:
-- WP Engine
-- Bluehost
-- SiteGround
-- Kinsta
+- **WP Engine**: Managed WordPress hosting
+- **Bluehost**: Popular shared hosting
+- **SiteGround**: WordPress-optimized hosting
+- **Kinsta**: Premium managed hosting
 
-## 🔄 Future Enhancements
+## 📊 Data Sources
 
-Potential additions:
-- Blog section for Reddit marketing insights
-- Client testimonials
-- Live chat integration
-- Interactive Reddit analytics demo
-- Case study detail pages
-- Resource library
-- Newsletter signup
+All Reddit statistics sourced from provided PDFs:
+1. "Pitch One-Sheeter"
+2. "Product Two Sheeter - Reddit Pixel"
+3. "Reddit Pro Organic Playbook"
+4. "Measuring and growing your brand building on Reddit"
+
+## 🔄 Recent Changes (Latest Commit)
+
+**Complete website rebuild: Multi-page architecture with Reddit platform stats**
+
+- Created SVG logo (recho-logo.svg) with transparent background and RECHO orange text
+- Completely rebuilt index.html with Reddit platform statistics (400M users, 51% purchase discussions)
+- Replaced agency metrics with Reddit internal platform data from provided PDFs
+- Restructured services to 3 core products: Organic Management, Paid Advertising, Technology
+- Added all Reddit ad types with detailed descriptions and measurement metrics
+- Created faq.html with 20 comprehensive FAQs and accordion functionality
+- Created blog.html with WordPress integration placeholder and modern card layout
+- Created contact.html with comprehensive form fields and WordPress email integration
+- Updated navigation: removed Case Studies/Team/Contact, added FAQs/Blog/Book a Call
+- Changed all 'Get Started' CTAs to 'Book a Call' linking to contact.html
+- Fixed mobile menu button ID in main.js
+- All pages feature consistent header/footer navigation and RECHO branding
+- Multi-page architecture with standalone pages for all menu items
+
+## ⏭️ Next Steps
+
+### Pending Tasks
+1. ✅ Create SVG logo - COMPLETED
+2. ✅ Rebuild homepage with Reddit stats - COMPLETED
+3. ✅ Create FAQ page with accordions - COMPLETED
+4. ✅ Create blog page - COMPLETED
+5. ✅ Create contact form page - COMPLETED
+6. ✅ Update navigation across all pages - COMPLETED
+7. ✅ Git commit all changes - COMPLETED
+8. ✅ Restart development server - COMPLETED
+
+### Future Enhancements
+- WordPress blog integration (backend setup)
+- Contact form email integration (WordPress plugin)
+- Add real client testimonials
+- Add case study detail pages
+- Integrate analytics (Google Analytics, Reddit Pixel)
+- Add live chat integration
+- Create resource library/downloads section
 
 ## 📞 Contact Information
 
-- **Email**: hello@recho.agency
-- **Phone**: +1 (555) 123-4567
-- **Location**: San Francisco, CA, United States
+- **Email**: hello@recho.com
+- **Phone**: (555) 123-4567
+- **Reddit**: u/RECHO_Agency
+- **Business Hours**: Mon-Fri: 9AM - 6PM EST
 
-## 🤝 Contributing
+## 🤝 Git Repository
 
-This is a client project for RECHO. For updates or changes, please contact the development team.
+- **Branch**: main
+- **Last Commit**: Complete website rebuild with multi-page architecture
+- **Files Added**: blog.html, contact.html, faq.html, recho-logo.svg
+- **Files Modified**: index.html, js/main.js
 
-## 📄 License
+## 📝 Important Notes
 
-Proprietary - All rights reserved by RECHO
-
-## 🎨 Brand Assets Required
-
-**IMPORTANT**: Please add the following brand assets to complete the website:
-
-1. **Logo File**: `images/recho-logo.png`
-   - Should be high-resolution PNG with transparent background
-   - Recommended size: 400px width (height proportional)
-
-2. **Favicon**: `images/recho-favicon.png`
-   - Should be square PNG
-   - Recommended size: 512x512px or 256x256px
-
-## 📝 Notes
-
-- Website built from scratch based on prompt history from previous GenSpark account
-- Designed specifically for RECHO brand identity
-- All Reddit service offerings implemented as specified
-- Technology platform advantages highlighted throughout
-- Professional, clean design with RECHO orange color scheme
-- Ready for logo integration and deployment
+- All pages use transparent SVG logo instead of PNG with red background
+- All statistics are Reddit platform data, not agency metrics
+- WordPress integration requires backend configuration
+- Mobile menu works across all pages
+- Form submission requires WordPress endpoint setup
+- Blog content is placeholder - needs WordPress integration
 
 ## 🌟 Version History
 
-- **v1.0** (2024): Initial website build with complete Reddit agency structure
+- **v2.0** (October 2025): Complete multi-page rebuild with Reddit platform stats
+  - Multi-page architecture
+  - FAQ accordion page
+  - Blog page with WordPress integration
+  - Contact form page
+  - Updated navigation and branding
+  
+- **v1.0** (2024): Initial single-page website build
 
 ---
 
-**Built with expertise for RECHO - Dominating Reddit through authentic community building and proprietary technology.**
+**Built with expertise for RECHO - Leveraging Reddit's 400M+ weekly users through authentic community building, targeted advertising, and proprietary technology.**

@@ -31,6 +31,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Logo styling for better blending */
+header img[alt="RECHO Logo"] {
+    mix-blend-mode: darken;
+    transition: all 0.3s ease;
+}
+
+header img[alt="RECHO Logo"]:hover {
+    transform: scale(1.05);
+}
+
 /* Header animations */
 .nav-link {
     position: relative;

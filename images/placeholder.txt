@@ -1,7 +1,0 @@
-RECHO Logo Placeholder
-
-Please add the following files to this directory:
-1. recho-logo.png - The RECHO logo with orange branding
-2. recho-favicon.png - The RECHO favicon/icon
-
-Once added, the website will display the actual RECHO branding.

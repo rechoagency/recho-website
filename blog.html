@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - RECHO | Reddit Marketing Insights & Strategies</title>
+    <meta name="description" content="Discover expert insights on Reddit marketing, advertising strategies, and community engagement tips from the RECHO team.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/recho-favicon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'recho-orange': '#E6462F',
+                        'recho-dark': '#1a1a1a',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .blog-card {
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(230, 70, 47, 0.15);
+        }
+        
+        .category-tag {
+            transition: all 0.2s ease;
+        }
+        
+        .category-tag:hover {
+            background-color: #E6462F;
+            color: white;
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: #E6462F;
+            box-shadow: 0 0 0 3px rgba(230, 70, 47, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center">
+                        <img src="images/recho-logo.svg" alt="RECHO Logo" class="h-12">
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">Services</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">FAQs</a>
+                    <a href="blog.html" class="text-recho-orange font-semibold">Blog</a>
+                    <a href="contact.html" class="bg-recho-orange text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all font-semibold">Book a Call</a>
+                </nav>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-recho-orange focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-gray-200">
+                <div class="flex flex-col space-y-4 mt-4">
+                    <a href="index.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">Services</a>
+                    <a href="faq.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">FAQs</a>
+                    <a href="blog.html" class="text-recho-orange font-semibold">Blog</a>
+                    <a href="contact.html" class="bg-recho-orange text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all font-semibold text-center">Book a Call</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-recho-orange to-red-600 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">RECHO Insights</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Expert strategies, case studies, and insights on Reddit marketing, advertising, and community engagement</p>
+            
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input 
+                        type="text" 
+                        placeholder="Search articles, guides, and insights..." 
+                        class="search-input w-full px-6 py-4 rounded-full text-gray-800 border-2 border-transparent focus:border-recho-orange transition-all"
+                    >
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-recho-orange text-white px-6 py-2 rounded-full hover:bg-opacity-90 transition-all">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WordPress Integration Notice -->
+    <section class="py-12 bg-blue-50 border-y border-blue-200">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-500">
+                    <i class="fas fa-info-circle text-blue-500 text-4xl mb-4"></i>
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4">WordPress Blog Integration</h2>
+                    <p class="text-gray-600 mb-4">
+                        This blog section is designed to integrate with your WordPress installation. The content below shows placeholder articles to demonstrate the layout and design.
+                    </p>
+                    <p class="text-sm text-gray-500">
+                        <strong>Setup Instructions:</strong> Install WordPress in a subdirectory (e.g., /blog/) or configure your WordPress theme to match this design. Use the WordPress REST API or embed WordPress content directly into this template.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="py-8 bg-white border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="category-tag px-6 py-2 rounded-full bg-recho-orange text-white font-semibold">All Posts</button>
+                <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Reddit Strategy</button>
+                <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Advertising Tips</button>
+                <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Case Studies</button>
+                <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Community Management</button>
+                <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Platform Updates</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Article</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div class="bg-gradient-to-br from-recho-orange to-red-600 p-12 flex items-center justify-center">
+                            <div class="text-white text-center">
+                                <i class="fas fa-rocket text-6xl mb-6"></i>
+                                <h3 class="text-3xl font-bold mb-4">Featured Article</h3>
+                                <p class="text-lg opacity-90">Latest insights on Reddit marketing</p>
+                            </div>
+                        </div>
+                        <div class="p-8">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="px-3 py-1 bg-recho-orange text-white text-sm rounded-full font-semibold">Reddit Strategy</span>
+                                <span class="text-gray-500 text-sm">January 15, 2025</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">The Complete Guide to Reddit Marketing in 2025</h3>
+                            <p class="text-gray-600 mb-6 leading-relaxed">
+                                Discover how to leverage Reddit's 400M+ weekly active users to build authentic brand relationships and drive meaningful engagement. Learn the latest strategies for organic posting, community management, and paid advertising.
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-user text-gray-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800 text-sm">RECHO Team</p>
+                                        <p class="text-gray-500 text-xs">Marketing Experts</p>
+                                    </div>
+                                </div>
+                                <a href="#" class="text-recho-orange font-semibold hover:underline flex items-center gap-2">
+                                    Read More <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Latest Articles</h2>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Blog Post 1 -->
+                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-br from-purple-500 to-purple-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-ad text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs rounded-full font-semibold">Advertising Tips</span>
+                            <span class="text-gray-500 text-xs">January 10, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">7 Reddit Ad Formats That Drive Conversions</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            From Promoted Posts to Dynamic Product Ads, learn which ad formats work best for your campaign goals and budget.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500 text-xs">
+                                <i class="fas fa-clock"></i>
+                                <span>8 min read</span>
+                            </div>
+                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-br from-green-500 to-green-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-comments text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-green-100 text-green-700 text-xs rounded-full font-semibold">Community Management</span>
+                            <span class="text-gray-500 text-xs">January 8, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Building Authentic Communities on Reddit</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Master the art of community engagement with proven strategies for posting, replying, and growing your brand's subreddit.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500 text-xs">
+                                <i class="fas fa-clock"></i>
+                                <span>6 min read</span>
+                            </div>
+                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-br from-blue-500 to-blue-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs rounded-full font-semibold">Platform Updates</span>
+                            <span class="text-gray-500 text-xs">January 5, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Reddit's Latest Algorithm Changes Explained</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Stay ahead of the curve with insights into Reddit's newest updates and how they impact your marketing strategy.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500 text-xs">
+                                <i class="fas fa-clock"></i>
+                                <span>5 min read</span>
+                            </div>
+                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 4 -->
+                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-br from-orange-500 to-red-600 h-48 flex items-center justify-center">
+                        <i class="fas fa-trophy text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-700 text-xs rounded-full font-semibold">Case Studies</span>
+                            <span class="text-gray-500 text-xs">January 3, 2025</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">How Brand X Achieved 300% ROI on Reddit</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            A deep dive into a successful Reddit campaign that combined organic engagement with targeted paid advertising.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500 text-xs">
+                                <i class="fas fa-clock"></i>
+                                <span>10 min read</span>
+                            </div>
+                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 5 -->
+                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-br from-pink-500 to-pink-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-pink-100 text-pink-700 text-xs rounded-full font-semibold">Reddit Strategy</span>
+                            <span class="text-gray-500 text-xs">December 28, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Reddit Karma: What Brands Need to Know</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            Understanding Reddit's karma system and how it impacts your brand's credibility and reach on the platform.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500 text-xs">
+                                <i class="fas fa-clock"></i>
+                                <span>7 min read</span>
+                            </div>
+                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Blog Post 6 -->
+                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 h-48 flex items-center justify-center">
+                        <i class="fas fa-bullseye text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-semibold">Advertising Tips</span>
+                            <span class="text-gray-500 text-xs">December 25, 2024</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Targeting the Right Subreddits for Your Brand</h3>
+                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                            A comprehensive guide to finding and targeting the most relevant subreddits for your marketing campaigns.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-gray-500 text-xs">
+                                <i class="fas fa-clock"></i>
+                                <span>9 min read</span>
+                            </div>
+                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button class="bg-white text-recho-orange border-2 border-recho-orange px-8 py-3 rounded-full font-semibold hover:bg-recho-orange hover:text-white transition-all">
+                    Load More Articles <i class="fas fa-chevron-down ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-16 bg-gradient-to-br from-recho-orange to-red-600 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <i class="fas fa-envelope text-5xl mb-6"></i>
+            <h2 class="text-4xl font-bold mb-4">Stay Updated with RECHO Insights</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Get the latest Reddit marketing strategies, tips, and case studies delivered to your inbox every week.</p>
+            
+            <form class="max-w-2xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <input 
+                        type="email" 
+                        placeholder="Enter your email address" 
+                        required
+                        class="flex-1 px-6 py-4 rounded-full text-gray-800 focus:outline-none focus:ring-4 focus:ring-white focus:ring-opacity-50"
+                    >
+                    <button type="submit" class="bg-white text-recho-orange px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all">
+                        Subscribe Now
+                    </button>
+                </div>
+                <p class="text-sm mt-4 opacity-90">No spam, unsubscribe anytime. Your privacy is important to us.</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Ready to Dominate Reddit Marketing?</h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                Let's discuss how RECHO can help your brand leverage Reddit's 400M+ weekly users to build authentic relationships and drive meaningful results.
+            </p>
+            <a href="contact.html" class="inline-block bg-recho-orange text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-all shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                Book Your Free Strategy Call <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <img src="images/recho-logo.svg" alt="RECHO Logo" class="h-10 mb-4 brightness-0 invert">
+                    <p class="text-gray-400 mb-4">
+                        RECHO specializes in Reddit marketing, helping brands leverage the platform's 400M+ weekly users through strategic organic engagement and targeted advertising.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-recho-orange transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-recho-orange transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-recho-orange transition-colors">
+                            <i class="fab fa-reddit text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-recho-orange transition-colors">FAQs</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-recho-orange transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-recho-orange transition-colors">Book a Call</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i> hello@recho.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RECHO. All rights reserved. | <a href="#" class="hover:text-recho-orange transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-recho-orange transition-colors">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Page-Specific JavaScript -->
+    <script>
+        // Category filter functionality
+        document.querySelectorAll('.category-tag').forEach(button => {
+            button.addEventListener('click', function() {
+                // Remove active state from all buttons
+                document.querySelectorAll('.category-tag').forEach(btn => {
+                    btn.classList.remove('bg-recho-orange', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                
+                // Add active state to clicked button
+                this.classList.remove('bg-gray-200', 'text-gray-700');
+                this.classList.add('bg-recho-orange', 'text-white');
+                
+                // In a real implementation, this would filter the blog posts
+                console.log('Filter category:', this.textContent);
+            });
+        });
+        
+        // Search functionality (placeholder)
+        document.querySelector('.search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                console.log('Search query:', this.value);
+                // In a real implementation, this would trigger a search
+            }
+        });
+    </script>
+</body>
+</html>

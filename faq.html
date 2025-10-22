@@ -17,19 +17,10 @@
                 extend: {
                     colors: {
                         'recho-orange': '#E6462F',
+                        'recho-light': '#FF5722',
+                        'recho-dark': '#D32F2F',
                         'recho-blue': '#2563EB',
                         'recho-blue-dark': '#1E40AF'
-                    }
-                }
-            }
-        }
-    }<script>tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'recho-orange': '#E6462F',
-                        'recho-light': '#FF5722',
-                        'recho-dark': '#D32F2F'
                     }
                 }
             }
@@ -46,22 +37,39 @@
     <link rel="stylesheet" href="css/style.css">
     
     <style>
+        /* Clean Tilda-style FAQ Accordion */
+        .faq-item {
+            border-bottom: 1px solid #E5E7EB;
+        }
+        
+        .faq-question {
+            position: relative;
+            transition: all 0.2s ease;
+        }
+        
+        .faq-question:hover {
+            background-color: #F9FAFB;
+        }
+        
         .faq-answer {
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+            padding-top: 0;
+            padding-bottom: 0;
         }
         
         .faq-answer.active {
-            max-height: 1000px;
-            transition: max-height 0.5s ease-in;
+            max-height: 2000px;
+            padding-top: 0.5rem;
+            padding-bottom: 1.5rem;
         }
         
-        .faq-icon {
-            transition: transform 0.3s ease;
+        .chevron-icon {
+            transition: transform 0.25s ease;
         }
         
-        .faq-icon.rotate {
+        .chevron-icon.rotate {
             transform: rotate(180deg);
         }
     </style>
@@ -80,7 +88,7 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Services</a>
-                    <a href="technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Services</a>
+                    <a href="technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
                     <a href="faq.html" class="nav-link text-recho-orange font-semibold transition-colors duration-300">FAQs</a>
                     <a href="blog.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>
                     <a href="contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all duration-300 font-medium">
@@ -100,7 +108,7 @@
             <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
                 <div class="flex flex-col space-y-4">
                     <a href="services.html" class="text-gray-700 hover:text-recho-orange transition-colors duration-300">Services</a>
-                    <a href="technology.html" class="text-gray-700 hover:text-recho-orange transition-colors duration-300">Services</a>
+                    <a href="technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
                     <a href="faq.html" class="text-recho-orange font-semibold transition-colors duration-300">FAQs</a>
                     <a href="blog.html" class="text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>
                     <a href="contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all duration-300 font-medium w-fit">
@@ -112,56 +120,55 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-12 bg-gradient-to-b from-orange-50 to-white">
+    <section class="pt-32 pb-16 bg-gradient-to-b from-gray-50 to-white">
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-5xl md:text-6xl font-bold text-gray-800 mb-6">
                 Frequently Asked <span class="text-recho-orange">Questions</span>
             </h1>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Everything you need to know about Reddit marketing, advertising, and how RECHO can help your brand succeed
+                Everything you need to know about Reddit marketing and how RECHO can help your brand succeed
             </p>
         </div>
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-16 bg-white">
+    <section class="py-20 bg-white">
         <div class="container mx-auto px-6 max-w-4xl">
             
             <!-- Reddit Marketing Basics -->
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                    <i class="fas fa-question-circle text-recho-orange mr-3"></i>
-                    Reddit Marketing Basics
-                </h2>
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Reddit Marketing Basics</h2>
                 
-                <div class="space-y-4">
-                    <!-- FAQ Item -->
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">Why should my brand be on Reddit?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                <div class="faq-list">
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">Why should my brand be on Reddit?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">Reddit is the #1 platform for product conversations, with 51% of all online purchasing discussions happening on Reddit. With 400M+ weekly active users and 31% year-over-year growth, Reddit offers unparalleled access to engaged communities actively seeking recommendations and making purchase decisions. Additionally, 60% of redditors are open to seeing brand ads, and 19% more likely to trust brands that participate authentically on the platform.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What makes Reddit different from other social platforms?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">What makes Reddit different from other social platforms?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">Unlike other social platforms, Reddit is organized around interests and topics (subreddits) rather than follower relationships. This creates highly engaged, niche communities where users actively seek information and recommendations. The platform rewards authenticity and value over promotional content, making it ideal for brands willing to participate genuinely. Users spend an average of 25 minutes daily on Reddit, demonstrating deep engagement with content.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">Can brands really succeed on Reddit?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">Can brands really succeed on Reddit?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">Absolutely! Reddit data shows that brand participation is not just welcomed—it's encouraged. Redditors are 15% more likely to engage positively when brands interact directly with them in authentic ways. The key is authenticity: brands that provide value, answer questions, and engage genuinely see tremendous success. Combined with strategic paid advertising, brands can reach high-intent audiences at the exact moment they're making decisions.</p>
                         </div>
                     </div>
@@ -169,218 +176,145 @@
             </div>
 
             <!-- Reddit Advertising -->
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                    <i class="fas fa-ad text-recho-orange mr-3"></i>
-                    Reddit Advertising
-                </h2>
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Reddit Advertising</h2>
                 
-                <div class="space-y-4">
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What types of Reddit ads are available?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">What types of Reddit ads are available?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">Reddit offers multiple ad formats to suit different campaign goals:</p>
-                            <ul class="text-gray-600 space-y-2 ml-4">
-                                <li>• <strong>Promoted Posts:</strong> Native feed ads that blend seamlessly with organic content</li>
-                                <li>• <strong>Video Ads:</strong> Autoplay video content for maximum engagement</li>
-                                <li>• <strong>Carousel Ads:</strong> Multi-image swipeable formats for showcasing products</li>
-                                <li>• <strong>Dynamic Product Ads:</strong> Catalog-driven ads showing personalized recommendations</li>
-                                <li>• <strong>Conversation Ads:</strong> Interactive formats designed to drive engagement</li>
-                                <li>• <strong>Lead Generation Ads:</strong> In-ad forms to capture leads without leaving Reddit</li>
-                                <li>• <strong>Takeover Ads:</strong> Premium placements for maximum visibility</li>
+                        <div class="faq-answer px-0">
+                            <p class="text-gray-600 leading-relaxed mb-4">Reddit offers multiple ad formats to suit different campaign goals:</p>
+                            <ul class="text-gray-600 space-y-2 pl-4">
+                                <li><strong>Promoted Posts:</strong> Native feed ads that blend seamlessly with organic content</li>
+                                <li><strong>Video Ads:</strong> Autoplay video content for maximum engagement</li>
+                                <li><strong>Carousel Ads:</strong> Multi-image swipeable formats for showcasing products</li>
+                                <li><strong>Dynamic Product Ads:</strong> Catalog-driven ads showing personalized recommendations</li>
+                                <li><strong>Conversation Ads:</strong> Interactive formats designed to drive engagement</li>
+                                <li><strong>Lead Generation Ads:</strong> In-ad forms to capture leads without leaving Reddit</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">How does Reddit ad targeting work?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">How does Reddit ad targeting work?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">Reddit offers sophisticated targeting options including:</p>
-                            <ul class="text-gray-600 space-y-2 ml-4">
-                                <li>• <strong>Community Targeting:</strong> Target specific subreddits where your audience gathers</li>
-                                <li>• <strong>Interest Targeting:</strong> Reach users based on their Reddit interests and behaviors</li>
-                                <li>• <strong>Lookalike Audiences:</strong> Find new users similar to your best customers</li>
-                                <li>• <strong>Retargeting:</strong> Re-engage users who've interacted with your brand</li>
-                                <li>• <strong>Category Targeting:</strong> Target across 15 major verticals</li>
-                                <li>• <strong>Geographic & Demographic:</strong> Filter by location, age, and more</li>
+                        <div class="faq-answer px-0">
+                            <p class="text-gray-600 leading-relaxed mb-4">Reddit offers sophisticated targeting options including:</p>
+                            <ul class="text-gray-600 space-y-2 pl-4">
+                                <li><strong>Community Targeting:</strong> Target specific subreddits where your audience gathers</li>
+                                <li><strong>Interest Targeting:</strong> Reach users based on their Reddit interests and behaviors</li>
+                                <li><strong>Lookalike Audiences:</strong> Find new users similar to your best customers</li>
+                                <li><strong>Retargeting:</strong> Re-engage users who've interacted with your brand</li>
+                                <li><strong>Category Targeting:</strong> Target across 15 major verticals</li>
+                                <li><strong>Geographic & Demographic:</strong> Filter by location, age, and more</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What's the typical cost of Reddit advertising?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">What's the typical cost of Reddit advertising?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">Reddit ads operate on a bid-based system with flexible budgets. The minimum daily budget is $5, making it accessible for businesses of all sizes. Cost-per-click (CPC) typically ranges from $0.50 to $3.00 depending on targeting and competition. With RECHO's optimization expertise, we focus on reducing your CPC while maximizing reach and engagement. We'll work within your budget to deliver the best possible return on ad spend (ROAS).</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">Do Reddit ads actually work?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">Do Reddit ads actually work?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">Yes! When done correctly, Reddit ads deliver strong ROI. The key is targeting the right communities with relevant creative and messaging. Because Reddit users are actively seeking information and recommendations, they're more receptive to ads that provide value. RECHO's approach combines data-driven targeting with creative optimization to ensure your ads resonate with your target audience and drive measurable results including clicks, conversions, and brand lift.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Agency Services -->
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-
-            <!-- Reddit SEO and Search Visibility -->
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                    <i class="fas fa-search text-recho-orange mr-3"></i>
-                    Reddit SEO & Search Visibility
-                </h2>
+            <!-- Reddit SEO & Search Visibility -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Reddit SEO & Search Visibility</h2>
                 
-                <div class="space-y-4">
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">How does Reddit impact SEO and Google search rankings?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">How does Reddit impact SEO and Google search rankings?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">Reddit has become a <strong>major driver of SEO visibility</strong>. According to recent data, Reddit experienced a <strong>1,328% increase in SEO visibility on Google</strong> between July 2023 and April 2024. Google now prominently features Reddit discussions in search results, especially for product recommendations and "best of" queries. When your brand participates authentically on Reddit, those conversations become discoverable in Google search, driving organic traffic to your site.</p>
-                            <p class="text-gray-600 leading-relaxed">Key benefits include: <strong>higher domain authority from Reddit backlinks</strong>, increased brand visibility in Google's "Discussions and forums" search feature, and improved rankings for branded search terms when users discuss your products positively on Reddit.</p>
+                        <div class="faq-answer px-0">
+                            <p class="text-gray-600 leading-relaxed mb-4">Reddit has become a major driver of SEO visibility. According to recent data, Reddit experienced a 1,328% increase in SEO visibility on Google between July 2023 and April 2024. Google now prominently features Reddit discussions in search results, especially for product recommendations and "best of" queries. When your brand participates authentically on Reddit, those conversations become discoverable in Google search, driving organic traffic to your site.</p>
+                            <p class="text-gray-600 leading-relaxed">Key benefits include higher domain authority from Reddit backlinks, increased brand visibility in Google's "Discussions and forums" search feature, and improved rankings for branded search terms when users discuss your products positively on Reddit.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">Why is Reddit the #1 source for AI and ChatGPT citations?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">Why is Reddit important for AI and ChatGPT visibility?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">Reddit has become a <strong>major source for AI and LLM training data</strong>. While Reddit's citation percentage in tools like ChatGPT fluctuates based on algorithm changes, the platform remains highly influential in how AI tools respond to product recommendations and advice queries. Recent data shows Reddit's prominence varies significantly, with citations ranging from <strong>2-10%</strong> depending on the query type and AI model version.</p>
-                            <p class="text-gray-600 leading-relaxed">What matters most is that <strong>Reddit is the #1 platform for authentic product discussions</strong> - with 51% of all online purchase conversations happening on Reddit (Reddit Inc., 2024). This creates a powerful opportunity: authentic Reddit engagement doesn't just build community - it positions your brand as the recommended solution when millions query AI tools. This is what we call <strong>"GEO" (Generative Engine Optimization)</strong> - the next frontier of digital marketing.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">How does RECHO optimize Reddit presence for both SEO and AI discovery?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">Our approach combines organic community building with strategic positioning for maximum search and AI visibility:</p>
-                            <ul class="text-gray-600 space-y-2 ml-4">
-                                <li>• <strong>Strategic Subreddit Targeting:</strong> We identify high-authority subreddits that Google and LLMs prioritize for citations</li>
-                                <li>• <strong>Authentic Value Creation:</strong> We post genuinely helpful content that users naturally reference and upvote</li>
-                                <li>• <strong>Keyword Optimization:</strong> We incorporate search-relevant terms naturally in posts and comments</li>
-                                <li>• <strong>Consistent Brand Presence:</strong> We build your brand's authority across multiple relevant communities</li>
-                                <li>• <strong>Performance Tracking:</strong> We monitor your brand's visibility in both Google search results and AI tool responses</li>
-                            </ul>
-                            <p class="text-gray-600 leading-relaxed mt-3">The result? Your brand becomes the go-to recommendation in both traditional search and AI-powered queries, driving qualified traffic from multiple discovery channels.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What ROI can I expect from Reddit's SEO and AI visibility benefits?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">The compound effect is significant. Brands with strong Reddit presence see:</p>
-                            <ul class="text-gray-600 space-y-2 ml-4">
-                                <li>• <strong>2-3x increase in branded search volume</strong> as Reddit discussions drive awareness</li>
-                                <li>• <strong>15-25% of total organic traffic</strong> coming from Google searches that surface Reddit threads</li>
-                                <li>• <strong>Higher conversion rates</strong> (often 2x higher) from Reddit-sourced traffic due to pre-qualified intent</li>
-                                <li>• <strong>Sustained traffic growth</strong> - Reddit posts continue driving traffic months or even years after posting</li>
-                                <li>• <strong>AI recommendation advantage</strong> - your brand becomes the default suggestion in ChatGPT and other LLM responses</li>
-                            </ul>
-                            <p class="text-gray-600 leading-relaxed mt-3">Unlike paid advertising that stops when budget runs out, Reddit SEO and AI visibility create <strong>compounding long-term value</strong> that grows over time.</p>
+                        <div class="faq-answer px-0">
+                            <p class="text-gray-600 leading-relaxed mb-4">Reddit is the #1 platform for authentic product discussions, with 51% of all online purchase conversations happening on Reddit (Reddit Inc., 2024). This makes it a crucial data source for AI and LLM training. When millions query AI tools for product recommendations, authentic Reddit engagement positions your brand as the recommended solution.</p>
+                            <p class="text-gray-600 leading-relaxed">This is what we call "GEO" (Generative Engine Optimization) - the next frontier of digital marketing. By building authentic presence on Reddit, your brand doesn't just build community; it becomes the default answer when users ask AI tools for recommendations.</p>
                         </div>
                     </div>
                 </div>
             </div>
-                    <i class="fas fa-handshake text-recho-orange mr-3"></i>
-                    Working with RECHO
-                </h2>
+
+            <!-- Working with RECHO -->
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Working with RECHO</h2>
                 
-                <div class="space-y-4">
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">How does RECHO manage my brand's Reddit presence?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">How does RECHO manage my brand's Reddit presence?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">RECHO provides comprehensive Reddit management including:</p>
-                            <ul class="text-gray-600 space-y-2 ml-4">
-                                <li>• <strong>Profile Management:</strong> Setup and optimization of your brand's Reddit user profiles and sub-profiles</li>
-                                <li>• <strong>Strategic Posting:</strong> Creating and posting valuable content in relevant subreddits</li>
-                                <li>• <strong>Community Engagement:</strong> Active participation through replies, upvoting, and discussion</li>
-                                <li>• <strong>Subreddit Management:</strong> Creating, moderating, and growing your brand's subreddit</li>
-                                <li>• <strong>Monitoring:</strong> 24/7 tracking of brand mentions and opportunities</li>
-                                <li>• <strong>Reputation Management:</strong> Responding to questions and managing sentiment</li>
+                        <div class="faq-answer px-0">
+                            <p class="text-gray-600 leading-relaxed mb-4">RECHO provides comprehensive Reddit management including:</p>
+                            <ul class="text-gray-600 space-y-2 pl-4">
+                                <li><strong>Profile Management:</strong> Setup and optimization of your brand's Reddit profiles</li>
+                                <li><strong>Strategic Posting:</strong> Creating and posting valuable content in relevant subreddits</li>
+                                <li><strong>Community Engagement:</strong> Active participation through replies and discussions</li>
+                                <li><strong>Monitoring:</strong> 24/7 tracking of brand mentions and opportunities</li>
+                                <li><strong>Reputation Management:</strong> Responding to questions and managing sentiment</li>
                             </ul>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What makes RECHO different from other agencies?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">What makes RECHO different from other agencies?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed">RECHO is Reddit-specialized and offers a unique integrated approach: we combine organic community building with paid advertising, powered by proprietary technology. Our platform provides unified analytics across both channels, identifies high-value opportunities in real-time, and ensures optimal performance through automated optimization. This integration ensures your organic and paid efforts work together synergistically, maximizing brand recall and ROI.</p>
+                        <div class="faq-answer px-0">
+                            <p class="text-gray-600 leading-relaxed">RECHO is Reddit-specialized and offers a unique integrated approach: we combine organic community building with paid advertising, powered by our proprietary EchoMind technology. Our platform provides unified analytics across both channels, identifies high-value opportunities in real-time, and ensures optimal performance through automated optimization. This integration ensures your organic and paid efforts work together synergistically, maximizing brand recall and ROI.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">How do you measure success?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">How long does it take to see results?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed mb-3">We track comprehensive metrics across both organic and paid channels:</p>
-                            <ul class="text-gray-600 space-y-2 ml-4">
-                                <li>• <strong>Organic Metrics:</strong> Brand engagement, impressions, reach, comment sentiment, community growth, and participation rates</li>
-                                <li>• <strong>Paid Metrics:</strong> Cost-per-click (CPC), click-through rate (CTR), impressions, conversion rate, and return on ad spend (ROAS)</li>
-                                <li>• <strong>Brand Health:</strong> Brand recall surveys, sentiment analysis, and share of voice in relevant conversations</li>
-                                <li>• <strong>Ultimate Goal:</strong> Increased brand recall and positive brand association within your target communities</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What's your proprietary technology?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed">Our proprietary technology platform provides: unified dashboard for organic and paid performance; real-time sentiment analysis across Reddit; AI-powered opportunity detection for high-value discussions; smart automation for scheduling and optimization; cross-channel attribution showing how organic and paid work together; compliance monitoring to ensure Reddit guideline adherence; and predictive analytics for trend identification. This technology ensures we maximize your impact across both organic and paid channels while minimizing wasted effort and budget.</p>
-                        </div>
-                    </div>
-
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">How long does it take to see results?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
-                        </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">Paid advertising results can be seen immediately—within days of launching campaigns, you'll have data on clicks, impressions, and conversions. Organic community building takes longer; expect to see meaningful engagement within 4-8 weeks as we build your presence and reputation. Brand recall and sentiment improvements typically manifest over 3-6 months. However, with RECHO's integrated approach, paid ads provide immediate results while organic efforts build long-term sustainable growth.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What industries does RECHO work with?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">What industries does RECHO work with?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">RECHO works with brands across all industries. Reddit has active communities for virtually every topic—from technology and gaming to finance, health, beauty, fashion, home improvement, and more. Whether you're B2B, B2C, SaaS, e-commerce, or service-based, if your target audience is on Reddit (and they probably are), we can help you reach them effectively.</p>
                         </div>
                     </div>
@@ -388,39 +322,36 @@
             </div>
 
             <!-- Getting Started -->
-            <div class="mb-12">
-                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
-                    <i class="fas fa-rocket text-recho-orange mr-3"></i>
-                    Getting Started
-                </h2>
+            <div class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Getting Started</h2>
                 
-                <div class="space-y-4">
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">How do I get started with RECHO?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">How do I get started with RECHO?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
-                            <p class="text-gray-600 leading-relaxed">Getting started is easy! Book a call with our team, and we'll: conduct a Reddit ecosystem analysis for your brand; identify key communities and opportunities; review your current Reddit presence (if any); discuss your goals and budget; and provide a custom strategy recommendation. From there, we can typically launch within 2-3 weeks.</p>
+                        <div class="faq-answer px-0">
+                            <p class="text-gray-600 leading-relaxed">Getting started is easy! Book a call with our team, and we'll conduct a Reddit ecosystem analysis for your brand, identify key communities and opportunities, review your current Reddit presence (if any), discuss your goals and budget, and provide a custom strategy recommendation. From there, we can typically launch within 2-3 weeks.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">What's the minimum budget to work with RECHO?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">What's the minimum budget to work with RECHO?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">We work with businesses of all sizes. For paid advertising, Reddit's minimum is just $5/day, though we recommend starting with at least $1,000-$2,000/month for testing. Organic services can be tailored to your needs. During your strategy call, we'll recommend a budget based on your goals, industry, and competitive landscape.</p>
                         </div>
                     </div>
 
-                    <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                        <button class="faq-question w-full px-6 py-5 text-left flex justify-between items-center">
-                            <span class="text-lg font-semibold text-gray-800">Do I need to have a Reddit presence already?</span>
-                            <i class="fas fa-chevron-down text-recho-orange faq-icon"></i>
+                    <div class="faq-item">
+                        <button class="faq-question w-full py-6 text-left flex justify-between items-center group">
+                            <span class="text-lg font-medium text-gray-900 pr-8">Do I need to have a Reddit presence already?</span>
+                            <i class="fas fa-chevron-down text-gray-400 chevron-icon text-sm group-hover:text-recho-orange"></i>
                         </button>
-                        <div class="faq-answer px-6 pb-5">
+                        <div class="faq-answer px-0">
                             <p class="text-gray-600 leading-relaxed">No! RECHO can start from scratch or build on existing presence. We'll create and optimize your brand's Reddit profiles, identify relevant communities, develop your content strategy, and handle everything from setup to execution. If you already have a Reddit presence, we'll audit it and optimize for better performance.</p>
                         </div>
                     </div>
@@ -431,11 +362,11 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-gradient-to-r from-recho-orange to-recho-dark text-white">
+    <section class="py-20 bg-gradient-to-br from-recho-orange to-recho-light text-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">Still Have Questions?</h2>
-            <p class="text-xl mb-8 opacity-90">Let's discuss how RECHO can help your brand succeed on Reddit</p>
-            <a href="contact.html" class="inline-block bg-white text-recho-orange px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Still Have Questions?</h2>
+            <p class="text-xl mb-10 opacity-95 max-w-2xl mx-auto">Let's discuss how RECHO can help your brand succeed on Reddit</p>
+            <a href="contact.html" class="inline-block bg-white text-recho-orange px-12 py-5 rounded-full font-bold text-lg hover:bg-gray-50 transition-all duration-300 shadow-2xl hover:shadow-xl transform hover:-translate-y-1">
                 Book Your Strategy Call
                 <i class="fas fa-calendar-alt ml-2"></i>
             </a>
@@ -443,48 +374,55 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16">
+    <footer class="bg-gray-900 text-white py-12">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <div class="mb-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="mb-4">
                         <img src="images/recho-logo-white-full.png" alt="RECHO - A Full Service Reddit Agency" class="h-16 w-auto">
                     </div>
-                    <p class="text-gray-300 mb-6">
-                        Full-service Reddit marketing agency combining organic community building, paid advertising, and proprietary technology.
+                    <p class="text-gray-400 mb-4">
+                        RECHO specializes in Reddit marketing, helping brands leverage the platform's 400M+ weekly users through organic engagement, paid advertising, and proprietary technology.
                     </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-recho-orange transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-recho-orange transition-colors">
+                            <i class="fab fa-twitter text-2xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-recho-orange transition-colors">
+                            <i class="fab fa-reddit text-2xl"></i>
+                        </a>
+                    </div>
                 </div>
                 
+                <!-- Quick Links -->
                 <div>
-                    <h3 class="text-lg font-bold mb-4">Services</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="index.html#services" class="hover:text-recho-orange transition-colors">Reddit Organic</a></li>
-                        <li><a href="index.html#services" class="hover:text-recho-orange transition-colors">Reddit Ads</a></li>
-                        <li><a href="index.html#services" class="hover:text-recho-orange transition-colors">Technology</a></li>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="services.html" class="text-gray-400 hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="technology.html" class="text-gray-400 hover:text-recho-orange transition-colors">Technology</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-recho-orange transition-colors">FAQs</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-recho-orange transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-recho-orange transition-colors">Book a Call</a></li>
                     </ul>
                 </div>
                 
+                <!-- Contact Info -->
                 <div>
-                    <h3 class="text-lg font-bold mb-4">Company</h3>
-                    <ul class="space-y-2 text-gray-300">
-                        <li><a href="index.html" class="hover:text-recho-orange transition-colors">Services</a></li>
-                        <li><a href="faq.html" class="hover:text-recho-orange transition-colors">FAQs</a></li>
-                        <li><a href="blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
-                        <li><a href="contact.html" class="hover:text-recho-orange transition-colors">Book a Call</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-lg font-bold mb-4">Get in Touch</h3>
-                    <ul class="space-y-3 text-gray-300">
-                        <li><a href="mailto:hello@recho.agency" class="hover:text-recho-orange transition-colors">hello@recho.agency</a></li>
-                        <li><a href="tel:+15551234567" class="hover:text-recho-orange transition-colors">+1 (555) 123-4567</a></li>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><i class="fas fa-envelope mr-2"></i> hello@recho.com</li>
+                        <li><i class="fas fa-phone mr-2"></i> (555) 123-4567</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="border-t border-gray-800 pt-8 text-center">
-                <p class="text-gray-400 text-sm">&copy; 2024 RECHO. All rights reserved.</p>
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 RECHO. All rights reserved. | <a href="#" class="hover:text-recho-orange transition-colors">Privacy Policy</a> | <a href="#" class="hover:text-recho-orange transition-colors">Terms of Service</a></p>
             </div>
         </div>
     </footer>
@@ -492,23 +430,30 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
     <script>
-        // FAQ Accordion functionality
+        // Clean Tilda-style FAQ Accordion
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const answer = button.nextElementSibling;
-                const icon = button.querySelector('.faq-icon');
+                const icon = button.querySelector('.chevron-icon');
+                const isActive = answer.classList.contains('active');
                 
-                // Close all other open FAQs
-                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                // Close all other open FAQs in the same section
+                const parentList = button.closest('.faq-list');
+                parentList.querySelectorAll('.faq-answer').forEach(otherAnswer => {
                     if (otherAnswer !== answer && otherAnswer.classList.contains('active')) {
                         otherAnswer.classList.remove('active');
-                        otherAnswer.previousElementSibling.querySelector('.faq-icon').classList.remove('rotate');
+                        otherAnswer.previousElementSibling.querySelector('.chevron-icon').classList.remove('rotate');
                     }
                 });
                 
                 // Toggle current FAQ
-                answer.classList.toggle('active');
-                icon.classList.toggle('rotate');
+                if (isActive) {
+                    answer.classList.remove('active');
+                    icon.classList.remove('rotate');
+                } else {
+                    answer.classList.add('active');
+                    icon.classList.add('rotate');
+                }
             });
         });
     </script>

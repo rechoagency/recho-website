@@ -320,4 +320,4 @@ document.head.appendChild(style);
 // Console welcome message
 console.log('%c🚀 RECHO - Full-Service Reddit Marketing Agency', 'color: #E6462F; font-size: 20px; font-weight: bold;');
 console.log('%cWebsite loaded successfully!', 'color: #10B981; font-size: 14px;');
-console.log('%cLooking to dominate Reddit? Contact us at hello@recho.agency', 'color: #6B7280; font-size: 12px;');
+console.log('%cLooking to dominate Reddit? Contact us at sales@recho.co', 'color: #6B7280; font-size: 12px;');

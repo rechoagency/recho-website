@@ -110,10 +110,11 @@
                 <div class="relative">
                     <input 
                         type="text" 
+                        id="blog-search"
                         placeholder="Search articles, guides, and insights..." 
                         class="search-input w-full px-6 py-4 rounded-full text-gray-800 border-2 border-transparent focus:border-recho-orange transition-all"
                     >
-                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all">
+                    <button id="search-btn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -121,78 +122,17 @@
         </div>
     </section>
 
-    <!-- WordPress Integration Notice -->
-    <section class="py-12 bg-blue-50 border-y border-blue-200">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-500">
-                    <i class="fas fa-info-circle text-blue-500 text-4xl mb-4"></i>
-                    <h2 class="text-2xl font-bold text-gray-800 mb-4">WordPress Blog Integration</h2>
-                    <p class="text-gray-600 mb-4">
-                        This blog section is designed to integrate with your WordPress installation. The content below shows placeholder articles to demonstrate the layout and design.
-                    </p>
-                    <p class="text-sm text-gray-500">
-                        <strong>Setup Instructions:</strong> Install WordPress in a subdirectory (e.g., /blog/) or configure your WordPress theme to match this design. Use the WordPress REST API or embed WordPress content directly into this template.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Category Filter -->
     <section class="py-8 bg-white border-b border-gray-200">
         <div class="container mx-auto px-6">
             <div class="flex flex-wrap justify-center gap-3">
                 <button class="category-tag px-6 py-2 rounded-full bg-recho-orange text-white font-semibold">All Posts</button>
+                <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Community Management</button>
                 <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Reddit Strategy</button>
                 <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Advertising Tips</button>
-
-                <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Community Management</button>
                 <button class="category-tag px-6 py-2 rounded-full bg-gray-200 text-gray-700 font-semibold">Platform Updates</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Post -->
-    <section class="py-16">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Featured Article</h2>
-            <div class="max-w-5xl mx-auto">
-                <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow">
-                    <div class="grid md:grid-cols-2 gap-0">
-                        <div class="bg-gradient-to-br from-recho-orange to-red-600 p-12 flex items-center justify-center">
-                            <div class="text-white text-center">
-                                <i class="fas fa-rocket text-6xl mb-6"></i>
-                                <h3 class="text-3xl font-bold mb-4">Featured Article</h3>
-                                <p class="text-lg opacity-90">Latest insights on Reddit marketing</p>
-                            </div>
-                        </div>
-                        <div class="p-8">
-                            <div class="flex items-center gap-3 mb-4">
-                                <span class="px-3 py-1 bg-green-600 text-white text-sm rounded-full font-semibold">Community Management</span>
-                                <span class="text-gray-500 text-sm">January 15, 2025</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">How to Build an Engaged Reddit Community Without Being That Brand Plug</h3>
-                            <p class="text-gray-600 mb-6 leading-relaxed">
-                                Learn how to build an engaged Reddit community authentically. Discover strategies for genuine community building, authentic participation, and earning trust on Reddit without sounding like a brand plug.
-                            </p>
-                            <div class="flex items-center justify-between w-full">
-                                <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-user text-gray-600"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-semibold text-gray-800 text-sm">RECHO Team</p>
-                                        <p class="text-gray-500 text-xs">Marketing Experts</p>
-                                    </div>
-                                </div>
-                                <a href="blog-post-1.html" class="text-recho-orange font-semibold hover:underline flex items-center gap-2">
-                                    Read More <i class="fas fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -234,10 +174,10 @@
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 bg-blue-100 text-recho-blue text-xs rounded-full font-semibold">Subreddit Strategy</span>
+                            <span class="px-3 py-1 bg-blue-100 text-recho-blue text-xs rounded-full font-semibold">Reddit Strategy</span>
                             <span class="text-gray-500 text-xs">January 15, 2025</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Why Your Reddit Subreddit Strategy Is Failing and How to Fix It</h3>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Why Your Reddit Reddit Strategy Is Failing and How to Fix It</h3>
                         <p class="text-gray-600 text-sm mb-4 leading-relaxed">
                             Discover why most subreddit strategies fail and learn how to fix them with authentic, human engagement.
                         </p>
@@ -299,61 +239,10 @@
                     </div>
                 </article>
 
-                <!-- Blog Post 5 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div class="bg-gradient-to-br from-pink-500 to-pink-700 h-48 flex items-center justify-center">
-                        <i class="fas fa-lightbulb text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 bg-pink-100 text-pink-700 text-xs rounded-full font-semibold">Reddit Strategy</span>
-                            <span class="text-gray-500 text-xs">December 28, 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Reddit Karma: What Brands Need to Know</h3>
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                            Understanding Reddit's karma system and how it impacts your brand's credibility and reach on the platform.
-                        </p>
-                        <div class="flex items-center justify-between w-full">
-                            <div class="flex items-center gap-2 text-gray-500 text-xs">
-                                <i class="fas fa-clock"></i>
-                                <span>7 min read</span>
-                            </div>
-                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
-                        </div>
-                    </div>
-                </article>
 
-                <!-- Blog Post 6 -->
-                <article class="blog-card bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <div class="bg-gradient-to-br from-indigo-500 to-indigo-700 h-48 flex items-center justify-center">
-                        <i class="fas fa-bullseye text-white text-5xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-2 mb-3">
-                            <span class="px-3 py-1 bg-indigo-100 text-indigo-700 text-xs rounded-full font-semibold">Advertising Tips</span>
-                            <span class="text-gray-500 text-xs">December 25, 2024</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">Targeting the Right Subreddits for Your Brand</h3>
-                        <p class="text-gray-600 text-sm mb-4 leading-relaxed">
-                            A comprehensive guide to finding and targeting the most relevant subreddits for your marketing campaigns.
-                        </p>
-                        <div class="flex items-center justify-between w-full">
-                            <div class="flex items-center gap-2 text-gray-500 text-xs">
-                                <i class="fas fa-clock"></i>
-                                <span>9 min read</span>
-                            </div>
-                            <a href="#" class="text-recho-orange font-semibold text-sm hover:underline">Read Article</a>
-                        </div>
-                    </div>
-                </article>
             </div>
 
-            <!-- Load More Button -->
-            <div class="text-center mt-12">
-                <button class="bg-white text-recho-orange border-2 border-recho-orange px-8 py-3 rounded-full font-semibold hover:bg-recho-orange hover:text-white transition-all">
-                    Load More Articles <i class="fas fa-chevron-down ml-2"></i>
-                </button>
-            </div>
+
         </div>
     </section>
 
@@ -386,7 +275,7 @@
                         Full-service Reddit marketing agency combining organic community building, paid advertising, and proprietary technology.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://www.linkedin.com/company/recho" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                        <a href="https://www.linkedin.com/company/rechoagency" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                         <a href="mailto:sales@recho.co" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
@@ -463,17 +352,93 @@
                 this.classList.remove('bg-gray-200', 'text-gray-700');
                 this.classList.add('bg-recho-orange', 'text-white');
                 
-                // In a real implementation, this would filter the blog posts
-                console.log('Filter category:', this.textContent);
+                // Filter blog posts by category
+                const selectedCategory = this.textContent.trim().toLowerCase();
+                const blogCards = document.querySelectorAll('.blog-card');
+                let hasVisiblePosts = false;
+                
+                blogCards.forEach(card => {
+                    const categoryBadge = card.querySelector('.px-3');
+                    const cardCategory = categoryBadge ? categoryBadge.textContent.trim().toLowerCase() : '';
+                    
+                    // Show all posts if "All Posts" is selected, otherwise filter by category
+                    if (selectedCategory === 'all posts' || cardCategory === selectedCategory) {
+                        card.style.display = 'block';
+                        hasVisiblePosts = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Show "no posts" message if no posts match the category
+                const existingMessage = document.querySelector('.no-category-message');
+                if (!hasVisiblePosts) {
+                    if (!existingMessage) {
+                        const message = document.createElement('div');
+                        message.className = 'no-category-message text-center text-gray-600 text-xl py-12';
+                        message.innerHTML = '<i class="fas fa-filter text-4xl mb-4 opacity-50"></i><p>No articles in "' + this.textContent + '" category yet.</p>';
+                        document.querySelector('.grid').parentElement.appendChild(message);
+                    }
+                } else if (existingMessage) {
+                    existingMessage.remove();
+                }
+                
+                // Clear search when category is clicked
+                document.getElementById('blog-search').value = '';
+                const searchMessage = document.querySelector('.no-results-message');
+                if (searchMessage) searchMessage.remove();
             });
         });
         
-        // Search functionality (placeholder)
-        document.querySelector('.search-input').addEventListener('keypress', function(e) {
+        // Search functionality
+        const searchInput = document.getElementById('blog-search');
+        const searchBtn = document.getElementById('search-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+        
+        function performSearch() {
+            const query = searchInput.value.toLowerCase().trim();
+            let hasResults = false;
+            
+            blogCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const category = card.querySelector('.px-3').textContent.toLowerCase();
+                
+                if (query === '' || title.includes(query) || description.includes(query) || category.includes(query)) {
+                    card.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Show "no results" message if needed
+            const existingMessage = document.querySelector('.no-results-message');
+            if (!hasResults && query !== '') {
+                if (!existingMessage) {
+                    const message = document.createElement('div');
+                    message.className = 'no-results-message text-center text-gray-600 text-xl py-12';
+                    message.innerHTML = '<i class="fas fa-search text-4xl mb-4 opacity-50"></i><p>No articles found matching "' + query + '"</p>';
+                    document.querySelector('.grid').parentElement.appendChild(message);
+                }
+            } else if (existingMessage) {
+                existingMessage.remove();
+            }
+        }
+        
+        searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
-                console.log('Search query:', this.value);
-                // In a real implementation, this would trigger a search
+                performSearch();
+            }
+        });
+        
+        searchBtn.addEventListener('click', performSearch);
+        
+        // Clear search when input is empty
+        searchInput.addEventListener('input', function() {
+            if (this.value === '') {
+                performSearch();
             }
         });
     </script>

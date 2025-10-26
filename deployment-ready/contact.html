@@ -514,28 +514,55 @@
     
     <!-- Page-Specific JavaScript -->
     <script>
-        // Show success message if redirected back with success parameter
-        window.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                const successMessage = document.getElementById('success-message');
-                if (successMessage) {
-                    successMessage.classList.add('show');
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // Hide after 15 seconds
-                    setTimeout(function() {
-                        successMessage.classList.remove('show');
-                    }, 15000);
-                    
-                    // Clean URL
-                    window.history.replaceState({}, document.title, window.location.pathname);
+        // Form submission handling (placeholder for WordPress integration)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // In a real WordPress integration, this would send data via AJAX to WordPress
+            // For now, we'll show a success message as a placeholder
+            console.log('Form submitted with data:', Object.fromEntries(formData));
+            
+            // Show success message
+            const successMessage = document.getElementById('success-message');
+            successMessage.style.display = 'block';
+            
+            // Scroll to success message
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Reset form
+            this.reset();
+            
+            // Hide success message after 10 seconds
+            setTimeout(function() {
+                successMessage.style.display = 'none';
+            }, 10000);
+            
+            // In real implementation, this would be replaced with:
+            /*
+            fetch('/wp-json/contact-form/v1/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show success message
+                    document.getElementById('success-message').style.display = 'block';
+                    this.reset();
+                } else {
+                    // Show error message
+                    alert('There was an error submitting your form. Please try again.');
                 }
-            }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your form. Please try again.');
+            });
+            */
         });
-        
-        // Form submission handling - Let FormSubmit.co handle the actual submission
-        // The form will submit normally to FormSubmit.co which handles the email delivery
     </script>
 </body>
 </html>

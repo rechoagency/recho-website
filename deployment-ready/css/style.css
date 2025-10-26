@@ -266,16 +266,6 @@ button:active,
     background: var(--primary-dark);
 }
 
-/* Success message - hidden by default */
-.success-message {
-    display: none;
-}
-
-.success-message.show {
-    display: block;
-    animation: slideDown 0.5s ease-out;
-}
-
 /* Mobile menu animation */
 #mobile-menu {
     transition: all 0.3s ease;

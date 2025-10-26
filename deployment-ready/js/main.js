@@ -3,51 +3,21 @@
 // DOM Content Loaded Event Listener
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Modern Mobile Menu Toggle with Slide-in Overlay
+    // Mobile Menu Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
-    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
-    const mobileMenuClose = document.getElementById('mobile-menu-close');
     
-    function openMobileMenu() {
-        mobileMenu.classList.remove('translate-x-full');
-        mobileMenuOverlay.classList.remove('hidden');
-        mobileMenuBtn.setAttribute('aria-expanded', 'true');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
-    
-    function closeMobileMenu() {
-        mobileMenu.classList.add('translate-x-full');
-        mobileMenuOverlay.classList.add('hidden');
-        mobileMenuBtn.setAttribute('aria-expanded', 'false');
-        document.body.style.overflow = ''; // Restore scrolling
-    }
-    
-    if (mobileMenuBtn && mobileMenu && mobileMenuOverlay) {
-        // Open menu on button click
-        mobileMenuBtn.addEventListener('click', openMobileMenu);
-        
-        // Close menu on close button click
-        if (mobileMenuClose) {
-            mobileMenuClose.addEventListener('click', closeMobileMenu);
-        }
-        
-        // Close menu on overlay click
-        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
-        
-        // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll('.mobile-nav-link, a[href]');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                closeMobileMenu();
-            });
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
         });
         
-        // Close menu on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
-                closeMobileMenu();
-            }
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
         });
     }
     
@@ -262,7 +232,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Keyboard navigation support is handled in mobile menu section above
+    // Add keyboard navigation support
+    document.addEventListener('keydown', (e) => {
+        // ESC key closes mobile menu
+        if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
     
     // Track scroll depth for analytics (optional)
     let scrollDepths = [25, 50, 75, 100];

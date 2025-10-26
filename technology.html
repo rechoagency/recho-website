@@ -1,3 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Technology | EchoMind by RECHO</title>
+    <meta name="description" content="EchoMind is RECHO's advanced Reddit technology platform. AI-powered Reddit marketing software that automates community building and ad optimization at scale.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/recho-favicon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'recho-orange': '#E6462F',
+                        'recho-light': '#FF5722',
+                        'recho-dark': '#D32F2F',
+                        'recho-blue': '#2563EB',
+                        'recho-blue-dark': '#1E40AF',
+                        'recho-navy': '#1a2332'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .hexagon {
+            width: 140px;
+            height: 160px;
+            position: relative;
+            margin: 0 auto;
+        }
+        .hexagon-inner {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #7c3626 0%, #4a1f16 100%);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .hexagon-text {
+            color: #E6462F;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.2;
+        }
+        .hexagon-label {
+            color: white;
+            font-size: 11px;
+            font-weight: 400;
+            text-align: center;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body class="font-poppins bg-white">
+    
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="images/recho-logo-corrected.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Services</a>
+                    <a href="technology.html" class="nav-link text-recho-orange font-semibold transition-colors duration-300">Technology</a>
+                    <a href="faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
+                    <a href="blog.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>
+                    <a href="contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all duration-300 font-medium">
+                        Book a Call
+                    </a>
+                </div>
+                
                 <!-- Mobile Menu Button -->
                 <div class="md:hidden">
                     <button id="mobile-menu-button" class="text-gray-700 hover:text-recho-orange focus:outline-none z-50 relative" aria-label="Toggle menu" aria-expanded="false">
@@ -15,7 +110,9 @@
             <div class="flex flex-col h-full">
                 <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
-                    <img src="images/recho-logo-corrected.png" alt="RECHO" class="h-12">
+                    <a href="index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors">
+                        <i class="fas fa-home mr-2"></i>Home
+                    </a>
                     <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none" aria-label="Close menu">
                         <i class="fas fa-times text-2xl"></i>
                     </button>
@@ -58,6 +155,7 @@
                 </div>
             </div>
         </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->

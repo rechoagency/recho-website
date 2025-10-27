@@ -1,8 +1,0 @@
-# robots.txt for RECHO - Full-Service Reddit Marketing Agency
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-# Sitemaps
-Sitemap: https://www.recho.co/sitemap.xml

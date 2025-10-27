@@ -556,28 +556,72 @@
     
     <!-- Page-Specific JavaScript -->
     <script>
-        // Show success message if redirected back with success parameter
-        window.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('success') === 'true') {
-                const successMessage = document.getElementById('success-message');
-                if (successMessage) {
-                    successMessage.classList.add('show');
-                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // AJAX Form Submission with Formspree
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('contact-form');
+            const submitButton = form.querySelector('button[type="submit"]');
+            const successMessage = document.getElementById('success-message');
+            const originalButtonText = submitButton.innerHTML;
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Disable button and show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                
+                // Get form data
+                const formData = new FormData(form);
+                
+                try {
+                    // Submit to Formspree
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
                     
-                    // Hide after 15 seconds
-                    setTimeout(function() {
-                        successMessage.classList.remove('show');
-                    }, 15000);
+                    if (response.ok) {
+                        // Success! Show success message
+                        successMessage.classList.add('show');
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        
+                        // Reset form
+                        form.reset();
+                        
+                        // Hide success message after 15 seconds
+                        setTimeout(function() {
+                            successMessage.classList.remove('show');
+                        }, 15000);
+                        
+                        // Re-enable button
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                        
+                    } else {
+                        // Error from Formspree
+                        const data = await response.json();
+                        alert('Oops! There was a problem submitting your form. Please try again or email us directly at sales@recho.co');
+                        console.error('Form submission error:', data);
+                        
+                        // Re-enable button
+                        submitButton.disabled = false;
+                        submitButton.innerHTML = originalButtonText;
+                    }
                     
-                    // Clean URL
-                    window.history.replaceState({}, document.title, window.location.pathname);
+                } catch (error) {
+                    // Network error
+                    alert('Oops! There was a problem submitting your form. Please try again or email us directly at sales@recho.co');
+                    console.error('Form submission error:', error);
+                    
+                    // Re-enable button
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
                 }
-            }
+            });
         });
-        
-        // Form submission handling - Let FormSubmit.co handle the actual submission
-        // The form will submit normally to FormSubmit.co which handles the email delivery
     </script>
 </body>
 </html>

@@ -567,15 +567,6 @@
           "inLanguage": "en-US"
         },
         {
-          "@type": "Service",
-          "@id": "https://www.recho.co/#service",
-          "serviceType": "Marketing Service",
-          "name": "Reddit Marketing Services",
-          "description": "Comprehensive Reddit marketing services including organic community management, paid advertising campaigns, and proprietary AI-powered technology.",
-          "provider": {"@id": "https://www.recho.co/#organization"},
-          "areaServed": {"@type": "Place", "name": "Worldwide"}
-        },
-        {
           "@type": "BreadcrumbList",
           "@id": "https://www.recho.co/#breadcrumb",
           "itemListElement": [
@@ -583,6 +574,55 @@
           ]
         }
       ]
+    }
+    </script>
+
+    <!-- Service Schema (Top-level for Google Rich Results) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": "https://www.recho.co/#service",
+      "serviceType": "Marketing Service",
+      "name": "Reddit Marketing Services",
+      "description": "Comprehensive Reddit marketing services including organic community management, paid advertising campaigns, and proprietary AI-powered technology.",
+      "provider": {
+        "@type": "Organization",
+        "name": "RECHO",
+        "url": "https://www.recho.co",
+        "@id": "https://www.recho.co/#organization"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Reddit Marketing Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reddit Organic Management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Reddit Paid Advertising"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "EchoMind Technology"
+            }
+          }
+        ]
+      }
     }
     </script>
 

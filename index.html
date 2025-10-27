@@ -508,33 +508,45 @@
     </footer>
 
     <!-- JSON-LD Schema Markup -->
+    <!-- Comprehensive JSON-LD Schema Markup -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://recho.co/#organization",
+          "@id": "https://www.recho.co/#organization",
           "name": "RECHO",
-          "legalName": "RECHO - A Full Service Reddit Agency",
-          "url": "https://recho.co",
+          "legalName": "RECHO - Full Service Reddit Marketing Agency",
+          "url": "https://www.recho.co",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://recho.co/images/recho-logo.png",
-            "width": 200,
-            "height": 60
+            "@id": "https://www.recho.co/#logo",
+            "url": "https://www.recho.co/images/recho-logo.png",
+            "contentUrl": "https://www.recho.co/images/recho-logo.png",
+            "caption": "RECHO Logo",
+            "inLanguage": "en-US",
+            "width": "200",
+            "height": "60"
           },
-          "description": "Full-service Reddit marketing agency specializing in organic community management, paid advertising, and proprietary technology.",
+          "image": {
+            "@id": "https://www.recho.co/#logo"
+          },
+          "description": "Full-service Reddit marketing agency specializing in organic community management, paid advertising, and proprietary EchoMind technology. We help brands reach 400M+ Reddit users.",
+          "slogan": "Full-Service Reddit Marketing Agency",
+          "foundingDate": "2024",
           "address": {
             "@type": "PostalAddress",
             "addressCountry": "US"
           },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "email": "sales@recho.co",
-            "contactType": "Sales",
-            "availableLanguage": "English"
-          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "email": "sales@recho.co",
+              "contactType": "Sales",
+              "availableLanguage": ["English"]
+            }
+          ],
           "sameAs": [
             "https://www.linkedin.com/company/rechoagency"
           ],
@@ -542,35 +554,52 @@
             "@type": "Place",
             "name": "Worldwide"
           },
-          "serviceType": [
+          "knowsAbout": [
             "Reddit Marketing",
             "Reddit Advertising",
+            "Reddit Ads",
             "Community Management",
-            "Social Media Marketing"
+            "Social Media Marketing",
+            "Reddit Organic Management",
+            "Reddit Technology"
           ]
         },
         {
           "@type": "WebSite",
-          "@id": "https://recho.co/#website",
-          "url": "https://recho.co",
+          "@id": "https://www.recho.co/#website",
+          "url": "https://www.recho.co",
           "name": "RECHO - Reddit Marketing Agency",
+          "description": "Full-service Reddit marketing agency specializing in organic management, paid advertising, and EchoMind technology",
           "publisher": {
-            "@id": "https://recho.co/#organization"
+            "@id": "https://www.recho.co/#organization"
           },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://recho.co/?s={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.recho.co/#webpage",
+          "url": "https://www.recho.co",
+          "name": "Full-Service Reddit Marketing Agency | RECHO",
+          "description": "RECHO is a full-service Reddit marketing agency specializing in organic management, paid ads, and EchoMind technology. Reach 400M+ Reddit users effectively.",
+          "isPartOf": {
+            "@id": "https://www.recho.co/#website"
+          },
+          "about": {
+            "@id": "https://www.recho.co/#organization"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://www.recho.co/#logo"
+          },
+          "inLanguage": "en-US"
         },
         {
           "@type": "Service",
-          "@id": "https://recho.co/#service",
-          "serviceType": "Reddit Marketing Services",
-          "name": "Full-Service Reddit Marketing",
-          "description": "Comprehensive Reddit marketing combining organic community building, paid advertising, and proprietary technology.",
+          "@id": "https://www.recho.co/#service",
+          "serviceType": "Marketing Service",
+          "name": "Reddit Marketing Services",
+          "description": "Comprehensive Reddit marketing services including organic community management, paid advertising campaigns, and proprietary AI-powered technology.",
           "provider": {
-            "@id": "https://recho.co/#organization"
+            "@id": "https://www.recho.co/#organization"
           },
           "areaServed": {
             "@type": "Place",
@@ -585,7 +614,7 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Reddit Organic Management",
-                  "description": "Build authentic community presence through strategic posting and engagement."
+                  "description": "Build authentic community presence through strategic posting, engagement, and subreddit management."
                 }
               },
               {
@@ -593,7 +622,7 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "Reddit Paid Advertising",
-                  "description": "Expert campaign management across all Reddit ad formats."
+                  "description": "Expert campaign management across all Reddit ad formats including promoted posts, video ads, and carousel ads."
                 }
               },
               {
@@ -601,11 +630,23 @@
                 "itemOffered": {
                   "@type": "Service",
                   "name": "EchoMind Technology",
-                  "description": "Proprietary AI-powered platform for Reddit marketing automation."
+                  "description": "Proprietary AI-powered platform for automated Reddit marketing, community building, and ad optimization."
                 }
               }
             ]
           }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.recho.co/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.recho.co"
+            }
+          ]
         }
       ]
     }
@@ -613,38 +654,5 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    
-    <!-- JSON-LD Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "RECHO",
-      "alternateName": "RECHO - A Full Service Reddit Agency",
-      "url": "https://www.recho.co",
-      "logo": "https://www.recho.co/images/recho-logo.png",
-      "description": "Full-service Reddit marketing agency specializing in organic management, paid advertising, and EchoMind technology",
-      "email": "sales@recho.co",
-      "sameAs": [
-        "https://www.linkedin.com/company/rechoagency"
-      ],
-      "areaServed": "Worldwide",
-      "knowsAbout": ["Reddit Marketing", "Reddit Advertising", "Reddit Organic Management", "Social Media Marketing", "Community Building"],
-      "slogan": "Full-Service Reddit Marketing Agency"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "RECHO",
-      "url": "https://www.recho.co",
-      "description": "Full-service Reddit marketing agency",
-      "publisher": {
-        "@type": "Organization",
-        "name": "RECHO"
-      }
-    }
-    </script>
 </body>
 </html>

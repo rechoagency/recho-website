@@ -627,7 +627,64 @@
             });
         });
     </script>
+
+    <!-- Comprehensive JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.recho.co/#organization",
+          "name": "RECHO",
+          "url": "https://www.recho.co",
+          "logo": {
+            "@id": "https://www.recho.co/#logo"
+          },
+          "sameAs": [
+            "https://www.linkedin.com/company/rechoagency"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "sales@recho.co",
+            "contactType": "Sales",
+            "availableLanguage": ["English"]
+          }
+        },
+        {
+          "@type": "ContactPage",
+          "@id": "https://www.recho.co/contact.html#contactpage",
+          "url": "https://www.recho.co/contact.html",
+          "name": "Contact RECHO | Reddit Marketing Experts",
+          "description": "Book a free Reddit marketing strategy call with RECHO. Talk to our Reddit ads and organic management experts to grow your brand on Reddit today.",
+          "isPartOf": {
+            "@id": "https://www.recho.co/#website"
+          },
+          "about": {
+            "@id": "https://www.recho.co/#organization"
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.recho.co/contact.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.recho.co"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Contact",
+              "item": "https://www.recho.co/contact.html"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
 </body>
-</html>
-y>
 </html>

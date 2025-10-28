@@ -34,4 +34,4 @@ Allow: /
 Content-signal: search=yes,ai-train=yes
 
 # Sitemaps
-Sitemap: https://www.recho.co/sitemap.xml
+Sitemap: https://recho.co/sitemap.xml

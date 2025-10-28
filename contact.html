@@ -604,6 +604,15 @@
                         successMessage.classList.add('show');
                         successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         
+                        // Track form submission in Google Analytics 4
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'form_submission', {
+                                'event_category': 'Contact',
+                                'event_label': 'Contact Form',
+                                'value': 1
+                            });
+                        }
+                        
                         // Reset form
                         form.reset();
                         

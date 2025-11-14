@@ -486,6 +486,13 @@
     
     <!-- Page-Specific JavaScript -->
     <script>
+        // Helper function to parse date from blog card
+        function parseDate(dateString) {
+            // Parse "November 14, 2025" format
+            const date = new Date(dateString);
+            return date.getTime();
+        }
+        
         // Category filter functionality
         document.querySelectorAll('.category-tag').forEach(button => {
             button.addEventListener('click', function() {
@@ -501,30 +508,56 @@
                 
                 // Filter blog posts by category
                 const selectedCategory = this.textContent.trim().toLowerCase();
-                const blogCards = document.querySelectorAll('.blog-card');
+                const gridContainer = document.querySelector('.grid');
+                const blogLinks = Array.from(gridContainer.querySelectorAll('a.block'));
                 let hasVisiblePosts = false;
                 
-                blogCards.forEach(card => {
+                // Create array of blog posts with their data
+                const blogPosts = blogLinks.map(link => {
+                    const card = link.querySelector('.blog-card');
                     const categoryBadge = card.querySelector('.px-3');
-                    const cardCategory = categoryBadge ? categoryBadge.textContent.trim().toLowerCase() : '';
+                    const dateElement = card.querySelectorAll('.text-gray-500')[0];
                     
-                    // Show all posts if "All Posts" is selected, otherwise filter by category
-                    if (selectedCategory === 'all posts' || cardCategory === selectedCategory) {
-                        card.style.display = 'block';
-                        hasVisiblePosts = true;
-                    } else {
-                        card.style.display = 'none';
-                    }
+                    return {
+                        element: link,
+                        category: categoryBadge ? categoryBadge.textContent.trim().toLowerCase() : '',
+                        date: dateElement ? dateElement.textContent.trim() : '',
+                        dateTimestamp: dateElement ? parseDate(dateElement.textContent.trim()) : 0
+                    };
                 });
+                
+                // Filter posts by category
+                const filteredPosts = blogPosts.filter(post => {
+                    return selectedCategory === 'all posts' || post.category === selectedCategory;
+                });
+                
+                // Sort filtered posts by date (newest first)
+                filteredPosts.sort((a, b) => b.dateTimestamp - a.dateTimestamp);
+                
+                // Hide all posts first
+                blogPosts.forEach(post => {
+                    post.element.style.display = 'none';
+                });
+                
+                // Show filtered posts in sorted order
+                if (filteredPosts.length > 0) {
+                    hasVisiblePosts = true;
+                    
+                    // Clear the grid and re-append in correct order
+                    filteredPosts.forEach(post => {
+                        post.element.style.display = 'block';
+                        gridContainer.appendChild(post.element);
+                    });
+                }
                 
                 // Show "no posts" message if no posts match the category
                 const existingMessage = document.querySelector('.no-category-message');
                 if (!hasVisiblePosts) {
                     if (!existingMessage) {
                         const message = document.createElement('div');
-                        message.className = 'no-category-message text-center text-gray-600 text-xl py-12';
+                        message.className = 'no-category-message text-center text-gray-600 text-xl py-12 col-span-full';
                         message.innerHTML = '<i class="fas fa-filter text-4xl mb-4 opacity-50"></i><p>No articles in "' + this.textContent + '" category yet.</p>';
-                        document.querySelector('.grid').parentElement.appendChild(message);
+                        gridContainer.appendChild(message);
                     }
                 } else if (existingMessage) {
                     existingMessage.remove();
@@ -540,33 +573,61 @@
         // Search functionality
         const searchInput = document.getElementById('blog-search');
         const searchBtn = document.getElementById('search-btn');
-        const blogCards = document.querySelectorAll('.blog-card');
         
         function performSearch() {
             const query = searchInput.value.toLowerCase().trim();
+            const gridContainer = document.querySelector('.grid');
+            const blogLinks = Array.from(gridContainer.querySelectorAll('a.block'));
             let hasResults = false;
             
-            blogCards.forEach(card => {
+            // Create array of blog posts with their data
+            const blogPosts = blogLinks.map(link => {
+                const card = link.querySelector('.blog-card');
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 const description = card.querySelector('p').textContent.toLowerCase();
                 const category = card.querySelector('.px-3').textContent.toLowerCase();
+                const dateElement = card.querySelectorAll('.text-gray-500')[0];
                 
-                if (query === '' || title.includes(query) || description.includes(query) || category.includes(query)) {
-                    card.style.display = 'block';
-                    hasResults = true;
-                } else {
-                    card.style.display = 'none';
-                }
+                return {
+                    element: link,
+                    title: title,
+                    description: description,
+                    category: category,
+                    dateTimestamp: dateElement ? parseDate(dateElement.textContent.trim()) : 0,
+                    matches: query === '' || title.includes(query) || description.includes(query) || category.includes(query)
+                };
             });
+            
+            // Filter posts by search query
+            const filteredPosts = blogPosts.filter(post => post.matches);
+            
+            // Sort filtered posts by date (newest first)
+            filteredPosts.sort((a, b) => b.dateTimestamp - a.dateTimestamp);
+            
+            // Hide all posts first
+            blogPosts.forEach(post => {
+                post.element.style.display = 'none';
+            });
+            
+            // Show filtered posts in sorted order
+            if (filteredPosts.length > 0) {
+                hasResults = true;
+                
+                // Re-append in correct order
+                filteredPosts.forEach(post => {
+                    post.element.style.display = 'block';
+                    gridContainer.appendChild(post.element);
+                });
+            }
             
             // Show "no results" message if needed
             const existingMessage = document.querySelector('.no-results-message');
             if (!hasResults && query !== '') {
                 if (!existingMessage) {
                     const message = document.createElement('div');
-                    message.className = 'no-results-message text-center text-gray-600 text-xl py-12';
+                    message.className = 'no-results-message text-center text-gray-600 text-xl py-12 col-span-full';
                     message.innerHTML = '<i class="fas fa-search text-4xl mb-4 opacity-50"></i><p>No articles found matching "' + query + '"</p>';
-                    document.querySelector('.grid').parentElement.appendChild(message);
+                    gridContainer.appendChild(message);
                 }
             } else if (existingMessage) {
                 existingMessage.remove();

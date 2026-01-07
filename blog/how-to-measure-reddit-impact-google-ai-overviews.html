@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Measure Reddit's Impact on Google AI Overviews & LLM Citations | RECHO</title>
+    <meta name="description" content="Reddit citations in AI Overviews grew 450% in 2025. Learn how to track your brand's visibility in ChatGPT, Perplexity, and Google AI using GEO tools and attribution methods. Complete 2026 measurement guide.">
+    <meta name="keywords" content="reddit ai overviews tracking, GEO measurement, reddit chatgpt citations, ai search visibility, reddit llm tracking, generative engine optimization, reddit google ai">
+    <link rel="canonical" href="https://www.recho.co/blog/how-to-measure-reddit-impact-google-ai-overviews.html">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPND9L4EB9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HPND9L4EB9', {
+            'send_page_view': true,
+            'allow_google_signals': true,
+            'anonymize_ip': false
+        });
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.recho.co/blog/how-to-measure-reddit-impact-google-ai-overviews.html">
+    <meta property="og:title" content="How to Measure Reddit's Impact on Google AI Overviews & LLM Citations">
+    <meta property="og:description" content="Reddit citations in AI Overviews grew 450% in 2025. Complete guide to tracking brand visibility in ChatGPT, Perplexity, and Google AI.">
+    <meta property="og:image" content="https://www.recho.co/images/recho-logo.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.recho.co/blog/how-to-measure-reddit-impact-google-ai-overviews.html">
+    <meta property="twitter:title" content="How to Measure Reddit's Impact on Google AI Overviews & LLM Citations">
+    <meta property="twitter:description" content="Reddit citations grew 450% in AI Overviews. Learn how to track and measure your brand's AI visibility.">
+    <meta property="twitter:image" content="https://www.recho.co/images/recho-logo.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'recho-orange': '#E6462F',
+                        'recho-light': '#FF5722',
+                        'recho-dark': '#D32F2F',
+                        'recho-blue': '#2563EB',
+                        'recho-blue-dark': '#1E40AF'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="font-poppins bg-white">
+    
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="../images/recho-logo-corrected.png" alt="RECHO - Full-Service Reddit Marketing Agency" style="height: 158px; width: auto;">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Services</a>
+                    <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
+                    <a href="../faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
+                    <a href="../blog.html" class="nav-link text-recho-orange font-semibold">Blog</a>
+                    <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
+                        Book a Call
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-recho-orange focus:outline-none z-50 relative" aria-label="Toggle menu" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation Overlay -->
+            <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
+            
+            <!-- Mobile Navigation Slide-in Panel -->
+            <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden" aria-label="Mobile navigation">
+                <div class="flex flex-col h-full">
+                    <!-- Mobile Menu Header -->
+                    <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                        <a href="../index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors"><i class="fas fa-home mr-2"></i>Home</a>
+                        <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none" aria-label="Close menu">
+                            <i class="fas fa-times text-2xl"></i>
+                        </button>
+                    </div>
+                    
+                    <!-- Mobile Menu Links -->
+                    <div class="flex-1 overflow-y-auto py-6">
+                        <div class="flex flex-col space-y-1 px-4">
+                            <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                                <i class="fas fa-briefcase w-6 text-recho-orange"></i>
+                                Services
+                            </a>
+                            <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                                <i class="fas fa-microchip w-6 text-recho-orange"></i>
+                                Technology
+                            </a>
+                            <a href="../faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                                <i class="fas fa-question-circle w-6 text-recho-orange"></i>
+                                FAQs
+                            </a>
+                            <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                                <i class="fas fa-blog w-6 text-recho-orange"></i>
+                                Blog
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Menu Footer CTA -->
+                    <div class="p-6 border-t border-gray-200">
+                        <a href="../contact.html" class="block w-full bg-recho-blue text-white px-6 py-4 rounded-lg hover:bg-recho-blue-dark transition-all duration-300 font-semibold text-center shadow-lg hover:shadow-xl">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Book a Call
+                        </a>
+                        <div class="mt-4 text-center">
+                            <a href="mailto:delivery@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
+                                <i class="fas fa-envelope mr-2"></i>
+                                delivery@recho.co
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Spacer for fixed header -->
+    <div style="height: 84px;"></div>
+
+    <!-- Article Content -->
+    <article class="container mx-auto px-6 py-12 max-w-5xl">
+        <div class="mb-6">
+            <span class="inline-block bg-blue-100 text-recho-blue px-3 py-1 rounded-full text-sm font-semibold">
+                Reddit Strategy
+            </span>
+        </div>
+        
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            How to Measure Reddit's Impact on Google AI Overviews & LLM Citations
+        </h1>
+        
+        <div class="flex items-center text-gray-600 text-sm mb-8 space-x-4">
+            <span>January 2, 2026</span>
+            <span>•</span>
+            <span>10 min read</span>
+        </div>
+
+        <!-- Direct Answer Box -->
+        <div class="bg-gradient-to-r from-orange-50 to-red-50 border-l-4 border-recho-orange p-6 mb-8 rounded-r-lg">
+            <h2 class="text-lg font-bold text-gray-900 mb-3">📊 Quick Answer</h2>
+            <p class="text-gray-800 leading-relaxed">
+                <strong>Track Reddit's AI impact using three methods:</strong> (1) GEO tracking tools like Semrush AI Visibility Toolkit, Profound, or AthenaHQ to monitor citations in ChatGPT, Perplexity, and Google AI Overviews; (2) Branded search lift in Google Search Console 1-2 weeks after Reddit campaigns; (3) Reddit-specific UTM parameters to track zero-click discovery paths. Reddit citations in AI Overviews grew 450% between March-June 2025, with Reddit now cited in 7.15% of all AI-generated answers.
+            </p>
+        </div>
+
+        <!-- 2026 Breakthrough Callout -->
+        <div class="bg-gradient-to-br from-recho-blue to-blue-600 text-white p-8 rounded-xl mb-10 shadow-lg">
+            <h3 class="text-2xl font-bold mb-4 flex items-center">
+                <svg class="w-8 h-8 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                Why Measuring AI Visibility Matters in 2026
+            </h3>
+            <div class="grid md:grid-cols-2 gap-4 text-base">
+                <div class="flex items-start">
+                    <span class="text-2xl mr-3">📈</span>
+                    <div>
+                        <strong>450% Reddit citation growth</strong> — In AI Overviews (Mar-Jun 2025)
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-2xl mr-3">🔍</span>
+                    <div>
+                        <strong>7.15% citation rate</strong> — Reddit in all AI-generated answers
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-2xl mr-3">🎯</span>
+                    <div>
+                        <strong>Zero-click discovery</strong> — 69% of searches end without site visits
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-2xl mr-3">💰</span>
+                    <div>
+                        <strong>Branded search lift</strong> — 1-2 week lag from Reddit to conversions
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Table of Contents -->
+        <div class="bg-gray-100 p-6 rounded-lg mb-10">
+            <h3 class="text-lg font-bold text-gray-900 mb-4">Table of Contents</h3>
+            <ol class="space-y-2 text-recho-blue">
+                <li><a href="#why-measure" class="hover:underline">1. Why You Need to Measure Reddit's AI Impact</a></li>
+                <li><a href="#geo-tools" class="hover:underline">2. GEO Tracking Tools: What Actually Works</a></li>
+                <li><a href="#branded-search" class="hover:underline">3. Tracking Branded Search Lift from Reddit</a></li>
+                <li><a href="#utm-attribution" class="hover:underline">4. UTM Parameters and Zero-Click Attribution</a></li>
+                <li><a href="#measurement-framework" class="hover:underline">5. Complete Measurement Framework</a></li>
+                <li><a href="#optimization" class="hover:underline">6. Using Data to Optimize Reddit Strategy</a></li>
+            </ol>
+        </div>
+
+        <!-- Main Content -->
+        <div class="prose prose-lg max-w-none">
+            <p class="text-xl text-gray-700 leading-relaxed mb-8">
+                Your Reddit posts are getting cited by ChatGPT, showing up in Google AI Overviews, and appearing in Perplexity answers. But you have no idea which ones, how often, or what impact they're having on your business. Welcome to 2026, where traditional analytics tell you nothing about how people actually discover your brand.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-8">
+                The shift to AI search is seismic. According to <a href="https://www.semrush.com/blog/reddit-ai-search-visibility-study/" target="_blank" rel="noopener" class="text-recho-blue hover:underline">Semrush's analysis of 248,000 Reddit posts</a>, Reddit citations in AI Overviews exploded 450% between March and June 2025. Reddit now appears in 7.15% of all AI-generated answers—making it a top-three source for ChatGPT, Perplexity, and Google AI Mode. But here's the kicker: <strong>most brands have zero visibility into this</strong>.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-8">
+                Unlike <a href="is-reddit-marketing-worth-it-in-2026.html" class="text-recho-blue hover:underline">traditional Reddit marketing metrics</a> (upvotes, comments, click-through rates), AI visibility operates in a black box. Users ask ChatGPT "What's the best project management tool?" and your brand either gets mentioned or it doesn't. No clickthrough. No referral data. Just presence or absence. This guide breaks down how to measure what matters: citations, branded search lift, and actual business impact from Reddit's role in AI search.
+            </p>
+
+            <h2 id="why-measure" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Why You Need to Measure Reddit's AI Impact
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Traditional metrics—traffic, clicks, conversions—are dying. Zero-click searches hit 69% in 2025, with AI Overviews reducing position 1 organic CTR by 34.5%. If you're only tracking direct Reddit referrals, you're missing 70-80% of your actual reach.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">The Zero-Click Discovery Loop</h3>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Here's how modern discovery actually works:
+            </p>
+
+            <div class="bg-blue-50 border-l-4 border-recho-blue p-6 my-8 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 mb-3 text-lg">🔄 Modern Brand Discovery Flow</h3>
+                <ol class="space-y-2 text-gray-800 list-decimal list-inside">
+                    <li>User asks ChatGPT or searches Google → sees AI Overview mentioning your brand from Reddit</li>
+                    <li>User doesn't click through (zero-click) but remembers your brand name</li>
+                    <li>1-2 weeks later, user searches "<strong>[your brand] + pricing</strong>" or "<strong>[your brand] + reviews</strong>"</li>
+                    <li>User visits your site directly via branded search → converts</li>
+                    <li>Analytics attributes conversion to "organic search" or "direct" with zero credit to Reddit</li>
+                </ol>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed mb-8">
+                This is why branded search lift matters more than Reddit referral traffic. Reddit plants seeds in AI answers; branded searches harvest them 1-2 weeks later. If you're not tracking this lag, you'll undervalue Reddit by 70-80%.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">What Changed in 2025</h3>
+            <p class="text-gray-700 leading-relaxed mb-8">
+                Reddit became the #1 cited domain on Perplexity (4% share), #2 on ChatGPT Search (13% share), and #3 on Google AI Mode (9% share). User-generated content now comprises 21.74% of all AI Overview citations. If your competitors are getting cited and you're not, you're invisible in the channel that's replacing traditional search.
+            </p>
+
+            <h2 id="geo-tools" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                GEO Tracking Tools: What Actually Works
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Generative Engine Optimization (GEO) tracking tools monitor when and how your brand appears in AI-generated answers. Unlike traditional rank tracking, these tools query LLMs directly and analyze citation patterns. Here's what's available in 2026:
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">1. Semrush AI Visibility Toolkit (Enterprise)</h3>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                The most comprehensive option for tracking Reddit citations across AI platforms. Semrush's <strong>Narrative Drivers</strong> report shows which Reddit threads cite your brand, broken down by branded vs. non-branded queries. You can filter by domain (reddit.com) to surface specific threads appearing in LLM outputs.
+            </p>
+
+            <div class="bg-green-50 border-l-4 border-green-500 p-6 my-8 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 mb-3 text-lg">✅ Semrush AI Visibility Features</h3>
+                <ul class="space-y-2 text-gray-800">
+                    <li>✓ <strong>Tracks ChatGPT, Perplexity, Google AI Mode</strong> — Coverage across all major LLMs</li>
+                    <li>✓ <strong>Reddit-specific filtering</strong> — See exactly which threads cite your brand</li>
+                    <li>✓ <strong>Branded vs. non-branded split</strong> — Understand direct mentions vs. category relevance</li>
+                    <li>✓ <strong>Historical data</strong> — Track citation trends over time</li>
+                    <li>✓ <strong>Competitor analysis</strong> — See who's winning AI visibility in your niche</li>
+                </ul>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                <strong>Cost:</strong> Enterprise pricing (typically $5,000-$10,000+/month for full AI Visibility Toolkit access). Best for brands with significant Reddit investment and need for comprehensive data.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">2. Profound & AthenaHQ (Mid-Market)</h3>
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Dedicated GEO platforms that check AI answers in real-time. <strong>Profound</strong> focuses on monitoring brand mentions across LLMs, while <strong>AthenaHQ</strong> adds optimization suggestions based on citation patterns. Both track Reddit as a source but with less granular subreddit-level data than Semrush.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                <strong>Cost:</strong> $500-$2,000/month depending on query volume and platform coverage. Good middle ground for brands testing GEO without enterprise budgets.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">3. Manual Spot-Checking (Free)</h3>
+            <p class="text-gray-700 leading-relaxed mb-8">
+                If you're not ready for paid tools, manually query ChatGPT, Perplexity, and Google with your category keywords + brand terms. Document when Reddit threads cite your brand. This is tedious but validates whether GEO investment makes sense. Set up a spreadsheet tracking:
+            </p>
+
+            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8 ml-4">
+                <li>Query: "best CRM for small businesses"</li>
+                <li>Platform: ChatGPT, Perplexity, Google AI</li>
+                <li>Brand mentioned: Yes/No</li>
+                <li>Reddit source: URL if cited</li>
+                <li>Position: Where in answer (1-10)</li>
+            </ul>
+
+            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-6 my-8 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 mb-3 text-lg">⚠️ GEO Tool Limitations</h3>
+                <ul class="space-y-2 text-gray-800">
+                    <li>✗ <strong>No direct business metrics</strong> — Tools show citations, not conversions or revenue</li>
+                    <li>✗ <strong>Lag in data</strong> — Most tools update daily/weekly, missing real-time shifts</li>
+                    <li>✗ <strong>Query coverage gaps</strong> — Can't track every possible search variation</li>
+                    <li>✗ <strong>Platform personalization</strong> — ChatGPT/Perplexity results vary by user history</li>
+                </ul>
+            </div>
+
+            <h2 id="branded-search" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Tracking Branded Search Lift from Reddit
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                The most reliable way to measure Reddit's AI impact is <strong>branded search lift</strong>—the increase in "[your brand]" searches following Reddit activity. This captures zero-click discovery better than any tracking tool.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">How to Track Branded Search Lift</h3>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                <strong>1. Establish Your Baseline</strong><br>
+                Open Google Search Console → Performance → filter by "brand name" queries. Note average weekly branded search volume for the past 4-8 weeks.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                <strong>2. Launch Reddit Campaign or Content Push</strong><br>
+                Whether it's <a href="how-to-build-an-engaged-reddit-community.html" class="text-recho-blue hover:underline">organic community posts</a>, paid campaigns, or AMA threads, time-stamp when you increase Reddit activity.
+            </p>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                <strong>3. Monitor 1-2 Week Lag</strong><br>
+                Track branded search volume 7-14 days after Reddit activity. Most brands see a noticeable lift in this window as AI discovery converts to direct searches.
+            </p>
+
+            <blockquote class="border-l-4 border-recho-orange pl-6 italic text-gray-700 my-8 text-lg">
+                "Most brands today are seeing a lift in branded searches because zero-click discovery channels keep growing. People encounter your brand on Reddit, TikTok, Instagram, or inside AI answers, then search for it directly to convert. With Reddit, we almost always see that bump one to two weeks after a campaign, even when there's no direct traffic spike."
+                <footer class="text-sm text-gray-600 mt-2">— Ann Smarty, Founder, Smarty Marketing</footer>
+            </blockquote>
+
+            <p class="text-gray-700 leading-relaxed mb-8">
+                <strong>4. Correlate with Conversions</strong><br>
+                In Google Analytics, segment users arriving via branded organic search during your lift window. Track their conversion rate and revenue. This is Reddit's true ROI—not the 50 clicks you got directly from r/YourNiche.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Example: Tracking a Reddit AMA's Impact</h3>
+            <p class="text-gray-700 leading-relaxed mb-8">
+                Let's say your baseline is 1,000 branded searches/week. You run an AMA in r/Entrepreneur on January 5. By January 12-19, branded searches jump to 1,400/week (+40%). Those 400 extra searches convert at 5%, generating 20 new customers you'd never attribute to Reddit using traditional tracking. That's the hidden value.
+            </p>
+
+            <h2 id="utm-attribution" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                UTM Parameters and Zero-Click Attribution
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                While zero-click discovery dominates, you still need to track <em>direct</em> Reddit traffic properly. Use Reddit-specific UTM parameters to segment traffic sources and understand which content drives clicks vs. citations.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">UTM Structure for Reddit</h3>
+
+            <div class="bg-gray-100 p-6 rounded-lg my-8">
+                <h3 class="font-bold text-gray-900 mb-4 text-lg">🔗 Reddit UTM Template</h3>
+                <code class="text-sm text-gray-800 block mb-4">
+                    https://yoursite.com/landing-page?utm_source=reddit&utm_medium=organic&utm_campaign=r_productmanagement_qa&utm_content=best_pm_tools_thread
+                </code>
+                <ul class="space-y-2 text-gray-800 text-sm">
+                    <li><strong>utm_source:</strong> reddit (always)</li>
+                    <li><strong>utm_medium:</strong> organic, paid, ama, crosspost</li>
+                    <li><strong>utm_campaign:</strong> r_[subreddit]_[content_type]</li>
+                    <li><strong>utm_content:</strong> specific_thread_identifier</li>
+                </ul>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed mb-8">
+                This lets you differentiate r/Entrepreneur AMAs from r/SaaS product mentions from paid ad clicks. In Google Analytics, segment by utm_campaign to see which subreddits drive traffic <em>and</em> conversions. Cross-reference with branded search lift to capture the full picture.
+            </p>
+
+            <h2 id="measurement-framework" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Complete Measurement Framework
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Combine GEO tracking, branded search lift, and UTM attribution into a unified framework. Here's what to monitor monthly:
+            </p>
+
+            <div class="bg-recho-orange bg-opacity-10 border-l-4 border-recho-orange p-6 my-8 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 mb-4 text-lg">📊 Monthly Reddit AI Impact Dashboard</h3>
+                <ul class="space-y-3 text-gray-800">
+                    <li><strong>1. AI Citation Metrics (GEO Tools)</strong>
+                        <ul class="ml-6 mt-2 space-y-1 text-sm">
+                            <li>• Total brand citations across ChatGPT, Perplexity, Google AI</li>
+                            <li>• Reddit threads cited (count and URLs)</li>
+                            <li>• Branded vs. non-branded query split</li>
+                            <li>• Average citation position (1-10)</li>
+                        </ul>
+                    </li>
+                    <li><strong>2. Branded Search Metrics (GSC)</strong>
+                        <ul class="ml-6 mt-2 space-y-1 text-sm">
+                            <li>• Weekly branded search volume vs. baseline</li>
+                            <li>• Lift % following Reddit activity</li>
+                            <li>• New branded query variations (e.g., "[brand] vs [competitor]")</li>
+                        </ul>
+                    </li>
+                    <li><strong>3. Direct Traffic Metrics (GA4 + UTMs)</strong>
+                        <ul class="ml-6 mt-2 space-y-1 text-sm">
+                            <li>• Reddit referral traffic by subreddit</li>
+                            <li>• Conversion rate by utm_campaign</li>
+                            <li>• Revenue attributed to Reddit (direct + assisted)</li>
+                        </ul>
+                    </li>
+                    <li><strong>4. Sentiment & Share of Voice</strong>
+                        <ul class="ml-6 mt-2 space-y-1 text-sm">
+                            <li>• Competitor citations in same AI queries</li>
+                            <li>• Positive vs. negative Reddit mentions in citations</li>
+                            <li>• Trending topics where your brand appears</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Attribution Model for Reddit AI Impact</h3>
+            <p class="text-gray-700 leading-relaxed mb-8">
+                Use a <strong>time-decay attribution model</strong> with a 14-day window. Weight touchpoints as follows: Reddit post → AI citation → branded search → conversion. This captures the full funnel instead of giving all credit to the final "organic search" touchpoint. In GA4, create a custom conversion path report including:
+            </p>
+
+            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8 ml-4">
+                <li>Source: Reddit (utm_source=reddit)</li>
+                <li>Medium: Organic search (branded queries)</li>
+                <li>Days to conversion: 1-14 days</li>
+            </ul>
+
+            <h2 id="optimization" class="text-3xl font-bold text-gray-900 mt-12 mb-6">
+                Using Data to Optimize Reddit Strategy
+            </h2>
+
+            <p class="text-gray-700 leading-relaxed mb-6">
+                Once you have measurement in place, use the data to double down on what works. Semrush's research on 248K Reddit posts revealed clear patterns:
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">What Drives AI Citations</h3>
+
+            <div class="bg-blue-50 border-l-4 border-recho-blue p-6 my-8 rounded-r-lg">
+                <h3 class="font-bold text-gray-900 mb-3 text-lg">🎯 Optimize for These Factors</h3>
+                <ul class="space-y-2 text-gray-800">
+                    <li>✓ <strong>Q&A format:</strong> 50%+ of cited Reddit content is Q&A threads—structure posts as questions + answers</li>
+                    <li>✓ <strong>Comparison posts:</strong> "X vs. Y" threads get cited heavily; create product comparison discussions</li>
+                    <li>✓ <strong>Evergreen content:</strong> Average cited post age is ~900 days; long-term value over viral spikes</li>
+                    <li>✓ <strong>Low engagement threshold:</strong> 70% of cited posts have <20 upvotes; quality > popularity</li>
+                    <li>✓ <strong>Concise length:</strong> Median cited post is ~80 words; AI favors digestible content</li>
+                </ul>
+            </div>
+
+            <p class="text-gray-700 leading-relaxed mb-8">
+                If your GEO data shows you're getting cited for Q&A threads but not product mentions, shift your <a href="why-brand-reddit-posts-rank-in-google-and-chatgpt.html" class="text-recho-blue hover:underline">Reddit content strategy</a> toward more Q&A participation. If branded search lifts after AMAs but not regular posts, prioritize AMAs quarterly.
+            </p>
+
+            <h3 class="text-2xl font-bold text-gray-900 mt-8 mb-4">Tying It Back to Revenue</h3>
+            <p class="text-gray-700 leading-relaxed mb-8">
+                The final step: connect AI visibility to revenue. In your monthly dashboard, calculate:
+            </p>
+
+            <ul class="list-disc list-inside space-y-2 text-gray-700 mb-8 ml-4">
+                <li><strong>Incremental branded searches:</strong> Lift volume × avg. conversion rate × avg. order value = Reddit-influenced revenue</li>
+                <li><strong>Citation value:</strong> (# of citations × estimated reach per citation) / total Reddit spend = cost per AI impression</li>
+                <li><strong>LTV impact:</strong> Compare LTV of customers who arrived via branded search (post-Reddit) vs. other channels</li>
+            </ul>
+
+            <p class="text-gray-700 leading-relaxed mb-8">
+                Most brands find Reddit-influenced customers have 30-50% higher LTV because they've done research and arrive with intent. That's the real metric that justifies continued investment.
+            </p>
+
+            <!-- TL;DR Section -->
+            <div class="bg-gradient-to-r from-gray-900 to-gray-800 text-white p-8 rounded-xl my-12">
+                <h3 class="text-2xl font-bold mb-4 flex items-center">
+                    <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+                    </svg>
+                    TL;DR: Reddit AI Measurement in 9 Points
+                </h3>
+                <ol class="space-y-3 text-base leading-relaxed">
+                    <li><strong>1.</strong> Reddit citations in AI Overviews grew 450% (Mar-Jun 2025); now 7.15% of all AI answers</li>
+                    <li><strong>2.</strong> Traditional metrics miss 70-80% of Reddit's impact due to zero-click discovery</li>
+                    <li><strong>3.</strong> Use GEO tools (Semrush, Profound, AthenaHQ) to track ChatGPT/Perplexity/Google AI citations</li>
+                    <li><strong>4.</strong> Track branded search lift 1-2 weeks after Reddit activity in Google Search Console</li>
+                    <li><strong>5.</strong> Use Reddit-specific UTM parameters to attribute direct traffic by subreddit</li>
+                    <li><strong>6.</strong> Q&A threads and comparison posts drive 50%+ of AI citations</li>
+                    <li><strong>7.</strong> Most cited Reddit posts have <20 upvotes; quality beats virality for AI visibility</li>
+                    <li><strong>8.</strong> Time-decay attribution (14-day window) captures full Reddit → AI → conversion path</li>
+                    <li><strong>9.</strong> Reddit-influenced customers show 30-50% higher LTV than other channels</li>
+                </ol>
+            </div>
+
+            <!-- Sources Section -->
+            <div class="bg-gray-100 border border-gray-300 rounded-xl p-8 my-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <svg class="w-6 h-6 mr-3 text-recho-blue" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                    </svg>
+                    Sources & References
+                </h3>
+                <div class="space-y-4 text-gray-700">
+                    <div class="flex items-start">
+                        <span class="text-recho-orange font-bold mr-3">1.</span>
+                        <div>
+                            <strong>Semrush (2025).</strong> <a href="https://www.semrush.com/blog/reddit-ai-search-visibility-study/" target="_blank" rel="noopener" class="text-recho-blue hover:underline">"We Analyzed 248K Reddit Posts: What Drives Visibility in AI Search..."</a> Published November 10, 2025. Comprehensive analysis of Reddit citations in ChatGPT, Perplexity, and Google AI Mode.
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <span class="text-recho-orange font-bold mr-3">2.</span>
+                        <div>
+                            <strong>Writesonic (2025).</strong> <a href="https://writesonic.com/blog/reddit-growth-in-ai-overviews" target="_blank" rel="noopener" class="text-recho-blue hover:underline">"Reddit's 450% Growth in AI Overviews: Is UGC Now the AI King?"</a> Analysis of Reddit citation growth in AI-generated content.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="bg-white border border-gray-200 rounded-xl p-8 my-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+                
+                <div class="space-y-6">
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">How do I track Reddit posts appearing in ChatGPT and Google AI Overviews?</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Use GEO (Generative Engine Optimization) tracking tools like Semrush AI Visibility Toolkit, Profound, or AthenaHQ. These platforms query AI systems directly with your category keywords and track when Reddit threads citing your brand appear in answers. You can filter by reddit.com to see specific posts. For free tracking, manually search ChatGPT, Perplexity, and Google AI with relevant queries and document citations.
+                        </p>
+                    </div>
+
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">What is branded search lift and how does it relate to Reddit?</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Branded search lift is the increase in "[your brand name]" searches following marketing activity. With Reddit, users discover your brand in AI answers (zero-click), then search your brand directly 1-2 weeks later to learn more or convert. Track this in Google Search Console by monitoring branded query volume before/after Reddit campaigns. This captures hidden ROI missed by direct traffic attribution.
+                        </p>
+                    </div>
+
+                    <div class="border-b border-gray-200 pb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Why don't traditional analytics show Reddit's full impact?</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Zero-click searches hit 69% in 2025. Most users see your brand mentioned in AI Overviews, Perplexity, or ChatGPT but don't click through to Reddit or your site. They remember your brand and search it later. Traditional analytics only track direct clicks, missing 70-80% of actual reach. That's why you need to measure AI citations and branded search lift separately.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">What types of Reddit content get cited most by AI?</h3>
+                        <p class="text-gray-700 leading-relaxed">
+                            Semrush's analysis of 248K posts found Q&A threads account for 50%+ of citations, followed by comparison posts ("X vs. Y") and discussion threads. Most cited posts have fewer than 20 upvotes, are ~900 days old (evergreen), and contain ~80 words (concise). Engagement metrics don't predict AI visibility—topical relevance and structure matter more.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Internal Links Section -->
+            <div class="bg-blue-50 border border-blue-200 rounded-xl p-8 my-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="why-brand-reddit-posts-rank-in-google-and-chatgpt.html" class="block p-4 bg-white rounded-lg hover:shadow-md transition border border-gray-200">
+                        <h4 class="font-bold text-recho-blue mb-2">Why Brand Reddit Posts Rank in Google & ChatGPT</h4>
+                        <p class="text-sm text-gray-600">248K post study reveals AI visibility secrets</p>
+                    </a>
+                    <a href="is-reddit-marketing-worth-it-in-2026.html" class="block p-4 bg-white rounded-lg hover:shadow-md transition border border-gray-200">
+                        <h4 class="font-bold text-recho-blue mb-2">Is Reddit Marketing Worth It in 2026?</h4>
+                        <p class="text-sm text-gray-600">ROI benchmarks and growth forecasts</p>
+                    </a>
+                    <a href="how-to-build-an-engaged-reddit-community.html" class="block p-4 bg-white rounded-lg hover:shadow-md transition border border-gray-200">
+                        <h4 class="font-bold text-recho-blue mb-2">How to Build an Engaged Reddit Community</h4>
+                        <p class="text-sm text-gray-600">Organic growth tactics for AI visibility</p>
+                    </a>
+                    <a href="how-reddit-pro-social-listening-tools-are-changing-marketing.html" class="block p-4 bg-white rounded-lg hover:shadow-md transition border border-gray-200">
+                        <h4 class="font-bold text-recho-blue mb-2">How Reddit Pro's Social Listening Tools Are Changing Marketing</h4>
+                        <p class="text-sm text-gray-600">Monitor brand mentions across Reddit</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="bg-gradient-to-br from-recho-orange to-recho-dark text-white p-10 rounded-2xl text-center my-12 shadow-xl">
+                <h3 class="text-3xl font-bold mb-4">Need Help Measuring Reddit's AI Impact?</h3>
+                <p class="text-xl mb-8 opacity-90">
+                    RECHO provides GEO tracking, attribution modeling, and strategic optimization to maximize your Reddit visibility in AI search.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="../contact.html" class="inline-block bg-white text-recho-orange px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-lg">
+                        Get Measurement Strategy
+                    </a>
+                    <a href="../services.html" class="inline-block bg-recho-blue text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-recho-blue-dark transition border-2 border-white">
+                        Explore Our Services
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-4">
+                        <img src="../images/recho-logo-white.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Full-service Reddit marketing agency combining organic community building, paid advertising, and proprietary technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/rechoagency" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:delivery@recho.co" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Reddit Organic Management</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Reddit Paid Advertising</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">EchoMind our proprietary software</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Community Building</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Subreddit Management</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Profile Optimization</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../index.html" class="hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="../faq.html" class="hover:text-recho-orange transition-colors">FAQs</a></li>
+                        <li><a href="../blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
+                        <li><a href="../contact.html" class="hover:text-recho-orange transition-colors">Book a Call</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Get in Touch</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-recho-orange mr-2 mt-1"></i>
+                            <a href="mailto:delivery@recho.co" class="hover:text-recho-orange transition-colors">delivery@recho.co</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2026 RECHO. All rights reserved.
+                    </p>
+                    <div class="text-gray-400 text-sm">
+                        <span>Full-Service Reddit Marketing Agency</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/ga4-events.js"></script>
+
+    <!-- Comprehensive JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Measure Reddit's Impact on Google AI Overviews & LLM Citations",
+      "description": "Reddit citations in AI Overviews grew 450% in 2025. Learn how to track your brand's visibility in ChatGPT, Perplexity, and Google AI using GEO tools and attribution methods.",
+      "image": "https://www.recho.co/images/recho-logo.png",
+      "author": {
+        "@type": "Organization",
+        "name": "RECHO",
+        "url": "https://www.recho.co"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "RECHO",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.recho.co/images/recho-logo.png"
+        }
+      },
+      "datePublished": "2026-01-02T09:00:00-05:00",
+      "dateModified": "2026-01-02T09:00:00-05:00",
+      "articleSection": "Reddit Strategy",
+      "keywords": "reddit ai overviews tracking, GEO measurement, reddit chatgpt citations, ai search visibility, reddit llm tracking, generative engine optimization, reddit google ai",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.recho.co/blog/how-to-measure-reddit-impact-google-ai-overviews.html"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I track Reddit posts appearing in ChatGPT and Google AI Overviews?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use GEO (Generative Engine Optimization) tracking tools like Semrush AI Visibility Toolkit, Profound, or AthenaHQ. These platforms query AI systems directly with your category keywords and track when Reddit threads citing your brand appear in answers. You can filter by reddit.com to see specific posts. For free tracking, manually search ChatGPT, Perplexity, and Google AI with relevant queries and document citations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is branded search lift and how does it relate to Reddit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Branded search lift is the increase in '[your brand name]' searches following marketing activity. With Reddit, users discover your brand in AI answers (zero-click), then search your brand directly 1-2 weeks later to learn more or convert. Track this in Google Search Console by monitoring branded query volume before/after Reddit campaigns. This captures hidden ROI missed by direct traffic attribution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why don't traditional analytics show Reddit's full impact?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zero-click searches hit 69% in 2025. Most users see your brand mentioned in AI Overviews, Perplexity, or ChatGPT but don't click through to Reddit or your site. They remember your brand and search it later. Traditional analytics only track direct clicks, missing 70-80% of actual reach. That's why you need to measure AI citations and branded search lift separately."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of Reddit content get cited most by AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Semrush's analysis of 248K posts found Q&A threads account for 50%+ of citations, followed by comparison posts ('X vs. Y') and discussion threads. Most cited posts have fewer than 20 upvotes, are ~900 days old (evergreen), and contain ~80 words (concise). Engagement metrics don't predict AI visibility—topical relevance and structure matter more."
+          }
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.recho.co/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.recho.co/blog.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "How to Measure Reddit's Impact on Google AI Overviews & LLM Citations",
+          "item": "https://www.recho.co/blog/how-to-measure-reddit-impact-google-ai-overviews.html"
+        }
+      ]
+    }
+    </script>
+</body>
+</html>

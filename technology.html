@@ -86,6 +86,39 @@
             margin-top: 4px;
         }
     </style>
+    
+    <!-- Dropdown Navigation Styles -->
+    <style>
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            min-width: 280px;
+            z-index: 50;
+            margin-top: 0.5rem;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            transition: all 0.2s;
+        }
+        
+        .dropdown a:hover {
+            background-color: #FFF7ED;
+            color: #E6462F;
+            padding-left: 1.5rem;
+        }
+    </style>
 </head>
 <body class="font-poppins bg-white">
     
@@ -100,7 +133,26 @@
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Services</a>
+                    <div class="nav-item relative">
+                        <a href="services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown">
+                            <a href="services.html" class="border-b border-gray-100">
+                                <i class="fas fa-th-large mr-2 text-recho-orange"></i>
+                                All Services
+                            </a>
+                            <a href="services/reddit-seo-geo.html">
+                                <i class="fas fa-search mr-2 text-recho-orange"></i>
+                                Reddit SEO & GEO
+                            </a>
+                            <a href="services/brand-monitoring-social-listening.html">
+                                <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
+                                Brand Monitoring & Social Listening
+                            </a>
+                        </div>
+                    </div>
                     <a href="technology.html" class="nav-link text-recho-orange font-semibold transition-colors duration-300">Technology</a>
                     <a href="faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
                     <a href="blog.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>

@@ -92,6 +92,10 @@
     
     <!-- Dropdown Navigation Styles -->
     <style>
+        .nav-item {
+            position: relative;
+        }
+        
         .dropdown {
             display: none;
             position: absolute;
@@ -102,7 +106,20 @@
             border-radius: 0.5rem;
             min-width: 280px;
             z-index: 50;
-            margin-top: 0.5rem;
+            margin-top: 0rem;
+            padding-top: 0.5rem;
+        }
+        
+        /* Add invisible bridge area */
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: transparent;
+            z-index: 49;
         }
         
         .nav-item:hover .dropdown {

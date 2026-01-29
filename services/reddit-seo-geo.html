@@ -175,6 +175,10 @@
             transform: scale(1.05);
         }
         
+        .nav-item {
+            position: relative;
+        }
+        
         .dropdown {
             display: none;
             position: absolute;
@@ -185,7 +189,20 @@
             border-radius: 0.5rem;
             min-width: 280px;
             z-index: 50;
-            margin-top: 0.5rem;
+            margin-top: 0rem;
+            padding-top: 0.5rem;
+        }
+        
+        /* Add invisible bridge */
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: transparent;
+            z-index: 49;
         }
         
         .nav-item:hover .dropdown {
@@ -335,7 +352,7 @@
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="../contact.html" class="bg-recho-orange text-white px-8 py-4 rounded-full hover:bg-recho-dark shadow-xl hover:shadow-2xl transition-all duration-300 font-semibold text-lg">
                         <i class="fas fa-rocket mr-2"></i>
-                        Get Your Free Reddit SEO Audit
+                        Grow your GEO strategy with Reddit
                     </a>
                     <a href="#how-it-works" class="bg-white text-recho-orange border-2 border-recho-orange px-8 py-4 rounded-full hover:bg-orange-50 transition-all duration-300 font-semibold text-lg">
                         <i class="fas fa-play-circle mr-2"></i>
@@ -922,7 +939,7 @@
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="../contact.html" class="bg-white text-recho-orange px-10 py-5 rounded-full hover:bg-gray-100 shadow-2xl hover:shadow-3xl transition-all duration-300 font-bold text-lg">
                         <i class="fas fa-rocket mr-2"></i>
-                        Get Your Free Reddit SEO Audit
+                        Grow your GEO strategy with Reddit
                     </a>
                     <a href="../blog.html" class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-full hover:bg-white hover:text-recho-orange transition-all duration-300 font-bold text-lg">
                         <i class="fas fa-book mr-2"></i>

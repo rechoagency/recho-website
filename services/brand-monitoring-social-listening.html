@@ -175,6 +175,10 @@
             transform: scale(1.05);
         }
         
+        .nav-item {
+            position: relative;
+        }
+        
         .dropdown {
             display: none;
             position: absolute;
@@ -185,7 +189,20 @@
             border-radius: 0.5rem;
             min-width: 280px;
             z-index: 50;
-            margin-top: 0.5rem;
+            margin-top: 0rem;
+            padding-top: 0.5rem;
+        }
+        
+        /* Add invisible bridge */
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: transparent;
+            z-index: 49;
         }
         
         .nav-item:hover .dropdown {
@@ -231,7 +248,7 @@
                             </a>
                             <a href="reddit-seo-geo.html">
                                 <i class="fas fa-search mr-2 text-recho-orange"></i>
-                                Reddit Brand Monitoring & Social Listening
+                                Reddit SEO & GEO
                             </a>
                             <a href="brand-monitoring-social-listening.html">
                                 <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
@@ -278,7 +295,7 @@
                         </a>
                         <a href="reddit-seo-geo.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
                             <i class="fas fa-search w-6 text-recho-orange"></i>
-                            Reddit Brand Monitoring & Social Listening
+                            Reddit SEO & GEO
                         </a>
                         <a href="brand-monitoring-social-listening.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
                             <i class="fas fa-chart-line w-6 text-recho-orange"></i>
@@ -378,83 +395,83 @@
                     What Are <span class="text-recho-orange">Reddit Brand Monitoring & Social Listening?</span>
                 </h2>
                 <p class="text-center text-gray-600 text-lg mb-12 max-w-3xl mx-auto">
-                    The future of search visibility isn't just about ranking in Google—it's about appearing in AI-powered answers that shape buyer decisions before they even click.
+                    Your brand reputation is built in real-time on Reddit. Every mention, complaint, and conversation happens in public—and can spread instantly across 100,000+ communities.
                 </p>
                 
                 <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Reddit brand monitoring -->
+                    <!-- Brand Monitoring -->
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-l-4 border-recho-orange">
                         <div class="flex items-center mb-6">
                             <div class="w-14 h-14 bg-recho-orange rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-search text-white text-2xl"></i>
+                                <i class="fas fa-shield-alt text-white text-2xl"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800">Reddit brand monitoring</h3>
+                            <h3 class="text-2xl font-bold text-gray-800">Reddit Brand Monitoring</h3>
                         </div>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            <strong>Reddit brand monitoring</strong> is the strategic optimization of Reddit content to rank in traditional Google Search results. Reddit experienced <strong>1,328% SEO visibility growth</strong> between July 2023 and April 2024, making it one of the most powerful platforms for organic search dominance.
+                            <strong>Reddit brand monitoring</strong> is the practice of tracking every mention of your brand, products, competitors, and industry keywords across Reddit's <strong>100,000+ active communities</strong> and <strong>1.36 billion global users</strong>. We detect conversations in <strong>5-15 minutes</strong> so you can respond before sentiment turns negative.
                         </p>
                         <div class="bg-orange-50 p-4 rounded-lg mb-4">
-                            <p class="text-sm text-gray-700 font-semibold mb-2"><i class="fas fa-trophy text-recho-orange mr-2"></i>Why Reddit brand monitoring Works:</p>
+                            <p class="text-sm text-gray-700 font-semibold mb-2"><i class="fas fa-bell text-recho-orange mr-2"></i>What We Monitor 24/7:</p>
                             <ul class="text-sm text-gray-600 space-y-2">
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-recho-orange mr-2 mt-1"></i>
-                                    <span>Google partnership gives Reddit preferential ranking treatment</span>
+                                    <span>Brand mentions (company name, products, executives)</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-recho-orange mr-2 mt-1"></i>
-                                    <span>Reddit posts rank on page 1 for competitive commercial keywords</span>
+                                    <span>Customer complaints, support requests, and negative sentiment</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-recho-orange mr-2 mt-1"></i>
-                                    <span>User-generated content signals trustworthiness to Google</span>
+                                    <span>Crisis triggers (PR issues, product failures, viral negativity)</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-recho-orange mr-2 mt-1"></i>
-                                    <span>Community engagement creates powerful ranking signals</span>
+                                    <span>Positive reviews, testimonials, and advocacy opportunities</span>
                                 </li>
                             </ul>
                         </div>
                         <p class="text-gray-600 text-sm italic">
-                            <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
-                            Reddit is now the <strong>9th most-visited website globally</strong> with 3.6 billion monthly visits—and Google is sending it even more traffic.
+                            <i class="fas fa-exclamation-triangle text-yellow-500 mr-2"></i>
+                            <strong>71% of consumers</strong> say they're more likely to recommend a brand that responds quickly to complaints on social media.
                         </p>
                     </div>
                     
-                    <!-- social listening -->
+                    <!-- Social Listening -->
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-l-4 border-blue-600">
                         <div class="flex items-center mb-6">
                             <div class="w-14 h-14 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-robot text-white text-2xl"></i>
+                                <i class="fas fa-ear-listen text-white text-2xl"></i>
                             </div>
-                            <h3 class="text-2xl font-bold text-gray-800">Generative Engine Optimization (social listening)</h3>
+                            <h3 class="text-2xl font-bold text-gray-800">Reddit Social Listening</h3>
                         </div>
                         <p class="text-gray-600 mb-6 leading-relaxed">
-                            <strong>social listening</strong> (Generative Engine Optimization) is optimization for AI-powered search engines like ChatGPT, Google AI Overviews, Perplexity, and Claude. Reddit is the <strong>#1 cited source</strong> in AI answers, appearing in <strong>21% of Google AI Overviews</strong> and <strong>6.6% of Perplexity responses</strong>.
+                            <strong>Reddit social listening</strong> goes beyond monitoring your brand—it's proactive intelligence gathering across entire industries. We track <strong>competitor mentions, market trends, customer pain points,</strong> and <strong>emerging opportunities</strong> to give you a strategic advantage.
                         </p>
                         <div class="bg-blue-50 p-4 rounded-lg mb-4">
-                            <p class="text-sm text-gray-700 font-semibold mb-2"><i class="fas fa-brain text-blue-600 mr-2"></i>Why social listening Matters Now:</p>
+                            <p class="text-sm text-gray-700 font-semibold mb-2"><i class="fas fa-chart-line text-blue-600 mr-2"></i>Social Listening Intelligence:</p>
                             <ul class="text-sm text-gray-600 space-y-2">
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
-                                    <span>40% of AI-generated answers cite Reddit as a primary source</span>
+                                    <span>Competitor sentiment analysis and reputation tracking</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
-                                    <span>Zero-click searches are replacing traditional Google results</span>
+                                    <span>Industry trends, emerging topics, and viral conversations</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
-                                    <span>LLMs trust Reddit's community-verified authenticity</span>
+                                    <span>Customer pain points, feature requests, and unmet needs</span>
                                 </li>
                                 <li class="flex items-start">
                                     <i class="fas fa-check text-blue-600 mr-2 mt-1"></i>
-                                    <span>Buyers use AI before even visiting Google Search</span>
+                                    <span>Partnership, influencer, and community engagement opportunities</span>
                                 </li>
                             </ul>
                         </div>
                         <p class="text-gray-600 text-sm italic">
                             <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
-                            <strong>Search is becoming circular:</strong> Google influences AI, AI influences buyers, and Reddit influences both.
+                            <strong>78% of brands</strong> use social listening to inform product development, marketing strategy, and customer service improvements.
                         </p>
                     </div>
                 </div>
@@ -463,8 +480,26 @@
                 <div class="mt-8 bg-gradient-to-r from-recho-orange to-red-600 text-white p-8 rounded-2xl shadow-2xl">
                     <div class="flex items-center mb-4">
                         <i class="fas fa-fire text-3xl mr-4"></i>
-                        <h3 class="text-2xl font-bold">The Combined Power of Reddit brand monitoring + social listening</h3>
+                        <h3 class="text-2xl font-bold">Why Brand Monitoring + Social Listening Together?</h3>
                     </div>
+                    <p class="text-lg mb-6 opacity-95">
+                        <strong>Monitoring</strong> protects your reputation by catching negative mentions early. <strong>Listening</strong> helps you capitalize on opportunities by understanding your market. Together, they create a complete Reddit intelligence system.
+                    </p>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-5xl font-bold mb-2">5-15min</div>
+                            <div class="text-sm opacity-90">Average detection time for brand mentions</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold mb-2">3x</div>
+                            <div class="text-sm opacity-90">Higher customer satisfaction with &lt;1hr response</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-5xl font-bold mb-2">100K+</div>
+                            <div class="text-sm opacity-90">Subreddits monitored in real-time</div>
+                        </div>
+                    </div>
+                </div>
                     <p class="text-white text-lg mb-4 leading-relaxed">
                         RECHO's Reddit brand monitoring and social listening services ensure your brand dominates <strong>both</strong> traditional Google Search results <strong>and</strong> AI-powered answer engines. While competitors focus on one or the other, we optimize for the entire modern search ecosystem.
                     </p>
@@ -495,7 +530,7 @@
                     How RECHO's <span class="text-recho-orange">Reddit Brand Monitoring & Social Listening</span> Services Work
                 </h2>
                 <p class="text-center text-gray-600 text-lg mb-16 max-w-3xl mx-auto">
-                    Our proprietary Reddit brand monitoring and social listening optimization process combines strategic content creation, API-powered insights, and continuous optimization to maximize your visibility in both Google Search and AI-powered results.
+                    Our proprietary brand monitoring and social listening system combines real-time Reddit API monitoring, AI-powered sentiment analysis, and 24/7 alert infrastructure to protect and grow your brand reputation.
                 </p>
                 
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -503,23 +538,23 @@
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-t-4 border-recho-orange">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-recho-orange rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">1</div>
-                            <h3 class="text-xl font-bold text-gray-800">Keyword & Subreddit Research</h3>
+                            <h3 class="text-xl font-bold text-gray-800">Real-Time Monitoring Setup</h3>
                         </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            We use <strong>Google Search Console API</strong> and <strong>Reddit API</strong> to identify high-value keywords where Reddit posts are already ranking and discover untapped opportunities in relevant subreddits.
+                            We configure <strong>Reddit API monitoring</strong> across 100,000+ subreddits to detect every mention of your brand, products, executives, competitors, and industry keywords within <strong>5-15 minutes</strong>.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-recho-orange mr-2 mt-1"></i>
-                                <span>Competitive Reddit brand monitoring keyword gap analysis</span>
+                                <span>Brand name and product keyword tracking</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-recho-orange mr-2 mt-1"></i>
-                                <span>Subreddit authority and engagement scoring</span>
+                                <span>Competitor mention monitoring</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-recho-orange mr-2 mt-1"></i>
-                                <span>AI citation pattern analysis</span>
+                                <span>Industry trend and topic tracking</span>
                             </li>
                         </ul>
                     </div>
@@ -528,23 +563,23 @@
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-t-4 border-blue-600">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">2</div>
-                            <h3 class="text-xl font-bold text-gray-800">Strategic Content Creation</h3>
+                            <h3 class="text-xl font-bold text-gray-800">AI-Powered Sentiment Analysis</h3>
                         </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Our team creates <strong>authentic, SEO-optimized Reddit posts</strong> that satisfy both Google's ranking algorithm and Reddit's community standards, using <strong>OpenAI API</strong> for content optimization and sentiment analysis.
+                            Using <strong>OpenAI API</strong>, we analyze every mention in real-time to classify sentiment (positive, negative, neutral), detect crisis triggers, and identify high-priority issues requiring immediate response.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
-                                <span>Community-first content that drives engagement</span>
+                                <span>Positive/negative sentiment scoring</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
-                                <span>Keyword-optimized titles and descriptions</span>
+                                <span>Crisis and viral risk detection</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-blue-600 mr-2 mt-1"></i>
-                                <span>AI-friendly formatting for social listening citations</span>
+                                <span>Customer support urgency classification</span>
                             </li>
                         </ul>
                     </div>
@@ -553,23 +588,23 @@
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-t-4 border-purple-600">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">3</div>
-                            <h3 class="text-xl font-bold text-gray-800">Community Engagement & Amplification</h3>
+                            <h3 class="text-xl font-bold text-gray-800">Instant Alerts & Escalation</h3>
                         </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            We strategically engage with your Reddit posts through <strong>authentic community interactions</strong>, upvoting strategies, and comment threads that signal quality to both Google and AI engines.
+                            We send <strong>instant alerts</strong> via email, Slack, or dashboard notification when high-priority mentions are detected. Critical issues (PR crises, viral negativity) escalate immediately to your team.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
-                                <span>Organic upvoting and award campaigns</span>
+                                <span>Real-time email & Slack alerts</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
-                                <span>Strategic comment engagement</span>
+                                <span>Priority-based escalation workflows</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-purple-600 mr-2 mt-1"></i>
-                                <span>Cross-subreddit visibility strategies</span>
+                                <span>Custom alert rules and filters</span>
                             </li>
                         </ul>
                     </div>
@@ -578,23 +613,23 @@
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-t-4 border-green-600">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">4</div>
-                            <h3 class="text-xl font-bold text-gray-800">Google Ranking Optimization</h3>
+                            <h3 class="text-xl font-bold text-gray-800">Strategic Response Management</h3>
                         </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            We monitor <strong>Google Search rankings</strong> for your Reddit posts using <strong>Google Search Console API</strong> and optimize them for maximum first-page visibility and click-through rates.
+                            Our team helps you <strong>respond quickly and authentically</strong> to customer complaints, questions, and feedback—turning negative sentiment into positive resolutions within <strong>&lt;1 hour response time</strong>.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
-                                <span>Real-time SERP position tracking</span>
+                                <span>Response template library</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
-                                <span>Meta description and title optimization</span>
+                                <span>Crisis communication protocols</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-600 mr-2 mt-1"></i>
-                                <span>Backlink and authority building</span>
+                                <span>Authenticity and tone optimization</span>
                             </li>
                         </ul>
                     </div>
@@ -603,23 +638,23 @@
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-t-4 border-yellow-600">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">5</div>
-                            <h3 class="text-xl font-bold text-gray-800">AI Citation Tracking (social listening)</h3>
+                            <h3 class="text-xl font-bold text-gray-800">Competitor Intelligence Gathering</h3>
                         </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Using <strong>OpenAI API</strong> and proprietary social listening tracking tools, we monitor when your Reddit content is cited in <strong>ChatGPT, Google AI Overviews, Perplexity, and Claude</strong> responses.
+                            We track <strong>competitor mentions, sentiment trends, and market positioning</strong> to help you understand your competitive landscape and identify opportunities to differentiate your brand.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-yellow-600 mr-2 mt-1"></i>
-                                <span>AI Overviews citation monitoring</span>
+                                <span>Competitor mention volume & sentiment</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-yellow-600 mr-2 mt-1"></i>
-                                <span>LLM response pattern analysis</span>
+                                <span>Product comparison and feature discussions</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-yellow-600 mr-2 mt-1"></i>
-                                <span>Zero-click attribution tracking</span>
+                                <span>Market gap and opportunity identification</span>
                             </li>
                         </ul>
                     </div>
@@ -628,19 +663,19 @@
                     <div class="service-card bg-white p-8 rounded-2xl shadow-xl border-t-4 border-red-600">
                         <div class="flex items-center mb-6">
                             <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">6</div>
-                            <h3 class="text-xl font-bold text-gray-800">Performance Reporting & Optimization</h3>
+                            <h3 class="text-xl font-bold text-gray-800">Weekly Reports & Insights</h3>
                         </div>
                         <p class="text-gray-600 mb-4 leading-relaxed">
-                            Monthly performance reports showing <strong>Google rankings, AI citations, traffic attribution, and ROI</strong>—with continuous optimization based on data insights.
+                            Weekly performance reports showing <strong>brand mention trends, sentiment changes, crisis alerts, competitor activity,</strong> and <strong>actionable recommendations</strong> for reputation management.
                         </p>
                         <ul class="text-sm text-gray-600 space-y-2">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-red-600 mr-2 mt-1"></i>
-                                <span>Reddit brand monitoring keyword ranking reports</span>
+                                <span>Brand mention volume & sentiment trends</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-red-600 mr-2 mt-1"></i>
-                                <span>social listening citation frequency analysis</span>
+                                <span>Crisis and risk detection summaries</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-red-600 mr-2 mt-1"></i>

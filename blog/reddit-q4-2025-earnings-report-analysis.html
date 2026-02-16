@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Q4 2025 Earnings: 70% Revenue Growth, 121M Daily Users, $1B Buyback</title>
+    <meta name="description" content="Reddit Q4 2025 earnings show 70% revenue growth to $726M, 121.4M daily users (19% YoY), and announces $1B share buyback. Full analysis of what it means for advertisers.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Reddit Q4 2025 Earnings: 70% Revenue Growth, 121M Daily Users">
+    <meta property="og:description" content="Reddit Q4 2025: $726M revenue, 121.4M daily users, 45% EBITDA margin, $1B buyback program. Full earnings analysis.">
+    <meta property="og:image" content="https://www.recho.co/images/og-reddit-q4-earnings.png">
+    <meta property="og:url" content="https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reddit Q4 2025 Earnings: 70% Growth">
+    <meta name="twitter:description" content="$726M revenue, 121.4M daily users, 45% EBITDA margin. What advertisers need to know.">
+    <meta name="twitter:image" content="https://www.recho.co/images/twitter-reddit-q4-earnings.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPND9L4EB9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HPND9L4EB9');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'recho-orange': '#E6462F',
+                        'recho-light': '#FF5722',
+                        'recho-dark': '#D32F2F',
+                        'recho-blue': '#2563EB',
+                        'recho-blue-dark': '#1E40AF'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: #4B5563;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.75;
+            color: #4B5563;
+        }
+        
+        .blog-content strong {
+            color: #1F2937;
+            font-weight: 600;
+        }
+
+        .table-of-contents {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border-left: 4px solid #2563EB;
+        }
+        
+        .table-of-contents a {
+            color: #1F2937;
+            transition: all 0.2s ease;
+        }
+        
+        .table-of-contents a:hover {
+            color: #2563EB;
+            padding-left: 0.5rem;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            color: white;
+            text-align: center;
+        }
+        
+        /* Dropdown Navigation Styles */
+        .nav-item {
+            position: relative;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 0.5rem;
+            min-width: 280px;
+            z-index: 50;
+            margin-top: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Add invisible bridge area */
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 0.5rem;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            transition: all 0.2s;
+        }
+        
+        .dropdown a:hover {
+            background-color: #EFF6FF;
+            color: #2563EB;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="../images/recho-logo-corrected.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="nav-item relative">
+                        <a href="../services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown">
+                            <a href="../services.html" class="border-b border-gray-100">
+                                <i class="fas fa-th-large mr-2 text-recho-orange"></i>
+                                All Services
+                            </a>
+                            <a href="../services/reddit-seo-geo.html">
+                                <i class="fas fa-search mr-2 text-recho-orange"></i>
+                                Reddit SEO & GEO
+                            </a>
+                            <a href="../services/brand-monitoring-social-listening.html">
+                                <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
+                                Brand Monitoring & Social Listening
+                            </a>
+                        </div>
+                    </div>
+                    <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
+                    <a href="../faq.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">FAQs</a>
+                    <a href="../blog.html" class="text-recho-orange font-semibold">Blog</a>
+                    <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all font-semibold">Book a Call</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-recho-orange focus:outline-none z-50 relative" aria-label="Toggle menu" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
+        
+        <!-- Mobile Navigation Slide-in Panel -->
+        <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden" aria-label="Mobile navigation">
+            <div class="flex flex-col h-full">
+                <!-- Mobile Menu Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <a href="../index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors"><i class="fas fa-home mr-2"></i>Home</a>
+                    <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none" aria-label="Close menu">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Links -->
+                <div class="flex-1 overflow-y-auto py-6">
+                    <div class="flex flex-col space-y-1 px-4">
+                        <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-briefcase w-6 text-recho-orange"></i>
+                            Services
+                        </a>
+                        <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-microchip w-6 text-recho-orange"></i>
+                            Technology
+                        </a>
+                        <a href="../faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-question-circle w-6 text-recho-orange"></i>
+                            FAQs
+                        </a>
+                        <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-blog w-6 text-recho-orange"></i>
+                            Blog
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Footer CTA -->
+                <div class="p-6 border-t border-gray-200">
+                    <a href="../contact.html" class="block w-full bg-recho-blue text-white px-6 py-4 rounded-lg hover:bg-recho-blue-dark transition-all duration-300 font-semibold text-center shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Book a Call
+                    </a>
+                    <div class="mt-4 text-center">
+                        <a href="mailto:delivery@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
+                            <i class="fas fa-envelope mr-2"></i>
+                            delivery@recho.co
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Content -->
+    <article class="pt-24 pb-16">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm">
+                <ol class="flex items-center space-x-2 text-gray-600">
+                    <li><a href="../index.html" class="hover:text-recho-orange transition-colors">Home</a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li><a href="../blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li class="text-gray-800">Reddit Q4 2025 Earnings</li>
+                </ol>
+            </nav>
+
+            <!-- Article Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="px-4 py-1 bg-blue-100 text-recho-blue text-sm rounded-full font-semibold">Platform Updates</span>
+                    <time datetime="2026-02-16" class="text-gray-600 text-sm">February 16, 2026</time>
+                    <span class="text-gray-600 text-sm">• 12 min read</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Reddit Q4 2025 Earnings: 70% Revenue Growth, 121M Daily Users, $1B Buyback
+                </h1>
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Reddit's Q4 2025 earnings reveal explosive growth: $726M revenue (up 70% YoY), 121.4M daily active users (19% growth), 45% EBITDA margin, and a new $1 billion share buyback program. Here's what advertisers and investors need to know about Reddit's next growth phase.
+                </p>
+            </header>
+
+            <!-- Key Stats Box -->
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border-l-4 border-recho-blue p-8 mb-12 rounded-r-lg">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                    <i class="fas fa-chart-line mr-3 text-recho-blue"></i>
+                    Q4 2025 at a Glance
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="stat-card">
+                        <div class="text-3xl font-bold mb-2">$726M</div>
+                        <div class="text-sm opacity-90">Revenue (+70% YoY)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="text-3xl font-bold mb-2">121.4M</div>
+                        <div class="text-sm opacity-90">Daily Active Users (+19% YoY)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="text-3xl font-bold mb-2">$252M</div>
+                        <div class="text-sm opacity-90">Net Income (35% margin)</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="text-3xl font-bold mb-2">45%</div>
+                        <div class="text-sm opacity-90">Adj. EBITDA Margin</div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <p class="text-gray-700 font-semibold">
+                        Full Year 2025: $2.2B revenue (+69%), $530M net income, $845M adj. EBITDA
+                    </p>
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="table-of-contents p-6 rounded-lg mb-12">
+                <h2 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <i class="fas fa-list"></i>
+                    Table of Contents
+                </h2>
+                <ol class="space-y-2">
+                    <li><a href="#revenue-growth" class="hover:text-recho-blue transition-colors">1. Revenue & Profitability: Record Breaking Quarter</a></li>
+                    <li><a href="#user-growth" class="hover:text-recho-blue transition-colors">2. User Growth: 121.4M Daily Active Users</a></li>
+                    <li><a href="#advertising-business" class="hover:text-recho-blue transition-colors">3. Advertising Business: What's Driving 75% Growth</a></li>
+                    <li><a href="#international-expansion" class="hover:text-recho-blue transition-colors">4. International Expansion: The Next Frontier</a></li>
+                    <li><a href="#buyback-program" class="hover:text-recho-blue transition-colors">5. $1B Share Buyback: What It Signals</a></li>
+                    <li><a href="#q1-2026-guidance" class="hover:text-recho-blue transition-colors">6. Q1 2026 Guidance & What to Watch</a></li>
+                    <li><a href="#advertiser-implications" class="hover:text-recho-blue transition-colors">7. What This Means for Advertisers</a></li>
+                </ol>
+            </div>
+
+            <!-- Blog Content -->
+            <div class="blog-content">
+
+                <h2 id="revenue-growth">1. Revenue & Profitability: Record Breaking Quarter</h2>
+                
+                <p>Reddit delivered its strongest financial performance to date in Q4 2025, exceeding analyst expectations across every key metric.</p>
+
+                <h3>Q4 2025 Revenue Breakdown</h3>
+                
+                <ul>
+                    <li><strong>Total Revenue:</strong> $726 million (up 70% year-over-year from $428M in Q4 2024)</li>
+                    <li><strong>Advertising Revenue:</strong> $690 million (up 75% YoY)</li>
+                    <li><strong>Other Revenue:</strong> $36 million (up 8% YoY, primarily data licensing deals)</li>
+                    <li><strong>U.S. Revenue:</strong> $583 million (68% YoY growth)</li>
+                    <li><strong>International Revenue:</strong> $142 million (78% YoY growth)</li>
+                </ul>
+
+                <p>The <strong>78% international revenue growth</strong> significantly outpaced U.S. growth, signaling Reddit's successful expansion beyond its core North American market. This trend is accelerating, with international markets now representing 20% of total revenue, up from 19% in Q3 2025.</p>
+
+                <h3>Profitability Metrics</h3>
+
+                <p>Reddit achieved profitability milestones that demonstrate operating leverage and margin expansion:</p>
+
+                <ul>
+                    <li><strong>Net Income:</strong> $252 million (35% net margin) vs. $71 million in Q4 2024</li>
+                    <li><strong>Adjusted EBITDA:</strong> $327 million (45% margin) vs. $154 million in Q4 2024</li>
+                    <li><strong>Operating Cash Flow:</strong> $267 million (up $177M YoY)</li>
+                    <li><strong>Free Cash Flow:</strong> $264 million (36% FCF margin)</li>
+                    <li><strong>Gross Margin:</strong> 91.9% (consistent with Reddit's capital-light business model)</li>
+                </ul>
+
+                <p>CEO Steve Huffman emphasized the company's focus on "sharper execution" and turning "Reddit's authenticity into everyday utility" during the earnings call. The 45% EBITDA margin represents a 900 basis point improvement from Q4 2024's 36.1%, showcasing operational efficiency gains.</p>
+
+                <h3>Full Year 2025 Performance</h3>
+
+                <p>For the complete fiscal year 2025:</p>
+
+                <ul>
+                    <li><strong>Revenue:</strong> $2.2 billion (up 69% from $1.3B in 2024)</li>
+                    <li><strong>Net Income:</strong> $530 million (vs. $484M loss in 2024) — a $1+ billion swing to profitability</li>
+                    <li><strong>Adjusted EBITDA:</strong> $845 million (38% margin)</li>
+                    <li><strong>Free Cash Flow:</strong> $684 million</li>
+                </ul>
+
+                <p>Reddit's journey from a $484 million loss in 2024 to $530 million profit in 2025 marks one of the fastest turnarounds in recent social media history.</p>
+
+                <h2 id="user-growth">2. User Growth: 121.4M Daily Active Users</h2>
+
+                <p>Reddit's user metrics demonstrate sustained engagement growth across all key segments.</p>
+
+                <h3>Global Daily Active Uniques (DAUq)</h3>
+
+                <ul>
+                    <li><strong>Global DAUq:</strong> 121.4 million (up 19% YoY from 101.7M)</li>
+                    <li><strong>U.S. DAUq:</strong> 52.5 million (up 9% YoY)</li>
+                    <li><strong>International DAUq:</strong> 68.9 million (up 28% YoY) — now 57% of total daily users</li>
+                </ul>
+
+                <p>The <strong>28% international user growth</strong> significantly exceeds U.S. growth, validating Reddit's international expansion strategy. International users now represent a majority of Reddit's daily active user base for the first time.</p>
+
+                <h3>Logged-In vs. Logged-Out Users</h3>
+
+                <p>Reddit's user composition reveals interesting engagement patterns:</p>
+
+                <ul>
+                    <li><strong>Logged-in DAUq:</strong> 50.7 million globally (42% of total, up 10% YoY)
+                        <ul>
+                            <li>U.S. logged-in: 23.0M (5% growth)</li>
+                            <li>International logged-in: 27.7M (14% growth)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Logged-out DAUq:</strong> 70.7 million globally (58% of total, up 27% YoY)
+                        <ul>
+                            <li>U.S. logged-out: 29.5M (13% growth)</li>
+                            <li>International logged-out: 41.2M (40% growth)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p>The dramatic <strong>40% growth in international logged-out users</strong> reflects Reddit's increasing visibility in Google search results globally, particularly after Google's 2024 algorithm updates that heavily favor Reddit content.</p>
+
+                <h3>Weekly Active Uniques (WAUq)</h3>
+
+                <p>Reddit's weekly engagement metrics show similar growth trends:</p>
+
+                <ul>
+                    <li><strong>Global WAUq:</strong> 471.6 million (up 24% YoY)</li>
+                    <li><strong>U.S. WAUq:</strong> 193.4 million (up 12% YoY)</li>
+                    <li><strong>International WAUq:</strong> 278.2 million (up 34% YoY)</li>
+                </ul>
+
+                <p>The high weekly-to-daily ratio (3.9x) indicates Reddit successfully attracts casual users who visit multiple times per week but may not engage daily — a positive sign for advertising reach.</p>
+
+                <h2 id="advertising-business">3. Advertising Business: What's Driving 75% Growth</h2>
+
+                <p>Reddit's advertising business delivered exceptional results in Q4 2025, with revenue growing 75% year-over-year to $690 million.</p>
+
+                <h3>Average Revenue Per User (ARPU)</h3>
+
+                <p>ARPU metrics demonstrate Reddit's improving monetization efficiency:</p>
+
+                <ul>
+                    <li><strong>Global ARPU:</strong> $5.98 (up 42% YoY from $4.21)</li>
+                    <li><strong>U.S. ARPU:</strong> $10.79 (up 53% YoY from $7.04)</li>
+                    <li><strong>International ARPU:</strong> $2.31 (up 38% YoY from $1.67)</li>
+                </ul>
+
+                <p>The 53% U.S. ARPU growth significantly exceeded the 9% U.S. user growth, indicating Reddit is extracting substantially more value per user through better targeting, increased advertiser demand, and improved ad products.</p>
+
+                <p>International ARPU of $2.31 remains significantly below U.S. levels ($10.79), presenting a <strong>4.7x monetization opportunity</strong> as international markets mature and Reddit improves localization, ad formats, and sales infrastructure.</p>
+
+                <h3>Key Growth Drivers</h3>
+
+                <p>Several factors contributed to Reddit's advertising acceleration:</p>
+
+                <ol>
+                    <li><strong>Reddit Max Campaigns:</strong> AI-powered campaign automation launched in Q3 2025 drove higher advertiser adoption and improved performance metrics. Early data shows 17% lower CPA and 27% more conversions vs. manual campaigns.</li>
+                    
+                    <li><strong>Conversation Ads:</strong> New ad format that appears within comment threads achieved strong engagement rates, particularly for brands looking to participate authentically in discussions.</li>
+                    
+                    <li><strong>Advertiser Base Expansion:</strong> Reddit added thousands of new advertisers in Q4, with 41% of Q4 advertisers being first-time Reddit advertisers according to leaked data. Many brands shifted budgets from Meta/TikTok to Reddit.</li>
+                    
+                    <li><strong>AI Search Visibility:</strong> Brands increasingly view Reddit ads as a path to visibility in ChatGPT, Google Gemini, and Perplexity results, as <a href="brands-rush-to-reddit-boosting-ad-spend-gaming-ai-search.html" class="text-recho-blue hover:underline">covered in our previous analysis</a>.</li>
+                    
+                    <li><strong>International Ad Sales Infrastructure:</strong> Reddit's partnership with Aleph to manage international ad sales is driving growth in Europe, Latin America, and Southeast Asia.</li>
+                </ol>
+
+                <h3>Advertiser Demand Trends</h3>
+
+                <p>According to Reddit's earnings call commentary:</p>
+
+                <ul>
+                    <li>Performance marketing advertisers (e-commerce, app installs, lead gen) now represent over 50% of ad revenue, up from 40% a year ago</li>
+                    <li>Brand advertisers are increasingly using Reddit for awareness campaigns, particularly targeting Gen Z audiences</li>
+                    <li>Reddit's average deal size increased 38% YoY as enterprise brands allocate larger budgets</li>
+                    <li>Retention rates for advertisers spending $50K+ per quarter improved to 78% (up from 71% in 2024)</li>
+                </ul>
+
+                <h2 id="international-expansion">4. International Expansion: The Next Frontier</h2>
+
+                <p>International markets represent Reddit's most significant growth opportunity, with user growth far outpacing revenue growth — indicating massive monetization headroom.</p>
+
+                <h3>International Performance Metrics</h3>
+
+                <ul>
+                    <li><strong>International DAUq Growth:</strong> 28% YoY (vs. 9% in U.S.)</li>
+                    <li><strong>International Revenue Growth:</strong> 78% YoY (vs. 68% in U.S.)</li>
+                    <li><strong>International ARPU:</strong> $2.31 (vs. $10.79 in U.S.) — 367% monetization gap</li>
+                    <li><strong>International Share of Users:</strong> 57% of DAUq</li>
+                    <li><strong>International Share of Revenue:</strong> 20% — significant mismatch indicating under-monetization</li>
+                </ul>
+
+                <h3>Key International Markets</h3>
+
+                <p>Reddit highlighted several international success stories during the earnings call:</p>
+
+                <ul>
+                    <li><strong>United Kingdom:</strong> <a href="reddit-overtakes-tiktok-uk-international-growth-2026.html" class="text-recho-blue hover:underline">Reddit overtook TikTok</a> to become the UK's 4th most-visited social platform in 2025, reaching 60% of UK internet users. U.K. ARPU is approaching $6-7, nearly 3x the international average.</li>
+                    
+                    <li><strong>Germany:</strong> Reddit's German user base grew 45% YoY to an estimated 26-33 million users. German-language content has increased 60% YoY, and localized subreddits like r/de are thriving.</li>
+                    
+                    <li><strong>France:</strong> French user growth exceeded 50% YoY, driven by both localized content and Google search visibility. French ARPU remains low ($1.80) but is growing 42% YoY.</li>
+                    
+                    <li><strong>India:</strong> While monetization remains minimal, India is Reddit's fastest-growing market by absolute user adds, contributing significantly to logged-out user growth.</li>
+                    
+                    <li><strong>Australia:</strong> Australian ARPU ($7.20) is approaching U.S. levels, demonstrating mature-market monetization potential in English-speaking countries.</li>
+                </ul>
+
+                <h3>Localization Initiatives</h3>
+
+                <p>Reddit is investing heavily in localization:</p>
+
+                <ul>
+                    <li><strong>Machine Translation:</strong> Reddit deployed AI-powered translation for 100+ languages, enabling cross-border content discovery</li>
+                    <li><strong>Local Sales Teams:</strong> Reddit hired dedicated sales teams in Germany, France, UK, Brazil, and Japan</li>
+                    <li><strong>Payment Localization:</strong> Support for local currencies and payment methods in 25+ countries</li>
+                    <li><strong>Content Recommendations:</strong> Algorithm improvements to surface relevant local content to international users</li>
+                </ul>
+
+                <h2 id="buyback-program">5. $1B Share Buyback: What It Signals</h2>
+
+                <p>Reddit's announcement of a $1 billion share repurchase program marks a significant milestone, signaling management's confidence in the business and commitment to returning capital to shareholders.</p>
+
+                <h3>Buyback Details</h3>
+
+                <ul>
+                    <li><strong>Authorization Amount:</strong> Up to $1 billion of Class A common stock</li>
+                    <li><strong>Duration:</strong> No expiration date</li>
+                    <li><strong>Method:</strong> Open market purchases, privately negotiated transactions, or other methods</li>
+                    <li><strong>Flexibility:</strong> Can be suspended or discontinued at management's discretion</li>
+                </ul>
+
+                <p>With approximately 206 million fully diluted shares outstanding and Reddit's stock trading around $180-200 per share post-earnings, the $1B program represents roughly 2.7-3% of market capitalization.</p>
+
+                <h3>What the Buyback Signals</h3>
+
+                <ol>
+                    <li><strong>Cash Generation Confidence:</strong> Reddit generated $684M in free cash flow in 2025 and expects to generate $800M+ in 2026. The buyback signals management believes this cash generation is sustainable.</li>
+                    
+                    <li><strong>Valuation Perspective:</strong> Management views current share prices as attractive relative to Reddit's growth trajectory and profitability profile.</li>
+                    
+                    <li><strong>Capital Allocation Strategy:</strong> With $2.5 billion in cash and marketable securities, Reddit has ample capital for both growth investments and shareholder returns.</li>
+                    
+                    <li><strong>Maturation Signal:</strong> The buyback marks Reddit's transition from growth-at-all-costs startup to mature, cash-generative platform balancing growth and returns.</li>
+                </ol>
+
+                <h3>Balance Sheet Strength</h3>
+
+                <p>Reddit's financial position supports the buyback authorization:</p>
+
+                <ul>
+                    <li><strong>Cash & Marketable Securities:</strong> $2.48 billion (up from $1.84B a year ago)</li>
+                    <li><strong>Total Debt:</strong> Minimal (primarily operating leases)</li>
+                    <li><strong>Stockholders' Equity:</strong> $2.93 billion (vs. $2.13B in 2024)</li>
+                    <li><strong>Q4 Operating Cash Flow:</strong> $267 million</li>
+                </ul>
+
+                <h2 id="q1-2026-guidance">6. Q1 2026 Guidance & What to Watch</h2>
+
+                <p>Reddit provided Q1 2026 guidance that suggests continued strong growth, though at a moderating pace as the company laps tougher comparisons.</p>
+
+                <h3>Q1 2026 Guidance</h3>
+
+                <ul>
+                    <li><strong>Revenue:</strong> $595-605 million (midpoint: $600M)
+                        <ul>
+                            <li>Implies 50-52% YoY growth vs. Q1 2025 revenue of $397M</li>
+                            <li>Sequential decline from Q4 is typical seasonal pattern (holiday quarter to Q1)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Adjusted EBITDA:</strong> $210-220 million (midpoint: $215M)
+                        <ul>
+                            <li>Implies 35-37% EBITDA margin</li>
+                            <li>Down from Q4's 45% margin due to seasonality and investment spending</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>What to Watch in 2026</h3>
+
+                <p>Several key metrics and initiatives will determine whether Reddit sustains its growth trajectory:</p>
+
+                <ol>
+                    <li><strong>International ARPU Expansion:</strong> Can Reddit narrow the 4.7x monetization gap between U.S. ($10.79) and international ($2.31) markets? Even modest improvements (e.g., international ARPU reaching $3.50) would add $150M+ in annual revenue.</li>
+                    
+                    <li><strong>Reddit Max Campaign Adoption:</strong> What percentage of advertisers adopt AI-powered Max campaigns? Higher adoption should drive better performance metrics and increased spend.</li>
+                    
+                    <li><strong>User Growth Sustainability:</strong> Will the 19% DAUq growth rate continue, or will it moderate as Reddit's user base matures? Watch logged-in user growth particularly — these users are more valuable for advertisers.</li>
+                    
+                    <li><strong>Data Licensing Revenue:</strong> "Other revenue" (primarily data licensing to AI companies like Google and OpenAI) grew only 8% in Q4. Will this accelerate as AI companies train larger models?</li>
+                    
+                    <li><strong>Advertiser Retention:</strong> Can Reddit maintain or improve its 78% retention rate for large advertisers? This is crucial for sustainable revenue growth.</li>
+                    
+                    <li><strong>Competition from AI:</strong> As ChatGPT, Perplexity, and other AI assistants answer questions directly, will users reduce time spent on Reddit? Or will Reddit's community discussions remain irreplaceable?</li>
+                </ol>
+
+                <h3>Full Year 2026 Expectations</h3>
+
+                <p>While Reddit didn't provide full-year guidance, Street expectations are coalescing around:</p>
+
+                <ul>
+                    <li><strong>Revenue:</strong> $2.8-3.0 billion (27-36% growth)</li>
+                    <li><strong>Adjusted EBITDA:</strong> $1.0-1.1 billion (37-40% margin)</li>
+                    <li><strong>Free Cash Flow:</strong> $900M-1.0 billion</li>
+                </ul>
+
+                <h2 id="advertiser-implications">7. What This Means for Advertisers</h2>
+
+                <p>Reddit's Q4 earnings report contains several important signals for current and prospective advertisers.</p>
+
+                <h3>Key Takeaways for Advertisers</h3>
+
+                <ol>
+                    <li><strong>Reddit Is No Longer Experimental:</strong> With $2.2B in annual revenue and 121M daily users, Reddit has reached critical mass as an advertising platform. Brands treating Reddit as a "test" channel should reconsider their budget allocation.</li>
+                    
+                    <li><strong>Competition Is Intensifying:</strong> The 41% of Q4 advertisers being first-time Reddit advertisers means your competitors are discovering Reddit. CPMs will rise as demand increases, especially in high-value communities.</li>
+                    
+                    <li><strong>International Opportunity Window:</strong> With international ARPU at just $2.31 vs. $10.79 in the U.S., European, LATAM, and APAC advertisers have a 6-18 month window to establish presence before competition drives up costs.</li>
+                    
+                    <li><strong>AI Search Synergy:</strong> Advertisers increasingly recognize that Reddit ads provide a two-fold benefit: direct engagement on Reddit and increased visibility in AI-powered search results from ChatGPT, Perplexity, and Google Gemini.</li>
+                    
+                    <li><strong>Performance Marketing Works:</strong> Reddit's shift from primarily brand advertising to 50%+ performance marketing indicates the platform now drives measurable conversions, not just awareness.</li>
+                </ol>
+
+                <h3>Recommended Actions</h3>
+
+                <p>Based on Q4 earnings insights, advertisers should consider:</p>
+
+                <ul>
+                    <li><strong>Test Reddit Max Campaigns:</strong> Early data shows 17% lower CPA and 27% more conversions. These AI-powered campaigns remove much of the complexity of Reddit advertising.</li>
+                    
+                    <li><strong>Expand to International Markets:</strong> If you're only advertising to U.S. audiences, consider UK, Germany, France, and Australia where user growth is accelerating but competition remains low.</li>
+                    
+                    <li><strong>Increase Budgets Proactively:</strong> With 75% ad revenue growth and increasing advertiser demand, waiting for CPMs to rise before scaling will cost you more long-term. Lock in better pricing now.</li>
+                    
+                    <li><strong>Focus on Community Engagement:</strong> Reddit's logged-in users (42% of DAUq) are the most valuable for advertisers. Prioritize subreddits with active, engaged communities over pure reach plays.</li>
+                    
+                    <li><strong>Leverage Conversation Ads:</strong> New ad formats that integrate into comment threads allow brands to participate authentically in discussions — particularly valuable for industries where trust matters (finance, healthcare, B2B SaaS).</li>
+                </ul>
+
+                <h3>Budget Benchmarks from Q4 Data</h3>
+
+                <p>Based on ARPU data and advertiser metrics from the earnings report:</p>
+
+                <ul>
+                    <li><strong>U.S. Advertisers:</strong> Plan for $10-12 ARPU when estimating reach. A campaign targeting 500K users should budget $5,000-6,000 monthly.</li>
+                    <li><strong>International Advertisers:</strong> Budget $2-3 ARPU in most markets (UK/Australia higher at $6-8).</li>
+                    <li><strong>Enterprise Brands:</strong> Average deal size of $50K+ per quarter suggests successful brands allocate $15-20K monthly minimum.</li>
+                    <li><strong>Performance Marketers:</strong> Target 3-5x ROAS in months 3-4 after optimization period. Early data suggests Reddit Max campaigns achieve this faster.</li>
+                </ul>
+
+                <h2>Conclusion: Reddit's Next Chapter</h2>
+
+                <p>Reddit's Q4 2025 earnings represent a pivotal moment: the platform has transitioned from fast-growing startup to profitable, cash-generative business while maintaining exceptional growth rates.</p>
+
+                <p>The 70% revenue growth, 19% user growth, and 45% EBITDA margin demonstrate that Reddit has found the formula for balancing growth and profitability. The $1 billion share buyback program signals management's confidence that this performance is sustainable.</p>
+
+                <p>For advertisers, the message is clear: <strong>Reddit is no longer a "nice-to-have" experimental channel — it's a must-have platform</strong> for reaching engaged audiences, particularly Gen Z and Millennials who increasingly use Reddit for product research, authentic discussions, and community connection.</p>
+
+                <p>The next 12-18 months will be crucial as Reddit scales internationally, improves monetization, and navigates competition from AI-powered assistants. Advertisers who establish presence now — before competition intensifies and CPMs rise further — will have a significant first-mover advantage.</p>
+
+                <div class="bg-blue-50 border-l-4 border-recho-blue p-6 my-8">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">📊 Bottom Line for Advertisers</h3>
+                    <p class="mb-0">If you're allocating 2026 advertising budgets, Reddit deserves a 10-15% share of your social media spend. The platform's combination of engaged communities, improving ad products, and strong business momentum makes it one of the highest-ROI advertising channels available today — especially in international markets where competition remains minimal.</p>
+                </div>
+
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mt-16 pt-8 border-t border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What were Reddit's Q4 2025 earnings results?</h3>
+                        <p class="text-gray-600">Reddit reported Q4 2025 revenue of $726 million (up 70% YoY), 121.4 million daily active users (up 19% YoY), net income of $252 million (35% margin), and adjusted EBITDA of $327 million (45% margin). Full year 2025 revenue reached $2.2 billion with $530 million net income.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Why did Reddit announce a $1 billion share buyback?</h3>
+                        <p class="text-gray-600">The $1 billion buyback program signals Reddit's confidence in sustained cash generation ($684M free cash flow in 2025) and reflects management's view that current share prices are attractive. With $2.5B in cash reserves and strong profitability, Reddit can invest in growth while returning capital to shareholders.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">How much do Reddit ads cost after Q4 earnings?</h3>
+                        <p class="text-gray-600">Based on Q4 ARPU data, U.S. advertisers should expect $10.79 ARPU (cost per user reached), translating to CPMs of $8-15 and CPCs of $0.50-4.00 depending on targeting. International markets average $2.31 ARPU, offering 40-60% lower costs. <a href="how-much-do-reddit-ads-cost-in-2026.html" class="text-recho-blue hover:underline">See our complete Reddit ads pricing guide</a>.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Which countries are driving Reddit's international growth?</h3>
+                        <p class="text-gray-600">Reddit's fastest-growing markets are UK (overtook TikTok in 2025), Germany (45% user growth), France (50%+ growth), India (fastest absolute growth), and Australia (mature monetization at $7.20 ARPU). International users now represent 57% of daily active users but only 20% of revenue, indicating massive monetization opportunity.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Should brands increase Reddit ad spend in 2026?</h3>
+                        <p class="text-gray-600">Yes. Reddit's 75% advertising revenue growth, improving retention rates (78% for large advertisers), and new AI-powered Max campaigns (17% lower CPA) make it one of the highest-ROI channels. With 41% of Q4 advertisers being first-time Reddit advertisers, competition is intensifying — acting now locks in better pricing.</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">What is Reddit's Q1 2026 guidance?</h3>
+                        <p class="text-gray-600">Reddit expects Q1 2026 revenue of $595-605 million (50-52% YoY growth) and adjusted EBITDA of $210-220 million (35-37% margin). The sequential decline from Q4 is normal seasonal pattern (holiday quarter to Q1). Full year 2026 expectations are $2.8-3.0B revenue.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Articles -->
+            <div class="mt-16 pt-8 border-t border-gray-200">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">
+                    Related Reddit Marketing Resources
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <a href="how-much-do-reddit-ads-cost-in-2026.html" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">How Much Do Reddit Ads Cost in 2026?</h3>
+                        <p class="text-gray-600 text-sm mb-3">Complete pricing guide: $0.50-$4.00 CPC, $3.50-$15 CPM, budget recommendations, and platform comparisons.</p>
+                        <span class="text-recho-blue font-semibold text-sm">Read Guide →</span>
+                    </a>
+                    
+                    <a href="reddit-overtakes-tiktok-uk-international-growth-2026.html" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Reddit Overtakes TikTok in UK</h3>
+                        <p class="text-gray-600 text-sm mb-3">Reddit surpassed TikTok with 88% growth to reach 60% of UK internet users. International advertiser opportunity.</p>
+                        <span class="text-recho-blue font-semibold text-sm">Read Analysis →</span>
+                    </a>
+                    
+                    <a href="brands-rush-to-reddit-boosting-ad-spend-gaming-ai-search.html" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Brands Rush to Reddit for AI Search Visibility</h3>
+                        <p class="text-gray-600 text-sm mb-3">Why major brands are increasing Reddit ad spend to boost visibility in ChatGPT, Google Gemini, and Perplexity.</p>
+                        <span class="text-recho-blue font-semibold text-sm">Read Report →</span>
+                    </a>
+                    
+                    <a href="reddit-max-campaigns-what-advertisers-need-to-know.html" class="block p-6 bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow border border-gray-200">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-2">Reddit Max Campaigns Guide</h3>
+                        <p class="text-gray-600 text-sm mb-3">AI-powered campaigns delivering 17% lower CPA and 27% more conversions. Benefits, drawbacks, when to use.</p>
+                        <span class="text-recho-blue font-semibold text-sm">Read Guide →</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Share Buttons -->
+            <div class="flex items-center gap-4 py-8 border-t border-gray-200">
+                <span class="text-gray-600 font-semibold">Share this article:</span>
+                <a href="https://twitter.com/intent/tweet?url=https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis&text=Reddit Q4 2025 Earnings: 70% Revenue Growth, 121M Daily Users" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-500 hover:text-white transition-colors">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-700 hover:text-white transition-colors">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis" target="_blank" rel="noopener" class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:bg-blue-600 hover:text-white transition-colors">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-4">
+                        <img src="../images/recho-logo-white.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Full-service Reddit marketing agency combining organic community building, paid advertising, and proprietary technology.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/rechoagency" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:delivery@recho.co" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Reddit Organic Management</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Reddit Paid Advertising</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">EchoMind our proprietary software</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Community Building</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Subreddit Management</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Profile Optimization</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../index.html" class="hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="../faq.html" class="hover:text-recho-orange transition-colors">FAQs</a></li>
+                        <li><a href="../blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
+                        <li><a href="../contact.html" class="hover:text-recho-orange transition-colors">Book a Call</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Get in Touch</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-recho-orange mr-2 mt-1"></i>
+                            <a href="mailto:delivery@recho.co" class="hover:text-recho-orange transition-colors">delivery@recho.co</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2026 RECHO. All rights reserved.
+                    </p>
+                    <div class="text-gray-400 text-sm">
+                        <a href="../privacy-policy.html" class="hover:text-recho-orange transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/ga4-events.js"></script>
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis#blogpost",
+          "headline": "Reddit Q4 2025 Earnings: 70% Revenue Growth, 121M Daily Users, $1B Buyback",
+          "description": "Reddit Q4 2025 earnings show 70% revenue growth to $726M, 121.4M daily users (19% YoY), and announces $1B share buyback. Full analysis of what it means for advertisers.",
+          "image": "https://www.recho.co/images/og-reddit-q4-earnings.png",
+          "datePublished": "2026-02-16T09:00:00-05:00",
+          "dateModified": "2026-02-16T09:00:00-05:00",
+          "author": {
+            "@type": "Organization",
+            "@id": "https://www.recho.co/#organization",
+            "name": "RECHO"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "@id": "https://www.recho.co/#organization",
+            "name": "RECHO",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://www.recho.co/images/recho-logo.png"
+            }
+          },
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis"
+          },
+          "articleSection": "Platform Updates",
+          "keywords": ["Reddit earnings", "Reddit Q4 2025", "Reddit revenue", "Reddit users", "Reddit advertising", "Reddit stock", "Reddit buyback", "social media earnings", "Reddit international growth"]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What were Reddit's Q4 2025 earnings results?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Reddit reported Q4 2025 revenue of $726 million (up 70% YoY), 121.4 million daily active users (up 19% YoY), net income of $252 million (35% margin), and adjusted EBITDA of $327 million (45% margin). Full year 2025 revenue reached $2.2 billion with $530 million net income."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why did Reddit announce a $1 billion share buyback?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The $1 billion buyback program signals Reddit's confidence in sustained cash generation ($684M free cash flow in 2025) and reflects management's view that current share prices are attractive. With $2.5B in cash reserves and strong profitability, Reddit can invest in growth while returning capital to shareholders."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should brands increase Reddit ad spend in 2026?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Reddit's 75% advertising revenue growth, improving retention rates (78% for large advertisers), and new AI-powered Max campaigns (17% lower CPA) make it one of the highest-ROI channels. With 41% of Q4 advertisers being first-time Reddit advertisers, competition is intensifying — acting now locks in better pricing."
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.recho.co"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.recho.co/blog"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Reddit Q4 2025 Earnings",
+              "item": "https://www.recho.co/blog/reddit-q4-2025-earnings-report-analysis"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</body>
+</html>

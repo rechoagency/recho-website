@@ -249,6 +249,13 @@
                             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
                             <input type="hidden" name="_next" value="https://www.recho.co/contact.html?success=true">
                             
+                            <!-- UTM Tracking Parameters (auto-populated by utm-tracking.js) -->
+                            <input type="hidden" name="utm_source" value="">
+                            <input type="hidden" name="utm_medium" value="">
+                            <input type="hidden" name="utm_campaign" value="">
+                            <input type="hidden" name="utm_term" value="">
+                            <input type="hidden" name="utm_content" value="">
+                            
                             <!-- Name Fields -->
                             <div class="grid md:grid-cols-2 gap-4 mb-4">
                                 <div>
@@ -571,6 +578,9 @@
 
     <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
+    
+    <!-- UTM Tracking Script -->
+    <script src="js/utm-tracking.js"></script>
     
     <!-- GA4 Custom Event Tracking -->
     <script src="js/ga4-events.js"></script>

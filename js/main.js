@@ -162,9 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Reset button
                 submitButton.innerHTML = originalButtonText;
                 submitButton.disabled = false;
-                
-                // Log form data (for development)
-                console.log('Form data:', data);
             }, 1500);
         });
     }
@@ -257,8 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const serviceSelect = document.getElementById('service');
     if (serviceSelect) {
         serviceSelect.addEventListener('change', function() {
-            console.log('Selected service:', this.value);
-            // Can be used for analytics or conditional form fields
+            // Track service selection for analytics
         });
     }
     
@@ -274,8 +270,7 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollDepths.forEach(depth => {
             if (scrollPercentage >= depth && !scrollDepthsReached.includes(depth)) {
                 scrollDepthsReached.push(depth);
-                console.log(`Scroll depth reached: ${depth}%`);
-                // Can be integrated with analytics tools
+                // Track scroll depth for analytics
             }
         });
     });
@@ -341,7 +336,4 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Console welcome message
-console.log('%c🚀 RECHO - Full-Service Reddit Marketing Agency', 'color: #E6462F; font-size: 20px; font-weight: bold;');
-console.log('%cWebsite loaded successfully!', 'color: #10B981; font-size: 14px;');
-console.log('%cLooking to dominate Reddit? Contact us at sales@recho.co', 'color: #6B7280; font-size: 12px;');
+// Website initialized successfully

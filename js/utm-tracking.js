@@ -38,7 +38,6 @@ function captureUTMs() {
   // This preserves the original source even as the user navigates.
   if (hasUTM) {
     setCookie(COOKIE_NAME, JSON.stringify(utmData), COOKIE_DAYS);
-    console.log('UTM parameters captured:', utmData);
   }
 }
 
@@ -47,16 +46,13 @@ function captureUTMs() {
 function populateFormFields() {
   const cookieValue = getCookie(COOKIE_NAME);
   if (!cookieValue) {
-    console.log('No UTM cookie found');
     return;
   }
 
   let utmData;
   try {
     utmData = JSON.parse(cookieValue);
-    console.log('UTM data from cookie:', utmData);
   } catch (e) {
-    console.warn('UTM cookie could not be parsed:', e);
     return;
   }
 
@@ -65,7 +61,6 @@ function populateFormFields() {
     const field = document.querySelector(`input[name="${param}"]`);
     if (field && utmData[param]) {
       field.value = utmData[param];
-      console.log(`Populated ${param} with: ${utmData[param]}`);
     }
   });
 }

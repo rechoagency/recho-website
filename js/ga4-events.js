@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'email_address': 'sales@recho.co',
                     'location': window.location.pathname
                 });
-                console.log('GA4 Event: Email click tracked');
+                // Event tracked
             }
         });
     });
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'item_id': window.location.pathname,
                     'article_title': articleTitle
                 });
-                console.log('GA4 Event: LinkedIn share tracked');
+                // Event tracked
             }
         });
     });
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'item_id': window.location.pathname,
                     'article_title': articleTitle
                 });
-                console.log('GA4 Event: Twitter share tracked');
+                // Event tracked
             }
         });
     });
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'item_id': window.location.pathname,
                     'article_title': articleTitle
                 });
-                console.log('GA4 Event: Reddit share tracked');
+                // Event tracked
             }
         });
     });
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'item_id': window.location.pathname,
                     'article_title': articleTitle
                 });
-                console.log('GA4 Event: Email share tracked');
+                // Event tracked
             }
         });
     });
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'search_term': searchTerm,
                     'search_location': 'blog_page'
                 });
-                console.log('GA4 Event: Blog search tracked -', searchTerm);
+                // Event tracked
             }
         });
         
@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         'search_term': searchTerm,
                         'search_location': 'blog_page'
                     });
-                    console.log('GA4 Event: Blog search tracked -', searchTerm);
+                    // Event tracked
                 }
             }
         });
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'blog_url': blogUrl,
                     'click_location': window.location.pathname
                 });
-                console.log('GA4 Event: Blog card click tracked -', blogTitle);
+                // Event tracked
             }
         });
     });
@@ -193,11 +193,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         'link_url': link.href,
                         'from_page': window.location.pathname
                     });
-                    console.log('GA4 Event: External link click tracked -', destination);
+                    // Event tracked
                 }
             });
         }
     });
     
-    console.log('GA4 Custom Event Tracking Initialized ✅');
+    // Event tracked
 });

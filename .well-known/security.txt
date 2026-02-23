@@ -1,0 +1,19 @@
+Contact: mailto:security@recho.co
+Contact: mailto:delivery@recho.co
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://www.recho.co/.well-known/security.txt
+Policy: https://www.recho.co/privacy-policy.html
+Acknowledgments: https://www.recho.co/security-acknowledgments
+
+# Security Contact Information
+# RECHO is a legitimate business providing Reddit marketing services
+# If you encounter security issues, please report responsibly
+
+# About RECHO
+# Business Name: RECHO
+# Business Type: Reddit Marketing Agency
+# Services: Reddit Advertising, Community Management, Social Listening
+# Website: https://www.recho.co
+# Email: delivery@recho.co
+# LinkedIn: https://www.linkedin.com/company/rechoagency

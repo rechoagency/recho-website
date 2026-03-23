@@ -10,13 +10,18 @@ A modern, professional, multi-page website for RECHO, the premier Reddit marketi
 - **Architecture**: Multi-page website with WordPress integration ready
 - **Target Audience**: Brands seeking professional Reddit marketing services
 
-## 🌐 Live Preview
+## 🌐 Live Site
 
-- **Development URL**: https://3000-iztdddk4ts3h4ab0pbxf1-b9b802c4.sandbox.novita.ai
-- **Homepage**: index.html
-- **FAQs**: faq.html
-- **Blog**: blog.html (WordPress integration ready)
-- **Contact**: contact.html (Book a Call form)
+- **Production URL**: https://recho.co
+- **Blog**: https://recho.co/blog (22 posts live)
+- **Sitemap**: https://recho.co/sitemap.xml (22 URLs indexed)
+- **GitHub**: https://github.com/rechoagency/recho-website
+- **Cloudflare Pages**: recho-co project
+
+### Latest Blog Posts (March 2026)
+1. **How to Remove Negative Reddit Posts from Google Search** (Mar 23, 2026) - Community Management
+2. **Time Spent on Reddit Nearly Doubles Since 2018** (Mar 6, 2026) - Platform Updates  
+3. **Reddit's Gender Shift: Platform Now Nearly Half Women Users** (Feb 27, 2026) - Platform Updates
 
 ## ✅ Completed Features
 

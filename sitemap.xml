@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://recho.co/blog</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -53,6 +53,12 @@
     <lastmod>2025-12-08</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://recho.co/blog/how-to-remove-negative-reddit-posts-from-google-search</loc>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://recho.co/blog/reddit-time-spent-nearly-doubles-since-2018</loc>

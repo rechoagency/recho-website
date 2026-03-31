@@ -153,44 +153,43 @@
         }
         
         /* Dropdown Navigation Styles */
-        .nav-item {
-            position: relative;
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            z-index: 1000;
+            margin-top: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
         
-        .dropdown-content {
-            display: none;
+        .nav-item::after {
+            content: '';
             position: absolute;
             top: 100%;
             left: 0;
-            background: white;
-            min-width: 250px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            border-radius: 0.5rem;
-            padding: 0.5rem 0;
-            z-index: 1000;
-            margin-top: 0.5rem;
+            right: 0;
+            height: 0.5rem;
         }
         
-        .nav-item:hover .dropdown-content {
+        .nav-item:hover .dropdown {
             display: block;
         }
         
-        .dropdown-content a {
+        .dropdown a {
             display: block;
-            padding: 0.75rem 1.5rem;
+            padding: 0.75rem 1.25rem;
             color: #374151;
-            transition: all 0.2s ease;
+            transition: all 0.2s;
         }
         
-        .dropdown-content a:hover {
-            background: #FFF7ED;
-            color: #E6462F;
-            padding-left: 2rem;
-        }
-        
-        .dropdown-content i {
-            width: 20px;
-            text-align: center;
+        .dropdown a:hover {
+            background-color: #EFF6FF;
+            color: #2563EB;
+            padding-left: 1.5rem;
         }
     </style>
     
@@ -330,26 +329,25 @@
     </script>
 </head>
 <body class="bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
+    <!-- Header Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
+            <div class="flex items-center justify-between w-full">
                 <!-- Logo -->
-                <div class="flex-shrink-0">
-                    <a href="../index.html" class="flex items-center">
-                        <span class="text-3xl font-bold text-recho-orange">RECHO</span>
-                    </a>
-                </div>
+                <a href="../index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="../images/recho-logo-corrected.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
+                </a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <div class="nav-item">
+                    <div class="nav-item relative">
                         <a href="../services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
-                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </a>
-                        <div class="dropdown-content">
-                            <a href="../services.html">
-                                <i class="fas fa-th mr-2 text-recho-orange"></i>
+                        <div class="dropdown">
+                            <a href="../services.html" class="border-b border-gray-100">
+                                <i class="fas fa-th-large mr-2 text-recho-orange"></i>
                                 All Services
                             </a>
                             <a href="../services/reddit-seo-geo.html">
@@ -363,7 +361,7 @@
                         </div>
                     </div>
                     <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
-                    <a href="../faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
+                    <a href="../faq.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">FAQs</a>
                     <a href="../blog.html" class="text-recho-orange font-semibold">Blog</a>
                     <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all font-semibold">Book a Call</a>
                 </div>
@@ -377,13 +375,11 @@
             </div>
         </div>
         
-        <!-- Mobile Navigation Overlay -->
+        <!-- Mobile Navigation -->
         <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
         
-        <!-- Mobile Navigation Slide-in Panel -->
         <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden" aria-label="Mobile navigation">
             <div class="flex flex-col h-full">
-                <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
                     <a href="../index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors"><i class="fas fa-home mr-2"></i>Home</a>
                     <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none" aria-label="Close menu">
@@ -391,90 +387,74 @@
                     </button>
                 </div>
                 
-                <!-- Mobile Menu Links -->
                 <div class="flex-1 overflow-y-auto py-6">
                     <div class="flex flex-col space-y-1 px-4">
                         <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
                             <i class="fas fa-briefcase w-6 text-recho-orange"></i>
-                            All Services
-                        </a>
-                        <a href="../services/reddit-seo-geo.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
-                            <i class="fas fa-search w-6 text-recho-orange"></i>
-                            Reddit SEO & GEO
-                        </a>
-                        <a href="../services/brand-monitoring-social-listening.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
-                            <i class="fas fa-chart-line w-6 text-recho-orange"></i>
-                            Brand Monitoring
+                            Services
                         </a>
                         <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
-                            <i class="fas fa-cogs w-6 text-recho-orange"></i>
+                            <i class="fas fa-microchip w-6 text-recho-orange"></i>
                             Technology
                         </a>
                         <a href="../faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
                             <i class="fas fa-question-circle w-6 text-recho-orange"></i>
                             FAQs
                         </a>
-                        <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-recho-orange bg-orange-50 rounded-lg font-semibold">
-                            <i class="fas fa-newspaper w-6"></i>
+                        <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-blog w-6 text-recho-orange"></i>
                             Blog
                         </a>
                     </div>
                 </div>
                 
-                <!-- Mobile Menu CTA -->
                 <div class="p-6 border-t border-gray-200">
-                    <a href="../contact.html" class="block w-full bg-recho-blue text-white text-center px-6 py-3 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all font-semibold">
+                    <a href="../contact.html" class="block w-full bg-recho-blue text-white px-6 py-4 rounded-lg hover:bg-recho-blue-dark transition-all duration-300 font-semibold text-center shadow-lg hover:shadow-xl">
                         <i class="fas fa-calendar-alt mr-2"></i>
                         Book a Call
                     </a>
+                    <div class="mt-4 text-center">
+                        <a href="mailto:delivery@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
+                            <i class="fas fa-envelope mr-2"></i>
+                            delivery@recho.co
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-12 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Blog Content -->
+    <article class="pt-24 pb-16">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm">
+                <ol class="flex items-center space-x-2 text-gray-600">
+                    <li><a href="../index.html" class="hover:text-recho-orange transition-colors">Home</a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li><a href="../blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li class="text-gray-800">Reddit Human Verification</li>
+                </ol>
+            </nav>
+
+            <!-- Article Header -->
             <header class="mb-12">
                 <div class="flex items-center gap-3 mb-6 flex-wrap">
                     <span class="breaking-badge px-4 py-1 bg-red-600 text-white text-sm rounded-full font-bold uppercase">
                         <i class="fas fa-bolt mr-1"></i> Breaking News
                     </span>
                     <span class="px-4 py-1 bg-blue-100 text-blue-700 text-sm rounded-full font-semibold">Platform Updates</span>
-                    <time datetime="2026-03-26" class="text-gray-300 text-sm">March 26, 2026</time>
-                    <span class="text-gray-300 text-sm">• 14 min read</span>
+                    <time datetime="2026-03-26" class="text-gray-600 text-sm">March 26, 2026</time>
+                    <span class="text-gray-600 text-sm">• 14 min read</span>
                 </div>
-                
-                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
                     Reddit Launches Human Verification to Combat Bot Crisis
                 </h1>
-                
-                <p class="text-xl text-gray-300 leading-relaxed mb-6">
+                <p class="text-xl text-gray-600 leading-relaxed">
                     Breaking: Reddit removes <strong>100,000 bot accounts daily</strong>, introduces <strong>mandatory verification</strong> for suspicious accounts, and launches <strong>APP labels</strong> for verified bots. The platform's response to the "dead internet theory" becoming reality.
                 </p>
-                
-                <div class="flex items-center gap-4 text-sm text-gray-300">
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-user-shield text-recho-orange"></i>
-                        <span>Privacy-First Verification</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-robot text-recho-orange"></i>
-                        <span>100K Daily Removals</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                        <i class="fas fa-certificate text-recho-orange"></i>
-                        <span>New APP Labels</span>
-                    </div>
-                </div>
             </header>
-        </div>
-    </section>
-
-    <!-- Main Content -->
-    <article class="py-12 bg-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
             <!-- Breaking Stats Box -->
             <div class="stats-box">
                 <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
@@ -526,7 +506,7 @@
             </div>
 
             <!-- Main Content -->
-            <div class="blog-content prose prose-lg max-w-none">
+            <div class="blog-content">
                 
                 <h2 id="overview">Overview: Reddit's Bot Crisis Response</h2>
                 

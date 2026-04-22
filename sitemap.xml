@@ -38,7 +38,7 @@
   </url>
   <url>
     <loc>https://recho.co/blog</loc>
-    <lastmod>2026-03-26</lastmod>
+    <lastmod>2026-04-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -55,6 +55,12 @@
     <priority>0.3</priority>
   </url>
   <url>
+  <url>
+    <loc>https://recho.co/blog/reddit-max-campaigns-q1-2026-results</loc>
+    <lastmod>2026-04-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
     <loc>https://recho.co/blog/reddit-enforces-power-mod-limit-brands-win</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>monthly</changefreq>
@@ -108,7 +114,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
+  <upl>
     <loc>https://recho.co/blog/how-much-do-reddit-ads-cost-in-2026</loc>
     <lastmod>2026-01-15</lastmod>
     <changefreq>monthly</changefreq>
@@ -188,6 +194,12 @@
   </url>
   <url>
     <loc>https://recho.co/blog/what-new-reddit-ad-tools-launched-in-2025</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
+c>https://recho.co/blog/what-new-reddit-ad-tools-launched-in-2025</loc>
     <lastmod>2025-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

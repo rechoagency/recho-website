@@ -6,14 +6,20 @@
     <title>Reddit MAX Campaigns After 3 Months: Real Results from 5 Advertisers | RECHO</title>
     <meta name="description" content="Reddit MAX campaigns are 3 months old. The Times 2x conversions, Brooks Running -37% CPC, B2C tech +214% ROAS. Here's what works, what doesn't, and whether you should switch from standard campaigns.">
     
-    <!-- Open Graph -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Reddit MAX Campaigns After 3 Months: Real Results from 5 Advertisers">
     <meta property="og:description" content="The Times doubled conversions. Brooks Running cut CPC by 37%. A B2C tech company saw 214% ROAS improvement. Here's what 3 months of Reddit MAX campaigns taught us about automated Reddit advertising.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.recho.co/blog/reddit-max-campaigns-3-month-results">
     <meta property="og:image" content="https://www.recho.co/images/og-reddit-max-3-months.png">
+    <meta property="og:url" content="https://www.recho.co/blog/reddit-max-campaigns-3-month-results">
+    <meta property="og:type" content="article">
     
-    <!-- Canonical -->
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reddit MAX Campaigns After 3 Months: Real Results from 5 Advertisers">
+    <meta name="twitter:description" content="The Times 2x conversions, Brooks Running -37% CPC, B2C tech +214% ROAS. Complete 3-month analysis.">
+    <meta name="twitter:image" content="https://www.recho.co/images/twitter-reddit-max-3-months.png">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://www.recho.co/blog/reddit-max-campaigns-3-month-results">
     
     <!-- Google Analytics 4 -->
@@ -27,12 +33,18 @@
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
     <!-- Font Awesome -->
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
     
     <!-- Tailwind Config -->
     <script>
@@ -41,63 +53,378 @@
                 extend: {
                     colors: {
                         'recho-orange': '#E6462F',
-                        'recho-blue': '#2563EB'
+                        'recho-light': '#FF5722',
+                        'recho-dark': '#D32F2F',
+                        'recho-blue': '#2563EB',
+                        'recho-blue-dark': '#1E40AF'
                     }
                 }
             }
         }
     </script>
+    
+    <style>
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: #4B5563;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.75;
+            color: #4B5563;
+        }
+        
+        .blog-content strong {
+            color: #1F2937;
+            font-weight: 600;
+        }
+
+        .table-of-contents {
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+            border-left: 4px solid #E6462F;
+        }
+        
+        .table-of-contents a {
+            color: #1F2937;
+            transition: all 0.2s ease;
+        }
+        
+        .table-of-contents a:hover {
+            color: #E6462F;
+            padding-left: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+            border-left: 4px solid #E6462F;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stats-box {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border-left: 4px solid #2563EB;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+        
+        .impact-box {
+            background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 100%);
+            border-left: 4px solid #16A34A;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            margin: 2rem 0;
+        }
+
+        /* Dropdown Navigation Styles */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            z-index: 1000;
+            margin-top: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 0.5rem;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            transition: all 0.2s;
+        }
+        
+        .dropdown a:hover {
+            background-color: #EFF6FF;
+            color: #2563EB;
+            padding-left: 1.5rem;
+        }
+    </style>
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Reddit MAX Campaigns After 3 Months: Real Results from 5 Advertisers",
+        "description": "Three months after Reddit MAX campaigns launched, we have real data from 5 advertisers. The Times doubled conversions, Brooks Running cut CPC by 37%, and a B2C tech company saw 214% ROAS improvement. Here's what works, what doesn't, and whether automated campaigns beat manual targeting on Reddit.",
+        "image": "https://www.recho.co/images/og-reddit-power-mod-limit.png",
+        "datePublished": "2026-04-22T00:00:00-05:00",
+        "dateModified": "2026-04-22T00:00:00-05:00",
+        "author": {
+            "@type": "Organization",
+            "name": "RECHO",
+            "url": "https://www.recho.co"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RECHO",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.recho.co/images/recho-logo-corrected.png"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.recho.co/blog/reddit-max-campaigns-3-month-results"
+        },
+        "articleSection": "Platform Updates",
+        "keywords": "Reddit MAX campaigns, Reddit automated advertising, Reddit AI campaigns, Reddit campaign performance, Reddit advertising ROI, MAX vs standard campaigns, Reddit advertising 2026",
+        "wordCount": 3800
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Reddit's power mod limit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "As of March 31, 2026, Reddit enforces a maximum of 5 high-traffic communities (over 100,000 weekly visitors) per moderator. Only one of those five communities can exceed 1 million weekly visitors. Moderators over the limit are automatically removed from communities starting with those they're least active in."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What was the r/Art controversy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "In November 2025, a moderator on r/Art banned artist Hayden Clay for posting about prints of his artwork. When users protested, the same moderator locked down the entire subreddit, removed all other moderators, and continued banning users who posted their own work. Reddit admins had to physically unlock the subreddit and install a new mod team."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "When did Reddit announce the power mod limit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reddit CEO Steve Huffman announced the power mod restrictions in September 2025 on r/ModNews, then made a wider announcement to all users in December 2025 after the r/Art incident. Enforcement began January 2026 with full automatic removal starting March 31, 2026."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why were power mods a barrier to brands?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A small group of anonymous volunteers controlled huge chunks of Reddit. In the biggest communities, power mods maintained an anti-brand culture where brand participation was unwelcome. Despite 40% of Reddit conversations having commercial intent (people asking what to buy), power mods actively suppressed brand engagement."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How much revenue did Reddit generate in 2025?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reddit generated $2.2 billion in revenue in 2025, up 69% year-over-year. Advertising revenue was $2.1 billion (up 74% YoY), and Reddit achieved GAAP profitability with $530 million in net income. Q4 2025 alone brought in $726 million in revenue."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should brands start participating on Reddit now?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. With power mod limits enforced as of March 31, 2026, the biggest barrier to brand participation is removed. Reddit has 121 million daily active users, 40% of conversations have commercial intent, and Reddit is aggressively building tools for brand participation. The anti-brand mod culture is ending."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens to mods over the 5-subreddit limit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Starting March 31, 2026, moderators exceeding the 5-community limit are automatically removed from communities they are least active in. Reddit offered transition support including 'alumni status' (advisor role without mod powers) and special recognition. The removal process continues until the mod is down to 5 or fewer high-traffic communities."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How many communities were power mods controlling?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Before the restrictions, some power mods controlled dozens of major subreddits simultaneously. Reddit never disclosed exact numbers, but moderator analysis showed individuals moderating 20-50+ communities with millions of combined users, creating centralized control over large platform sections."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the 1 million visitor sub-limit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Within the 5 high-traffic community limit, a moderator can only moderate ONE community exceeding 1 million weekly visitors. This prevents power mods from controlling multiple mega-communities like r/pics, r/videos, r/AskReddit simultaneously."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this apply to all subreddits?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. The limit only applies to high-traffic communities with over 100,000 weekly visitors. Moderators can still moderate unlimited smaller communities. The rule targets power mods controlling major, highly-visible subreddits that dominate Reddit's front page."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.recho.co/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.recho.co/blog"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Reddit Enforces Power Mod Limit",
+                "item": "https://www.recho.co/blog/reddit-enforces-power-mod-limit-brands-win"
+            }
+        ]
+    }
+    </script>
 </head>
+
 <body class="bg-gray-50">
-    <!-- Header -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-2">
-                    <a href="../index.html" class="flex items-center space-x-2">
-                        <img src="../images/recho-logo.png" alt="RECHO Logo" class="h-16 md:h-20">
-                    </a>
-                </div>
+    <!-- Header Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="../images/recho-logo-corrected.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
+                </a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../services.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">Services</a>
-                    <a href="../technology.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">Technology</a>
+                    <div class="nav-item relative">
+                        <a href="../services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown">
+                            <a href="../services.html" class="border-b border-gray-100">
+                                <i class="fas fa-th-large mr-2 text-recho-orange"></i>
+                                All Services
+                            </a>
+                            <a href="../services/reddit-seo-geo.html">
+                                <i class="fas fa-search mr-2 text-recho-orange"></i>
+                                Reddit SEO & GEO
+                            </a>
+                            <a href="../services/brand-monitoring-social-listening.html">
+                                <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
+                                Brand Monitoring & Social Listening
+                            </a>
+                        </div>
+                    </div>
+                    <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
                     <a href="../faq.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">FAQs</a>
-                    <a href="../blog.html" class="text-gray-700 hover:text-recho-orange transition-colors font-medium">Blog</a>
-                    <a href="https://calendly.com/jonnywaite-recho/reddit-ads-consultation" target="_blank" class="bg-recho-orange text-white px-6 py-2 rounded-full hover:bg-recho-dark transition-colors font-semibold">Book a Call</a>
+                    <a href="../blog.html" class="text-recho-orange font-semibold">Blog</a>
+                    <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all font-semibold">Book a Call</a>
                 </div>
                 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-toggle" class="md:hidden text-gray-700 hover:text-recho-orange focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
-                </button>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-recho-orange focus:outline-none z-50 relative" aria-label="Toggle menu" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
             </div>
-            
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <a href="../services.html" class="block py-2 text-gray-700 hover:text-recho-orange transition-colors">Services</a>
-                <a href="../technology.html" class="block py-2 text-gray-700 hover:text-recho-orange transition-colors">Technology</a>
-                <a href="../faq.html" class="block py-2 text-gray-700 hover:text-recho-orange transition-colors">FAQs</a>
-                <a href="../blog.html" class="block py-2 text-gray-700 hover:text-recho-orange transition-colors">Blog</a>
-                <a href="https://calendly.com/jonnywaite-recho/reddit-ads-consultation" target="_blank" class="block mt-2 bg-recho-orange text-white px-6 py-2 rounded-full hover:bg-recho-dark transition-colors text-center">Book a Call</a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Breadcrumb -->
-    <nav class="bg-white border-b border-gray-200">
-        <div class="container mx-auto px-6 py-3">
-            <ol class="flex items-center space-x-2 text-sm">
-                <li><a href="../index.html" class="text-recho-blue hover:text-recho-orange transition-colors">Home</a></li>
-                <li class="text-gray-400">/</li>
-                <li><a href="../blog.html" class="text-recho-blue hover:text-recho-orange transition-colors">Blog</a></li>
-                <li class="text-gray-400">/</li>
-                <li class="text-gray-600">Reddit MAX Campaigns: 3-Month Results</li>
-            </ol>
         </div>
-    </nav>
-
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
+        
+        <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden" aria-label="Mobile navigation">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <a href="../index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors"><i class="fas fa-home mr-2"></i>Home</a>
+                    <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none" aria-label="Close menu">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto py-6">
+                    <div class="flex flex-col space-y-1 px-4">
+                        <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-briefcase w-6 text-recho-orange"></i>
+                            Services
+                        </a>
+                        <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-microchip w-6 text-recho-orange"></i>
+                            Technology
+                        </a>
+                        <a href="../faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-question-circle w-6 text-recho-orange"></i>
+                            FAQs
+                        </a>
+                        <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-blog w-6 text-recho-orange"></i>
+                            Blog
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border-t border-gray-200">
+                    <a href="../contact.html" class="block w-full bg-recho-blue text-white px-6 py-4 rounded-lg hover:bg-recho-blue-dark transition-all duration-300 font-semibold text-center shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Book a Call
+                    </a>
+                    <div class="mt-4 text-center">
+                        <a href="mailto:delivery@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
+                            <i class="fas fa-envelope mr-2"></i>
+                            delivery@recho.co
+                        </a>
     <!-- Article -->
     <article class="bg-white">
         <div class="container mx-auto px-6 py-12 max-w-4xl">
@@ -130,7 +457,7 @@
             </div>
 
             <!-- Main Content -->
-            <div class="prose prose-lg max-w-none">
+            <div class="blog-content">
                 <h2>What Is Reddit MAX, Quickly</h2>
                 <p>
                     Reddit MAX campaigns are Reddit's answer to Google Performance Max—automated campaigns that use AI to optimize everything: targeting, bidding, creative selection, and placement. You upload assets, set a budget, and the algorithm does the rest.
@@ -666,6 +993,56 @@
         document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
             var menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
+                </p>
+
+                <!-- Call to Action -->
+                <div class="mt-16 bg-gradient-to-r from-recho-orange to-recho-light text-white p-8 rounded-2xl text-center">
+                    <h3 class="text-3xl font-bold mb-4">Ready to Enter Reddit's Brand-Friendly Era?</h3>
+                    <p class="text-lg mb-6 opacity-90">
+                        The power mod barrier is gone. 40% of Reddit conversations have commercial intent. 121 million daily users are asking for product recommendations. Your brand should be part of that conversation.
+                    </p>
+                    <a href="../contact.html?utm_source=blog&utm_medium=cta&utm_campaign=power-mod-enforcement" class="inline-block bg-white text-recho-orange px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calendar-alt mr-2"></i>Get Your Reddit Strategy Session
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMobileMenu() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = '';
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
+                closeMobileMenu();
+            }
         });
     </script>
 </body>

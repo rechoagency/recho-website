@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code of Conduct - White Hat Reddit Marketing | RECHO</title>
+    <meta name="description" content="RECHO's Code of Conduct: We are a fully compliant white hat Reddit marketing agency, following Reddit's guidelines and community rules to build authentic, valuable brand presence.">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPND9L4EB9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HPND9L4EB9');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'recho-orange': '#E6462F',
+                        'recho-light': '#FF5722',
+                        'recho-dark': '#D32F2F',
+                        'recho-blue': '#2563EB',
+                        'recho-blue-dark': '#1E40AF'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Dropdown Navigation Styles -->
+    <style>
+        .nav-item {
+            position: relative;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            min-width: 280px;
+            z-index: 50;
+            margin-top: 0rem;
+            padding-top: 0.5rem;
+        }
+        
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: transparent;
+            z-index: 49;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            transition: all 0.2s;
+        }
+        
+        .dropdown a:hover {
+            background-color: #FFF7ED;
+            color: #E6462F;
+            padding-left: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Header/Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
+            <div class="flex items-center justify-between w-full">
+                <a href="index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="images/recho-logo-corrected.png" alt="RECHO - Full-Service Reddit Marketing Agency" style="height: 158px; width: auto;">
+                </a>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="nav-item relative">
+                        <a href="services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown">
+                            <a href="services.html" class="border-b border-gray-100">
+                                <i class="fas fa-th-large mr-2 text-recho-orange"></i>
+                                All Services
+                            </a>
+                            <a href="services/reddit-seo-geo.html">
+                                <i class="fas fa-search mr-2 text-recho-orange"></i>
+                                Reddit SEO & GEO
+                            </a>
+                            <a href="services/brand-monitoring-social-listening.html">
+                                <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
+                                Brand Monitoring & Social Listening
+                            </a>
+                        </div>
+                    </div>
+                    <a href="code-of-conduct.html" class="text-recho-orange font-semibold">Code of Conduct</a>
+                    <a href="technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
+                    <a href="faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
+                    <a href="blog.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>
+                    <a href="contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
+                        Book a Call
+                    </a>
+                </div>
+                
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-recho-orange focus:outline-none z-50 relative" aria-label="Toggle menu">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 md:hidden"></div>
+        
+        <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+            <div class="flex flex-col h-full">
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <a href="index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors"><i class="fas fa-home mr-2"></i>Home</a>
+                    <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <div class="flex-1 overflow-y-auto py-6">
+                    <div class="flex flex-col space-y-1 px-4">
+                        <a href="services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-briefcase w-6 text-recho-orange"></i>
+                            All Services
+                        </a>
+                        <a href="services/reddit-seo-geo.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
+                            <i class="fas fa-search w-6 text-recho-orange"></i>
+                            Reddit SEO & GEO
+                        </a>
+                        <a href="services/brand-monitoring-social-listening.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
+                            <i class="fas fa-shield-alt w-6 text-recho-orange"></i>
+                            Brand Monitoring
+                        </a>
+                        <a href="code-of-conduct.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-balance-scale w-6 text-recho-orange"></i>
+                            Code of Conduct
+                        </a>
+                        <a href="technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-microchip w-6 text-recho-orange"></i>
+                            Technology
+                        </a>
+                        <a href="faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-question-circle w-6 text-recho-orange"></i>
+                            FAQs
+                        </a>
+                        <a href="blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-blog w-6 text-recho-orange"></i>
+                            Blog
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="p-6 border-t border-gray-200">
+                    <a href="contact.html" class="block w-full bg-recho-blue text-white px-6 py-4 rounded-lg hover:bg-recho-blue-dark transition-all duration-300 font-semibold text-center shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Book a Call
+                    </a>
+                    <div class="mt-4 text-center">
+                        <a href="mailto:delivery@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
+                            <i class="fas fa-envelope mr-2"></i>
+                            delivery@recho.co
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-green-600 to-teal-700 text-white pt-32 pb-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center gap-2 bg-white bg-opacity-20 px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-shield-check text-2xl"></i>
+                    <span class="font-semibold text-lg">100% White Hat Agency</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">RECHO Code of Conduct</h1>
+                <p class="text-xl md:text-2xl leading-relaxed opacity-95">
+                    We are a fully compliant, white hat Reddit marketing agency committed to building authentic brand communities within Reddit's guidelines and platform values.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Ethos Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Our Ethos: Onboarding Brands the Right Way</h2>
+                    <div class="w-24 h-1 bg-recho-orange mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        RECHO is a full-service Reddit marketing agency dedicated to onboarding brands onto Reddit the right way. We believe Reddit is an invaluable platform where people seek genuine help, honest recommendations, and authentic community connections. Our mission is to help brands become valuable contributors to these conversations—never to degrade the platform's integrity.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8 mb-16">
+                    <div class="text-center p-8 bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-handshake text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Authentic Engagement</h3>
+                        <p class="text-gray-600">We help brands build genuine relationships within Reddit communities through valuable contributions and transparent communication.</p>
+                    </div>
+                    
+                    <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-balance-scale text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Platform Integrity</h3>
+                        <p class="text-gray-600">We actively refuse any tactics that spam the platform or degrade the user experience that makes Reddit valuable.</p>
+                    </div>
+                    
+                    <div class="text-center p-8 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl">
+                        <div class="w-16 h-16 bg-recho-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Community First</h3>
+                        <p class="text-gray-600">We show brands how Reddit is the right place to build lasting communities and become trusted resources—not just another ad channel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Principles Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center">Our Core Principles</h2>
+                <p class="text-xl text-gray-600 text-center mb-16">How we ensure every client campaign operates within Reddit's guardrails</p>
+
+                <div class="space-y-8">
+                    <!-- Principle 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-green-600">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-user-check text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Official Branded Accounts Only</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    All client activity is conducted through <strong>official branded Reddit accounts</strong> that clearly identify the company or brand. We follow Reddit's own internal playbooks for brand accounts, ensuring transparency in every interaction.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Clear brand identification in username and profile</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Transparent disclosure of brand affiliation in all communications</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>No sockpuppeting, astroturfing, or deceptive practices</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Principle 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-600">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-book text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Strict Adherence to Subreddit Rules</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Every subreddit has its own unique culture and rule set. We follow the <strong>letter of the law</strong> for each community we engage with, respecting moderator authority and community norms.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                                        <span>Comprehensive review of subreddit rules before any engagement</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                                        <span>Respect for moderator decisions and community guidelines</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                                        <span>Building relationships with moderators before brand activity</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                                        <span>Zero tolerance for rule-breaking to achieve marketing goals</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Principle 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-recho-orange">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-recho-orange rounded-full flex items-center justify-center">
+                                    <i class="fas fa-gem text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Value-First Content Strategy</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Our approach centers on <strong>being a useful source</strong> rather than a promotional megaphone. We help brands contribute meaningfully to Reddit conversations where their expertise genuinely helps users.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-recho-orange mt-1"></i>
+                                        <span>Answer user questions with genuine expertise and helpfulness</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-recho-orange mt-1"></i>
+                                        <span>Share valuable insights without always promoting products</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-recho-orange mt-1"></i>
+                                        <span>Build trust through consistent, authentic participation</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-recho-orange mt-1"></i>
+                                        <span>Focus on 90% value-add, 10% brand mention ratio</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Principle 4 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-purple-600">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-shield-halved text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Reddit Content Policy Compliance</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    We operate within <strong>Reddit's platform-wide Content Policy</strong> and moderator guidelines at all times, ensuring every campaign aligns with Reddit's vision for authentic community engagement.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-purple-600 mt-1"></i>
+                                        <span>Full compliance with Reddit's spam policy and self-promotion guidelines</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-purple-600 mt-1"></i>
+                                        <span>Adherence to vote manipulation and brigading prohibitions</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-purple-600 mt-1"></i>
+                                        <span>Respect for intellectual property and content attribution</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-purple-600 mt-1"></i>
+                                        <span>Regular policy review to stay current with platform updates</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Principle 5 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-red-600">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-red-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-ban text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Zero Tolerance for Platform Degradation</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    We <strong>actively refuse and push off</strong> any tactics that would spam the platform, manipulate engagement, or degrade the user experience that makes Reddit valuable. Our success depends on Reddit remaining a trusted platform.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-times-circle text-red-600 mt-1"></i>
+                                        <span><strong>No spam:</strong> We refuse mass posting, repetitive content, or irrelevant promotions</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-times-circle text-red-600 mt-1"></i>
+                                        <span><strong>No manipulation:</strong> No vote buying, artificial upvotes, or coordinated engagement</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-times-circle text-red-600 mt-1"></i>
+                                        <span><strong>No deception:</strong> No fake accounts, hidden affiliations, or misleading claims</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-times-circle text-red-600 mt-1"></i>
+                                        <span><strong>No exploitation:</strong> We decline campaigns that would harm Reddit's community trust</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How We Work Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center">How We Put This Into Practice</h2>
+                <p class="text-xl text-gray-600 text-center mb-16">Our operational framework for white hat Reddit marketing</p>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-search text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Community Research</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Before engaging any subreddit, we conduct extensive research into community culture, rules, moderator expectations, and user behavior patterns to ensure brand fit.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-user-tie text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Moderator Relationships</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            We build relationships with subreddit moderators, seeking their input on appropriate brand participation and respecting their authority to guide community standards.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-recho-orange rounded-lg flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Client Education</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            We educate clients on Reddit's unique culture and why short-term promotional tactics fail, helping them understand the long-term value of authentic community building.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-chart-line text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Quality Over Quantity</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            We measure success by meaningful engagement, community trust, and long-term karma growth—not post volume or aggressive self-promotion metrics.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-comments text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Genuine Participation</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            Brand accounts participate in communities even when there's no promotional opportunity—answering questions, sharing expertise, and being helpful members.
+                        </p>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-200">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 bg-teal-600 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-clipboard-check text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">Regular Compliance Audits</h3>
+                        </div>
+                        <p class="text-gray-600">
+                            We conduct regular audits of client campaigns to ensure ongoing compliance with platform policies, subreddit rules, and our own ethical standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Matters Section -->
+    <section class="py-20 bg-gradient-to-br from-recho-orange to-red-600 text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Why Our White Hat Approach Benefits Everyone</h2>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                        <i class="fas fa-reddit text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">For Reddit</h3>
+                        <p class="text-sm opacity-90">We help maintain platform quality by bringing brands that add value, not spam. This supports Reddit's growth and user trust.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                        <i class="fas fa-building text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">For Brands</h3>
+                        <p class="text-sm opacity-90">Authentic engagement builds lasting communities and brand loyalty that far exceed short-term promotional gains.</p>
+                    </div>
+                    <div class="bg-white bg-opacity-10 p-6 rounded-xl">
+                        <i class="fas fa-users text-5xl mb-4"></i>
+                        <h3 class="text-xl font-bold mb-3">For Users</h3>
+                        <p class="text-sm opacity-90">Helpful brands that follow community norms enhance Reddit's value as a place to get honest advice and genuine recommendations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto bg-gradient-to-br from-blue-50 to-indigo-50 rounded-3xl p-12 text-center">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">Ready to Build Your Reddit Presence the Right Way?</h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Partner with a Reddit marketing agency that puts community integrity and long-term success ahead of quick wins and questionable tactics.
+                </p>
+                <a href="contact.html" class="inline-block bg-recho-blue text-white px-10 py-4 rounded-full font-bold hover:bg-recho-blue-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                    Book a Consultation
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="mb-4">
+                        <img src="images/recho-logo-white.png" alt="RECHO - Reddit Marketing Agency" style="height: 158px; width: auto;">
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Full-service Reddit marketing agency combining organic community building, paid advertising, and EchoMind our proprietary software.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/rechoagency" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:delivery@recho.co" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">Reddit Organic Management</a></li>
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">Reddit Paid Advertising</a></li>
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">EchoMind our proprietary software</a></li>
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">Community Building</a></li>
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">Subreddit Management</a></li>
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">Profile Optimization</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="code-of-conduct.html" class="hover:text-recho-orange transition-colors">Code of Conduct</a></li>
+                        <li><a href="technology.html" class="hover:text-recho-orange transition-colors">Technology</a></li>
+                        <li><a href="faq.html" class="hover:text-recho-orange transition-colors">FAQs</a></li>
+                        <li><a href="blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
+                        <li><a href="contact.html" class="hover:text-recho-orange transition-colors">Book a Call</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Get in Touch</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-recho-orange mr-2 mt-1"></i>
+                            <a href="mailto:delivery@recho.co" class="hover:text-recho-orange transition-colors">delivery@recho.co</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2026 RECHO. All rights reserved.
+                    </p>
+                    <div class="text-gray-400 text-sm">
+                        <a href="privacy-policy.html" class="hover:text-recho-orange transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/ga4-events.js"></script>
+</body>
+</html>

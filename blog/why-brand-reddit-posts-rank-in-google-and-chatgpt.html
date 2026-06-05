@@ -127,25 +127,32 @@
                     <img src="../images/recho-logo-corrected.png" alt="RECHO - Full-Service Reddit Marketing Agency" style="height: 158px; width: auto;">
                 </a>
                 
-                <!-- Desktop Navigation -->
+                                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <div class="nav-item relative">
-                        <a href="../services.html" class="text-gray-700 hover:text-recho-orange font-medium flex items-center gap-1">
+                        <a href="../services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
                             Services
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                            </svg>
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </a>
                         <div class="dropdown">
-                            <a href="../services.html" class="text-sm">All Services</a>
-                            <a href="../services/reddit-seo-geo.html" class="text-sm">Reddit SEO & GEO</a>
-                            <a href="../services/brand-monitoring-social-listening.html" class="text-sm">Brand Monitoring & Social Listening</a>
+                            <a href="../services.html" class="border-b border-gray-100">
+                                <i class="fas fa-th-large mr-2 text-recho-orange"></i>
+                                All Services
+                            </a>
+                            <a href="../services/reddit-seo-geo.html">
+                                <i class="fas fa-search mr-2 text-recho-orange"></i>
+                                Reddit SEO & GEO
+                            </a>
+                            <a href="../services/brand-monitoring-social-listening.html">
+                                <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
+                                Brand Monitoring & Social Listening
+                            </a>
                         </div>
                     </div>
-                    <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
                     <a href="../code-of-conduct.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Code of Conduct</a>
+                    <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
                     <a href="../faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
-                    <a href="../blog.html" class="nav-link text-recho-orange font-semibold">Blog</a>
+                    <a href="../blog.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>
                     <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
                         Book a Call
                     </a>
@@ -173,27 +180,40 @@
                         </button>
                     </div>
                     
-                    <!-- Mobile Menu Links -->
-                    <div class="flex-1 overflow-y-auto py-6">
-                        <div class="flex flex-col space-y-1 px-4">
-                            <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
-                                <i class="fas fa-briefcase w-6 text-recho-orange"></i>
-                                Services
-                            </a>
-                            <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
-                                <i class="fas fa-microchip w-6 text-recho-orange"></i>
-                                Technology
-                            </a>
-                            <a href="../faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
-                                <i class="fas fa-question-circle w-6 text-recho-orange"></i>
-                                FAQs
-                            </a>
-                            <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
-                                <i class="fas fa-blog w-6 text-recho-orange"></i>
-                                Blog
-                            </a>
-                        </div>
+                                    <!-- Mobile Menu Links -->
+<div class="flex-1 overflow-y-auto py-6">
+                    <div class="flex flex-col space-y-1 px-4">
+                        <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-briefcase w-6 text-recho-orange"></i>
+                            All Services
+                        </a>
+                        <a href="../services/reddit-seo-geo.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
+                            <i class="fas fa-search w-6 text-recho-orange"></i>
+                            Reddit SEO & GEO
+                        </a>
+                        <a href="../services/brand-monitoring-social-listening.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
+                            <i class="fas fa-shield-alt w-6 text-recho-orange"></i>
+                            Brand Monitoring
+                        </a>
+                        <a href="../code-of-conduct.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-balance-scale w-6 text-recho-orange"></i>
+                            Code of Conduct
+                        </a>
+                        <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-microchip w-6 text-recho-orange"></i>
+                            Technology
+                        </a>
+                        <a href="../faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-question-circle w-6 text-recho-orange"></i>
+                            FAQs
+                        </a>
+                        <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-blog w-6 text-recho-orange"></i>
+                            Blog
+                        </a>
                     </div>
+                </div>
+                
                     
                     <!-- Mobile Menu Footer CTA -->
                     <div class="p-6 border-t border-gray-200">

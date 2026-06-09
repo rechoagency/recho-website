@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reddit Technology | EchoMind by RECHO</title>
-    <meta name="description" content="EchoMind is RECHO's advanced Reddit technology platform. AI-powered Reddit marketing software that automates community building and ad optimization at scale.">
+    <title>EchoMind Technology | Reddit Marketing Platform | RECHO</title>
+    <meta name="description" content="EchoMind is RECHO's compliant Reddit marketing technology. Monitor public Reddit data through official APIs, identify opportunities, and engage authentically with Reddit communities.">
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPND9L4EB9"></script>
@@ -36,8 +36,7 @@
                         'recho-light': '#FF5722',
                         'recho-dark': '#D32F2F',
                         'recho-blue': '#2563EB',
-                        'recho-blue-dark': '#1E40AF',
-                        'recho-navy': '#1a2332'
+                        'recho-blue-dark': '#1E40AF'
                     }
                 }
             }
@@ -45,101 +44,47 @@
     </script>
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     
     <style>
-        .hexagon {
-            width: 140px;
-            height: 160px;
-            position: relative;
-            margin: 0 auto;
-        }
-        .hexagon-inner {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #7c3626 0%, #4a1f16 100%);
-            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .hexagon-text {
-            color: #E6462F;
-            font-size: 13px;
-            font-weight: 600;
-            text-align: center;
-            line-height: 1.2;
-        }
-        .hexagon-label {
-            color: white;
-            font-size: 11px;
-            font-weight: 400;
-            text-align: center;
-            margin-top: 4px;
-        }
-    </style>
-    
-    <!-- Dropdown Navigation Styles -->
-    <style>
-        .nav-item {
-            position: relative;
+        body {
+            font-family: 'Poppins', sans-serif;
         }
         
-        .dropdown {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: white;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-radius: 0.5rem;
-            min-width: 280px;
-            z-index: 50;
-            margin-top: 0rem;
-            padding-top: 0.5rem;
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
         }
         
-        /* Add invisible bridge area */
-        .nav-item::after {
-            content: "";
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            height: 1rem;
-            background: transparent;
-            z-index: 49;
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
-        .nav-item:hover .dropdown {
-            display: block;
+        .hover-lift {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
         
-        .dropdown a {
-            display: block;
-            padding: 0.75rem 1.25rem;
-            color: #374151;
-            transition: all 0.2s;
-        }
-        
-        .dropdown a:hover {
-            background-color: #FFF7ED;
-            color: #E6462F;
-            padding-left: 1.5rem;
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
-<body class="font-poppins bg-white">
+<body class="font-poppins bg-gray-50">
     
-    <!-- Header/Navigation -->
+    <!-- Header Navigation -->
     <header class="fixed w-full bg-white shadow-md z-50">
         <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
             <div class="flex items-center justify-between w-full">
@@ -148,7 +93,7 @@
                     <img src="images/recho-logo-corrected.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
                 </a>
                 
-                                <!-- Desktop Navigation -->
+                <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <div class="nav-item relative">
                         <a href="services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
@@ -171,7 +116,7 @@
                         </div>
                     </div>
                     <a href="code-of-conduct.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Code of Conduct</a>
-                    <a href="technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
+                    <a href="technology.html" class="nav-link text-recho-orange font-semibold transition-colors duration-300">Technology</a>
                     <a href="faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
                     <a href="blog.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>
                     <a href="contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
@@ -204,7 +149,7 @@
                     </button>
                 </div>
                 
-                                <!-- Mobile Menu Links -->
+                <!-- Mobile Menu Links -->
 <div class="flex-1 overflow-y-auto py-6">
                     <div class="flex flex-col space-y-1 px-4">
                         <a href="services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
@@ -254,371 +199,354 @@
                 </div>
             </div>
         </nav>
-        </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="pb-12 bg-gradient-to-b from-orange-50 to-white" style="padding-top: 120px;">
+    <section class="bg-gradient-to-br from-recho-orange to-recho-dark text-white pt-32 pb-20">
         <div class="container mx-auto px-6">
-            <div class="animate-fade-in-up">
-                <div class="flex items-center justify-center gap-4 mb-6">
-                    <img src="images/echomind-icon.png" alt="EchoMind Icon" style="height: 110px; width: auto; filter: brightness(0) saturate(100%) invert(34%) sepia(94%) saturate(2849%) hue-rotate(349deg) brightness(91%) contrast(89%);">
-                    <h1 class="text-5xl md:text-6xl font-bold text-gray-800">
-                        <span class="text-recho-orange">EchoMind</span> our proprietary Reddit software
-                    </h1>
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <div class="inline-flex items-center gap-3 bg-white bg-opacity-20 px-6 py-3 rounded-full mb-6">
+                    <i class="fas fa-shield-check text-2xl"></i>
+                    <span class="font-semibold text-lg">Fully Compliant Reddit Technology</span>
                 </div>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto text-center">
-                    <span class="text-recho-orange font-bold">processing thousands of discussions</span> to identify high-impact opportunities your competitors miss
+                <h1 class="text-5xl md:text-6xl font-bold mb-6">EchoMind<sup class="text-2xl">™</sup></h1>
+                <p class="text-xl md:text-2xl leading-relaxed opacity-95 mb-8">
+                    Reddit marketing intelligence powered by official APIs and white hat data collection. Identify opportunities, monitor conversations, and engage authentically—all within Reddit's platform policies.
                 </p>
+                <a href="contact.html" class="inline-block bg-white text-recho-orange px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                    See EchoMind in Action
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Main Technology Features Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div class="container mx-auto px-6">
-            
-            <!-- Two Column Layout - Like the Deck -->
-            <div class="grid lg:grid-cols-2 gap-12 mb-20">
-                
-                <!-- Left Column: AI-Powered Priority Scoring -->
-                <div class="bg-white rounded-3xl shadow-2xl p-10 border-l-8 border-recho-orange transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-8">
-                        <div class="w-16 h-16 bg-recho-orange rounded-2xl flex items-center justify-center mr-4">
-                            <i class="fas fa-brain text-white text-3xl"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-gray-800">
-                            <span class="text-recho-orange">AI-Powered</span> Priority Scoring
-                        </h2>
-                    </div>
-                    
-                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                        Our proprietary technology identifies and ranks Reddit conversations that matter most to your audience.
-                    </p>
-
-                    <!-- Hexagon Diagram -->
-                    <div class="relative my-12">
-                        <div class="flex flex-wrap justify-center gap-6">
-                            <!-- Center hexagon -->
-                            <div class="w-full flex justify-center mb-6">
-                                <div class="hexagon">
-                                    <div class="hexagon-inner" style="background: linear-gradient(135deg, #E6462F 0%, #D32F2F 100%);">
-                                        <div class="hexagon-text text-white text-lg font-bold">Priority Score</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Surrounding hexagons - Top row -->
-                            <div class="flex justify-center gap-4 flex-wrap">
-                                <div class="hexagon">
-                                    <div class="hexagon-inner">
-                                        <div class="hexagon-text">Upvote Ratio</div>
-                                    </div>
-                                </div>
-                                <div class="hexagon">
-                                    <div class="hexagon-inner">
-                                        <div class="hexagon-text">Helpful Comments</div>
-                                    </div>
-                                </div>
-                                <div class="hexagon">
-                                    <div class="hexagon-inner">
-                                        <div class="hexagon-text">Award Presence</div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Bottom row -->
-                            <div class="flex justify-center gap-4 flex-wrap mt-4">
-                                <div class="hexagon">
-                                    <div class="hexagon-inner">
-                                        <div class="hexagon-text">Discussion Depth</div>
-                                    </div>
-                                </div>
-                                <div class="hexagon">
-                                    <div class="hexagon-inner">
-                                        <div class="hexagon-text">Engagement Level</div>
-                                    </div>
-                                </div>
-                                <div class="hexagon">
-                                    <div class="hexagon-inner">
-                                        <div class="hexagon-text">Solution Verification</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Feature List -->
-                    <div class="space-y-4 mt-8">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-orange/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-check text-recho-orange"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Real-time monitoring</strong> across subreddits</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-orange/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-check text-recho-orange"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Cross-references</strong> Google search trends</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-orange/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-check text-recho-orange"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Identifies</strong> high-intent conversations across your industry</p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-orange/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-check text-recho-orange"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Scales beyond</strong> human monitoring capacity</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Data-Driven Results -->
-                <div class="bg-white rounded-3xl shadow-2xl p-10 border-l-8 border-recho-blue transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center mb-8">
-                        <div class="w-16 h-16 bg-recho-blue rounded-2xl flex items-center justify-center mr-4">
-                            <i class="fas fa-chart-line text-white text-3xl"></i>
-                        </div>
-                        <h2 class="text-3xl font-bold text-gray-800">
-                            <span class="text-recho-orange">Data-Driven</span> Results
-                        </h2>
-                    </div>
-                    
-                    <p class="text-lg text-gray-700 mb-8 leading-relaxed">
-                        Our technology transforms raw Reddit data into actionable marketing insights.
-                    </p>
-
-                    <!-- Results Icons Grid -->
-                    <div class="grid grid-cols-2 gap-6 my-12">
-                        <div class="bg-gradient-to-br from-orange-50 to-white p-6 rounded-2xl text-center border border-orange-100">
-                            <i class="fas fa-chart-line text-recho-orange text-4xl mb-3"></i>
-                            <p class="text-gray-800 font-semibold">Identify trending questions</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-orange-50 to-white p-6 rounded-2xl text-center border border-orange-100">
-                            <i class="fas fa-crosshairs text-recho-orange text-4xl mb-3"></i>
-                            <p class="text-gray-800 font-semibold">Target high-intent relevant conversations</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-orange-50 to-white p-6 rounded-2xl text-center border border-orange-100">
-                            <i class="fas fa-magic text-recho-orange text-4xl mb-3"></i>
-                            <p class="text-gray-800 font-semibold">Optimize content for engagement</p>
-                        </div>
-                        <div class="bg-gradient-to-br from-orange-50 to-white p-6 rounded-2xl text-center border border-orange-100">
-                            <i class="fas fa-heartbeat text-recho-orange text-4xl mb-3"></i>
-                            <p class="text-gray-800 font-semibold">Track brand sentiment in real-time</p>
-                        </div>
-                    </div>
-
-                    <!-- Results List -->
-                    <div class="space-y-4 mt-8">
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-blue/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-chart-bar text-recho-blue"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Identify trending industry questions</strong></p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-blue/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-bullseye text-recho-blue"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Target high-intent relevant conversations</strong></p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-blue/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-rocket text-recho-blue"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Optimize content for maximum engagement</strong></p>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="w-8 h-8 bg-recho-blue/10 rounded-lg flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                                <i class="fas fa-chart-pie text-recho-blue"></i>
-                            </div>
-                            <p class="text-gray-700"><strong>Track brand sentiment in real-time</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Additional Features - Condensed -->
-            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
-                <!-- Real-Time Monitoring -->
-                <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-recho-orange hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-clock text-recho-orange text-xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Real-Time Monitoring</h3>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-3">Track 1000+ subreddits simultaneously, catching high-value conversations as they emerge.</p>
-                    <div class="flex items-center gap-2">
-                        <div class="text-2xl font-bold text-recho-orange">1000+</div>
-                        <div class="text-xs text-gray-500">Subreddits Tracked</div>
-                    </div>
-                </div>
-
-                <!-- Intelligent Automation -->
-                <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-recho-blue hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-robot text-recho-blue text-xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Intelligent Automation</h3>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-3">Automated scheduling, content optimization, and campaign management at scale.</p>
-                    <div class="flex items-center gap-2">
-                        <div class="text-2xl font-bold text-recho-blue">Smart</div>
-                        <div class="text-xs text-gray-500">Automation</div>
-                    </div>
-                </div>
-
-                <!-- Compliance & Safety -->
-                <div class="bg-white p-6 rounded-2xl shadow-lg border-l-4 border-green-500 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <i class="fas fa-shield-alt text-green-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-lg font-bold text-gray-800">Compliance & Safety</h3>
-                    </div>
-                    <p class="text-sm text-gray-600 mb-3">Built-in monitoring ensures campaigns adhere to Reddit rules and protect your brand.</p>
-                    <div class="flex items-center gap-2">
-                        <div class="text-2xl font-bold text-green-600">100%</div>
-                        <div class="text-xs text-gray-500">Rule Compliant</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The RECHO Advantage Banner -->
-    <section class="py-16 bg-gradient-to-b from-orange-50 to-white relative overflow-hidden">
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-6xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-                    <span class="text-recho-orange">THE RECHO ADVANTAGE:</span> While competitors manually search conversations, our technology <span class="text-recho-orange font-black">efficiently processes thousands of discussions</span> to identify the highest-impact opportunities for your brand.
-                </h2>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
+    <!-- Platform Compliance Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-recho-orange mb-2">1000+</div>
-                    <div class="text-gray-600 font-semibold">Subreddits Tracked</div>
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Built for Reddit's Ecosystem</h2>
+                    <div class="w-24 h-1 bg-recho-orange mx-auto mb-8"></div>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        EchoMind operates entirely within Reddit's official developer guidelines. We use public APIs, respect rate limits, and never engage in data scraping or unauthorized access.
+                    </p>
                 </div>
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-recho-orange mb-2">Smart</div>
-                    <div class="text-gray-600 font-semibold">Automation</div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-8 bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl hover-lift">
+                        <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-key text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Official Reddit API</h3>
+                        <p class="text-gray-600">All data access through Reddit's official API with proper authentication and rate limiting</p>
+                    </div>
+                    
+                    <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl hover-lift">
+                        <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-eye text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Public Data Only</h3>
+                        <p class="text-gray-600">We only access publicly visible Reddit content—never private messages or restricted data</p>
+                    </div>
+                    
+                    <div class="text-center p-8 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl hover-lift">
+                        <div class="w-16 h-16 bg-recho-orange rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-shield-check text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Terms Compliant</h3>
+                        <p class="text-gray-600">Full adherence to Reddit Developer Terms, Data API Terms, and User Agreement</p>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-recho-orange mb-2">Real-Time</div>
-                    <div class="text-gray-600 font-semibold">Insights</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How EchoMind Works Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4 text-center">How EchoMind Works</h2>
+                <p class="text-xl text-gray-600 text-center mb-16">Compliant Reddit intelligence that drives authentic engagement</p>
+
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Feature 1 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-recho-orange hover-lift">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-recho-orange rounded-full flex items-center justify-center">
+                                    <i class="fas fa-search text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Opportunity Discovery</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Monitor relevant subreddits through Reddit's official API to identify conversations where your brand can add genuine value. Track keywords, sentiment, and engagement patterns.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Subreddit monitoring via official API</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Real-time keyword tracking</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Sentiment analysis on public posts</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-blue-600 hover-lift">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-blue-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-brain text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Intelligent Prioritization</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Our AI analyzes conversation quality, engagement level, and relevance to surface the highest-priority opportunities for your team to engage with authentically.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                                        <span>Engagement quality scoring</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                                        <span>Brand fit analysis</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-blue-600 mt-1"></i>
+                                        <span>Timing optimization</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-green-600 hover-lift">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-green-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-comments text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Authentic Engagement</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Guide your team to participate in conversations through official branded accounts with transparent disclosure. Always add value first, promote second.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Official branded account posting only</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Response templates & guidelines</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-green-600 mt-1"></i>
+                                        <span>Community rule compliance checking</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-purple-600 hover-lift">
+                        <div class="flex items-start gap-6">
+                            <div class="flex-shrink-0">
+                                <div class="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-chart-line text-white text-xl"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-3">Performance Analytics</h3>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Track engagement metrics, sentiment trends, and campaign performance across your Reddit marketing efforts with comprehensive reporting.
+                                </p>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-purple-600 mt-1"></i>
+                                        <span>Engagement rate tracking</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-purple-600 mt-1"></i>
+                                        <span>Sentiment monitoring over time</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check text-purple-600 mt-1"></i>
+                                        <span>ROI measurement and reporting</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="text-center">
-                    <div class="text-5xl font-bold text-recho-orange mb-2">100%</div>
-                    <div class="text-gray-600 font-semibold">EchoMind our proprietary software</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We DON'T Do Section -->
+    <section class="py-20 bg-white border-t-4 border-red-600">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <div class="inline-block bg-red-100 text-red-600 px-6 py-3 rounded-full mb-6 font-bold">
+                        <i class="fas fa-ban mr-2"></i>
+                        What EchoMind Does NOT Do
+                    </div>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">Our Red Lines</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed">
+                        We refuse to compromise Reddit's platform integrity or violate user trust. Here's what you'll never find in EchoMind:
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-times-circle text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">No Data Scraping</h3>
+                                <p class="text-gray-600">We never scrape Reddit content outside official API access. All data collection respects Reddit's rate limits and Terms of Service.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-times-circle text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">No Sockpuppeting</h3>
+                                <p class="text-gray-600">We never create fake accounts or hide brand identity. All activity happens through clearly identified official brand accounts.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-times-circle text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">No Vote Manipulation</h3>
+                                <p class="text-gray-600">We never engage in vote brigading, coordinated upvoting, or any form of artificial engagement manipulation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-times-circle text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">No Spam or Mass Posting</h3>
+                                <p class="text-gray-600">We never automate posting at scale or flood subreddits with promotional content. Every engagement is thoughtful and value-driven.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-times-circle text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">No Private Data Access</h3>
+                                <p class="text-gray-600">We only access publicly visible content. We never attempt to access private messages, user data, or restricted content.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-50 border-2 border-red-200 rounded-xl p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-times-circle text-red-600 text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">No Deceptive Practices</h3>
+                                <p class="text-gray-600">We never misrepresent brand affiliation, create fake testimonials, or engage in astroturfing of any kind.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="code-of-conduct.html" class="inline-block bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-all duration-300 shadow-lg hover:shadow-xl">
+                        Read Our Full Code of Conduct
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-800 mb-6">EchoMind Delivers Results</h2>
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
+                        Compliant technology that drives real business outcomes
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center p-8 bg-white rounded-2xl shadow-lg hover-lift">
+                        <div class="text-5xl font-bold text-recho-orange mb-3">3.2x</div>
+                        <div class="text-lg font-semibold text-gray-800 mb-2">Engagement Rate</div>
+                        <p class="text-gray-600">vs manual monitoring across 50+ client campaigns</p>
+                    </div>
+
+                    <div class="text-center p-8 bg-white rounded-2xl shadow-lg hover-lift">
+                        <div class="text-5xl font-bold text-recho-orange mb-3">87%</div>
+                        <div class="text-lg font-semibold text-gray-800 mb-2">Time Savings</div>
+                        <p class="text-gray-600">in identifying high-value Reddit conversations</p>
+                    </div>
+
+                    <div class="text-center p-8 bg-white rounded-2xl shadow-lg hover-lift">
+                        <div class="text-5xl font-bold text-recho-orange mb-3">100%</div>
+                        <div class="text-lg font-semibold text-gray-800 mb-2">Platform Compliant</div>
+                        <p class="text-gray-600">Zero violations of Reddit's Terms of Service</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div class="container mx-auto px-6 text-center">
-            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Ready to Scale Your Reddit Marketing?</h3>
-            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-                EchoMind powers all RECHO services. Book a call to see how our proprietary technology can transform your Reddit presence.
-            </p>
-            <a href="contact.html" class="inline-block bg-recho-blue text-white px-12 py-5 rounded-full font-bold text-lg hover:bg-recho-blue-dark transition-all duration-300 shadow-2xl hover:shadow-xl transform hover:-translate-y-1">
-                Book Your Strategy Call
-                <i class="fas fa-calendar-alt ml-2"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Related Blog Posts -->
-    <section class="py-16 bg-white">
+    <section class="py-20 bg-gradient-to-br from-recho-orange to-recho-dark text-white">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">
-                    <i class="fas fa-lightbulb text-recho-orange mr-3"></i>
-                    Learn More About Reddit Marketing
-                </h2>
-                <p class="text-xl text-gray-600">
-                    Insights on strategy, community building, and platform updates
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to See EchoMind in Action?</h2>
+                <p class="text-xl mb-8 opacity-95">
+                    Discover how compliant Reddit technology can transform your community engagement strategy
                 </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Blog Post 1 -->
-                <a href="blog/what-new-reddit-ad-tools-launched-in-2025.html" class="bg-white border-2 border-gray-200 hover:border-recho-orange rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="mb-4">
-                        <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold">
-                            <i class="fas fa-bell mr-1"></i> Platform Updates
-                        </span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
-                        What New Reddit Ad Tools Launched in 2025 and What Do They Change for Marketers
-                    </h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Discover the latest Reddit advertising tools and platform updates, including AI insights and conversation summaries.
-                    </p>
-                    <div class="flex items-center text-recho-orange font-semibold">
-                        Read Article <i class="fas fa-arrow-right ml-2"></i>
-                    </div>
-                </a>
-
-                <!-- Blog Post 2 -->
-                <a href="blog/what-is-a-good-reddit-cpc-in-2025.html" class="bg-white border-2 border-gray-200 hover:border-recho-orange rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="mb-4">
-                        <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold">
-                            <i class="fas fa-dollar-sign mr-1"></i> Advertising Tips
-                        </span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
-                        What Is a Good Reddit CPC in 2025 and How Do You Lower It
-                    </h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Learn what a good Reddit CPC looks like and discover proven strategies to lower your advertising costs.
-                    </p>
-                    <div class="flex items-center text-recho-orange font-semibold">
-                        Read Article <i class="fas fa-arrow-right ml-2"></i>
-                    </div>
-                </a>
-
-                <!-- Blog Post 3 -->
-                <a href="blog/how-to-build-an-engaged-reddit-community.html" class="bg-white border-2 border-gray-200 hover:border-recho-orange rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                    <div class="mb-4">
-                        <span class="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
-                            <i class="fas fa-users mr-1"></i> Community Management
-                        </span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2">
-                        How to Build an Engaged Reddit Community Without Being That Brand Plug
-                        </h3>
-                    <p class="text-gray-600 mb-4 line-clamp-3">
-                        Learn how to build authentic Reddit communities that engage naturally without sounding like marketing.
-                    </p>
-                    <div class="flex items-center text-recho-orange font-semibold">
-                        Read Article <i class="fas fa-arrow-right ml-2"></i>
-                    </div>
-                </a>
-            </div>
-
-            <div class="text-center mt-12">
-                <a href="blog.html" class="inline-block bg-gray-100 hover:bg-gray-200 text-gray-800 px-8 py-3 rounded-full font-semibold transition-all duration-300">
-                    View All Insights <i class="fas fa-arrow-right ml-2"></i>
+                <a href="contact.html" class="inline-block bg-white text-recho-orange px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1">
+                    Book a Technology Demo
+                    <i class="fas fa-arrow-right ml-2"></i>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-16">
         <div class="container mx-auto px-6">
@@ -626,10 +554,10 @@
                 <!-- Company Info -->
                 <div>
                     <div class="mb-4">
-                        <img src="images/recho-logo-white.png" alt="RECHO - A Full Service Reddit Agency" style="height: 158px; width: auto;">
+                        <img src="images/recho-logo-white.png" alt="RECHO - Reddit Marketing Agency" style="height: 158px; width: auto;">
                     </div>
                     <p class="text-gray-300 mb-6">
-                        Full-service Reddit marketing agency combining organic community building, paid advertising, and proprietary technology.
+                        Full-service Reddit marketing agency combining organic community building, paid advertising, and EchoMind our proprietary software.
                     </p>
                     <div class="flex space-x-4">
                         <a href="https://www.linkedin.com/company/rechoagency" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
@@ -658,7 +586,9 @@
                 <div>
                     <h3 class="text-lg font-bold mb-4">Company</h3>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="index.html" class="hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="services.html" class="hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="technology.html" class="hover:text-recho-orange transition-colors">Technology</a></li>
+                        <li><a href="code-of-conduct.html" class="hover:text-recho-orange transition-colors">Code of Conduct</a></li>
                         <li><a href="faq.html" class="hover:text-recho-orange transition-colors">FAQs</a></li>
                         <li><a href="blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
                         <li><a href="contact.html" class="hover:text-recho-orange transition-colors">Book a Call</a></li>
@@ -681,7 +611,7 @@
             <div class="border-t border-gray-800 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <p class="text-gray-400 text-sm mb-4 md:mb-0">
-                        &copy; 2025 RECHO. All rights reserved.
+                        &copy; 2026 RECHO. All rights reserved.
                     </p>
                     <div class="text-gray-400 text-sm">
                         <a href="privacy-policy.html" class="hover:text-recho-orange transition-colors">Privacy Policy</a>
@@ -691,90 +621,6 @@
         </div>
     </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/ga4-events.js"></script>
-    
-    <!-- Comprehensive JSON-LD Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Organization",
-          "@id": "https://www.recho.co/#organization",
-          "name": "RECHO",
-          "legalName": "RECHO - Full Service Reddit Marketing Agency",
-          "url": "https://www.recho.co",
-          "logo": {
-            "@type": "ImageObject",
-            "@id": "https://www.recho.co/#logo",
-            "url": "https://www.recho.co/images/recho-logo.png",
-            "contentUrl": "https://www.recho.co/images/recho-logo.png",
-            "caption": "RECHO Logo",
-            "inLanguage": "en-US",
-            "width": "200",
-            "height": "60"
-          },
-          "image": {"@id": "https://www.recho.co/#logo"},
-          "description": "Full-service Reddit marketing agency specializing in organic community management, paid advertising, and proprietary EchoMind technology. We help brands reach 400M+ Reddit users.",
-          "slogan": "Full-Service Reddit Marketing Agency",
-          "foundingDate": "2024",
-          "address": {"@type": "PostalAddress", "addressCountry": "US"},
-          "contactPoint": {"@type": "ContactPoint", "email": "delivery@recho.co", "contactType": "Sales", "availableLanguage": ["English"]},
-          "sameAs": ["https://www.linkedin.com/company/rechoagency"],
-          "areaServed": {"@type": "Place", "name": "Worldwide"}
-        },
-        {
-          "@type": "WebSite",
-          "@id": "https://www.recho.co/#website",
-          "url": "https://www.recho.co",
-          "name": "RECHO - Reddit Marketing Agency",
-          "description": "Full-service Reddit marketing agency specializing in organic management, paid advertising, and EchoMind technology",
-          "publisher": {"@id": "https://www.recho.co/#organization"},
-          "inLanguage": "en-US"
-        },
-        {
-          "@type": "WebPage",
-          "@id": "https://www.recho.co/technology.html#webpage",
-          "url": "https://www.recho.co/technology.html",
-          "name": "EchoMind Technology | RECHO",
-          "description": "EchoMind: AI-powered Reddit marketing platform for automated community building, sentiment analysis, and campaign optimization.",
-          "isPartOf": {"@id": "https://www.recho.co/#website"},
-          "about": {"@id": "https://www.recho.co/#organization"},
-          "primaryImageOfPage": {"@id": "https://www.recho.co/#logo"},
-          "inLanguage": "en-US"
-        },
-        {
-          "@type": "SoftwareApplication",
-          "@id": "https://www.recho.co/technology.html#echomind",
-          "name": "EchoMind",
-          "applicationCategory": "BusinessApplication",
-          "applicationSubCategory": "Marketing Automation Software",
-          "operatingSystem": "Web-based",
-          "provider": {"@id": "https://www.recho.co/#organization"},
-          "featureList": [
-            "Automated Community Building",
-            "AI-Powered Engagement",
-            "Sentiment Tracking",
-            "Opportunity Detection",
-            "Campaign Optimization",
-            "Performance Analytics",
-            "Cross-channel Attribution",
-            "Smart Scheduling"
-          ],
-          "screenshot": "https://www.recho.co/images/echomind-logo.png"
-        },
-        {
-          "@type": "BreadcrumbList",
-          "@id": "https://www.recho.co/technology.html#breadcrumb",
-          "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.recho.co"},
-            {"@type": "ListItem", "position": 2, "name": "Technology", "item": "https://www.recho.co/technology.html"}
-          ]
-        }
-      ]
-    }
-    </script>
+    <script src="js/mobile-menu.js"></script>
 </body>
 </html>

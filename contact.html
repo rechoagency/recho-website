@@ -51,7 +51,55 @@
         }
     </script>
     
+    <!-- Dropdown Navigation Styles -->
     <style>
+        .nav-item {
+            position: relative;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            min-width: 280px;
+            z-index: 50;
+            margin-top: 0rem;
+            padding-top: 0.5rem;
+        }
+        
+        /* Add invisible bridge area */
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: transparent;
+            z-index: 49;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            transition: all 0.2s;
+        }
+        
+        .dropdown a:hover {
+            background-color: #FFF7ED;
+            color: #E6462F;
+            padding-left: 1.5rem;
+        }
+        
         .form-input:focus, .form-textarea:focus, .form-select:focus {
             outline: none;
             border-color: #E6462F;

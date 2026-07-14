@@ -222,6 +222,55 @@
             padding-left: 1.5rem;
         }
     </style>
+<!-- Dropdown Navigation Styles -->
+    <style>
+        .nav-item {
+            position: relative;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 0.5rem;
+            min-width: 280px;
+            z-index: 50;
+            margin-top: 0rem;
+            padding-top: 0.5rem;
+        }
+        
+        /* Add invisible bridge area */
+        .nav-item::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 1rem;
+            background: transparent;
+            z-index: 49;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            transition: all 0.2s;
+        }
+        
+        .dropdown a:hover {
+            background-color: #FFF7ED;
+            color: #E6462F;
+            padding-left: 1.5rem;
+        }
+    </style>
 </head>
 <body class="font-poppins bg-white">
     
@@ -231,13 +280,13 @@
             <div class="flex items-center justify-between w-full">
                 <!-- Logo -->
                 <a href="../index.html" class="flex items-center space-x-3 cursor-pointer">
-                    <img src="../images/recho-logo-corrected.png" alt="RECHO - Reddit Brand Monitoring Services" style="height: 158px; width: auto;">
+                    <img src="../images/recho-logo-corrected.png" alt="RECHO - Full-Service Reddit Marketing Agency" style="height: 158px; width: auto;">
                 </a>
                 
                 <!-- Desktop Navigation -->
                 <div class="hidden md:flex items-center space-x-8">
                     <div class="nav-item relative">
-                        <a href="../services.html" class="nav-link text-recho-orange font-semibold transition-colors duration-300 flex items-center">
+                        <a href="../services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
                             Services
                             <i class="fas fa-chevron-down ml-1 text-xs"></i>
                         </a>
@@ -246,20 +295,21 @@
                                 <i class="fas fa-th-large mr-2 text-recho-orange"></i>
                                 All Services
                             </a>
-                            <a href="reddit-seo-geo.html">
+                            <a href="../services/reddit-seo-geo.html">
                                 <i class="fas fa-search mr-2 text-recho-orange"></i>
                                 Reddit SEO & GEO
                             </a>
-                            <a href="brand-monitoring-social-listening.html">
+                            <a href="../services/brand-monitoring-social-listening.html">
                                 <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
                                 Brand Monitoring & Social Listening
                             </a>
                         </div>
                     </div>
+                    <a href="../code-of-conduct.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Code of Conduct</a>
                     <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
                     <a href="../faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
                     <a href="../blog.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Blog</a>
-                    <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark shadow-lg hover:shadow-xl transition-all duration-300 font-medium">
+                    <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
                         Book a Call
                     </a>
                 </div>
@@ -273,33 +323,38 @@
             </div>
         </div>
         
-        <!-- Mobile Navigation (Same as main site) -->
+        <!-- Mobile Navigation Overlay -->
         <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
         
+        <!-- Mobile Navigation Slide-in Panel -->
         <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden" aria-label="Mobile navigation">
             <div class="flex flex-col h-full">
+                <!-- Mobile Menu Header -->
                 <div class="flex items-center justify-between p-6 border-b border-gray-200">
-                    <a href="../index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors">
-                        <i class="fas fa-home mr-2"></i>Home
-                    </a>
+                    <a href="../index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors"><i class="fas fa-home mr-2"></i>Home</a>
                     <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none" aria-label="Close menu">
                         <i class="fas fa-times text-2xl"></i>
                     </button>
                 </div>
                 
-                <div class="flex-1 overflow-y-auto py-6">
+                <!-- Mobile Menu Links -->
+<div class="flex-1 overflow-y-auto py-6">
                     <div class="flex flex-col space-y-1 px-4">
                         <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
                             <i class="fas fa-briefcase w-6 text-recho-orange"></i>
                             All Services
                         </a>
-                        <a href="reddit-seo-geo.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
+                        <a href="../services/reddit-seo-geo.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
                             <i class="fas fa-search w-6 text-recho-orange"></i>
                             Reddit SEO & GEO
                         </a>
-                        <a href="brand-monitoring-social-listening.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
-                            <i class="fas fa-chart-line w-6 text-recho-orange"></i>
+                        <a href="../services/brand-monitoring-social-listening.html" class="mobile-nav-link px-4 py-3 ml-4 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200">
+                            <i class="fas fa-shield-alt w-6 text-recho-orange"></i>
                             Brand Monitoring
+                        </a>
+                        <a href="../code-of-conduct.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-balance-scale w-6 text-recho-orange"></i>
+                            Code of Conduct
                         </a>
                         <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
                             <i class="fas fa-microchip w-6 text-recho-orange"></i>
@@ -316,13 +371,14 @@
                     </div>
                 </div>
                 
+                <!-- Mobile Menu Footer CTA -->
                 <div class="p-6 border-t border-gray-200">
                     <a href="../contact.html" class="block w-full bg-recho-blue text-white px-6 py-4 rounded-lg hover:bg-recho-blue-dark transition-all duration-300 font-semibold text-center shadow-lg hover:shadow-xl">
                         <i class="fas fa-calendar-alt mr-2"></i>
                         Book a Call
                     </a>
                     <div class="mt-4 text-center">
-                        <a href="mailto:sales@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
+                        <a href="../mailto:sales@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
                             <i class="fas fa-envelope mr-2"></i>
                             sales@recho.co
                         </a>

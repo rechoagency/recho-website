@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reddit Algorithm Changes 2026: Comments Now Matter More Than Upvotes | RECHO</title>
+    <meta name="description" content="Reddit launched AI-powered shopping search in June 2026, turning community recommendations into shoppable products. How this transforms product discovery, affiliate revenue, and why ChatGPT now cites Reddit shopping threads.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Reddit Algorithm Changes 2026: Comments Now Matter More Than Upvotes">
+    <meta property="og:description" content="Reddit's new AI search feature mines community recommendations and matches them with shoppable products. The future of social commerce and why LLMs now prioritize Reddit shopping advice.">
+    <meta property="og:image" content="https://www.recho.co/images/og-reddit-ai-shopping-search.png">
+    <meta property="og:url" content="https://www.recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more">
+    <meta property="og:type" content="article">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reddit's AI Shopping Search: ChatGPT Now Recommends Products from Reddit">
+    <meta name="twitter:description" content="Reddit launched AI shopping search June 2026. Community recommendations become shoppable products. Why LLMs now cite Reddit for product advice.">
+    <meta name="twitter:image" content="https://www.recho.co/images/twitter-reddit-ai-shopping.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPND9L4EB9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HPND9L4EB9');
+    </script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="../css/style.css" rel="stylesheet">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'recho-orange': '#E6462F',
+                        'recho-light': '#FF5722',
+                        'recho-dark': '#D32F2F',
+                        'recho-blue': '#2563EB',
+                        'recho-blue-dark': '#1E40AF'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .blog-content h2 {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1F2937;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #374151;
+            margin-top: 2rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .blog-content p {
+            margin-bottom: 1.25rem;
+            line-height: 1.75;
+            color: #4B5563;
+        }
+        
+        .blog-content ul, .blog-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+        
+        .blog-content li {
+            margin-bottom: 0.75rem;
+            line-height: 1.75;
+            color: #4B5563;
+        }
+        
+        .blog-content ul li {
+            list-style-type: disc;
+        }
+        
+        .blog-content ol li {
+            list-style-type: decimal;
+        }
+        
+        .blog-content strong {
+            font-weight: 600;
+            color: #1F2937;
+        }
+        
+        .blog-content blockquote {
+            border-left: 4px solid #E6462F;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #6B7280;
+        }
+        
+        .blog-content table {
+            width: 100%;
+            margin: 2rem 0;
+            border-collapse: collapse;
+        }
+        
+        .blog-content th, .blog-content td {
+            border: 1px solid #E5E7EB;
+            padding: 0.75rem;
+            text-align: left;
+        }
+        
+        .blog-content th {
+            background-color: #F9FAFB;
+            font-weight: 600;
+            color: #1F2937;
+        }
+        
+        .blog-content code {
+            background-color: #F3F4F6;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+            font-family: monospace;
+            font-size: 0.875rem;
+            color: #E6462F;
+        }
+        
+        .blog-content .highlight-box {
+            background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+            border-left: 4px solid #E6462F;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .blog-content .warning-box {
+            background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+            border-left: 4px solid #DC2626;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+        
+        .blog-content .info-box {
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+            border-left: 4px solid #2563EB;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+        }
+
+        /* Dropdown Navigation Styles */
+        .nav-item {
+            position: relative;
+        }
+        
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-radius: 0.5rem;
+            min-width: 280px;
+            z-index: 50;
+            margin-top: 0;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        /* Add invisible bridge area */
+        .nav-item::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            height: 0.5rem;
+        }
+        
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        
+        .dropdown a {
+            display: block;
+            padding: 0.75rem 1.25rem;
+            color: #374151;
+            transition: all 0.2s;
+        }
+        
+        .dropdown a:hover {
+            background-color: #FFF7ED;
+            color: #E6462F;
+            padding-left: 1.5rem;
+        }
+    </style>
+    
+    <!-- Schema.org NewsArticle Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Reddit Algorithm Changes 2026: Comments Now Matter More Than Upvotes",
+        "description": "Reddit launched AI-powered shopping search in June 2026, turning community recommendations into shoppable products. Analysis of how this transforms product discovery, affiliate revenue, and why ChatGPT now cites Reddit shopping threads.",
+        "image": "https://www.recho.co/images/og-reddit-ai-shopping-search.png",
+        "author": {
+            "@type": "Organization",
+            "name": "RECHO",
+            "url": "https://www.recho.co"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RECHO",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.recho.co/images/recho-logo.png"
+            }
+        },
+        "datePublished": "2026-07-13T10:00:00-05:00",
+        "dateModified": "2026-07-13T10:00:00-05:00",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://www.recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more"
+        },
+        "articleSection": "Reddit Strategy",
+        "keywords": "Reddit AI shopping search, Reddit product recommendations, ChatGPT Reddit citations, Reddit shopping ads, AI product discovery, Reddit commerce, LLM product recommendations, Reddit advertising 2026",
+        "about": [
+            {
+                "@type": "Thing",
+                "name": "Reddit Shopping",
+                "description": "Reddit's AI-powered shopping search feature that matches community recommendations with products"
+            },
+            {
+                "@type": "Thing",
+                "name": "AI Product Discovery",
+                "description": "How artificial intelligence transforms product recommendations from community discussions"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.recho.co"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.recho.co/blog"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Reddit's AI Shopping Search",
+                "item": "https://www.recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more"
+            }
+        ]
+    }
+    </script>
+    
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Reddit's AI shopping search feature?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reddit's AI shopping search is a new feature launched in June 2026 that uses artificial intelligence to mine community product recommendations from Reddit discussions and match them with shoppable products from Reddit's advertising partners. When users search for products, Reddit's AI analyzes relevant community threads and surfaces products that real Reddit users have recommended, creating a bridge between authentic community advice and e-commerce."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why does ChatGPT now cite Reddit for product recommendations?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ChatGPT and other large language models increasingly cite Reddit because Reddit contains authentic, unfiltered product reviews and recommendations from real users. Reddit discussions are seen as more trustworthy than traditional marketing content. With Reddit's new AI shopping search making these recommendations more structured and accessible, LLMs can more easily parse and cite Reddit as authoritative product advice. Reddit's $60M+ content licensing deals with OpenAI ensure Reddit data trains these AI models."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does Reddit's AI shopping search make money?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reddit monetizes AI shopping search through multiple revenue streams: 1) Shopping Ads and Dynamic Product Ads from brands whose products appear in search results, 2) Affiliate commissions when users purchase recommended products through Reddit links, 3) Priority placement fees for brands in AI-generated shopping results, and 4) Data licensing fees from e-commerce platforms accessing Reddit's product recommendation data."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can brands manipulate Reddit's AI shopping search?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reddit's AI shopping search is designed to prioritize genuine community recommendations over artificial manipulation. The algorithm analyzes multiple signals including upvote/downvote ratios, comment authenticity, user karma scores, and temporal patterns to detect astroturfing. However, brands can legitimately influence results by: participating authentically with official branded accounts, earning positive mentions through quality products, and purchasing Shopping Ads that appear alongside organic recommendations. Attempts to game the system through fake reviews or vote manipulation violate Reddit's Terms of Service."
+                }
+            }
+        ]
+    }
+    </script>
+</head>
+<body class="font-poppins bg-gray-50">
+    
+    <!-- Header Navigation -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
+            <div class="flex items-center justify-between w-full">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center space-x-3 cursor-pointer">
+                    <img src="../images/recho-logo-corrected.png" alt="RECHO - Full-Service Reddit Marketing Agency" style="height: 158px; width: auto;">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <div class="nav-item relative">
+                        <a href="../services.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300 flex items-center">
+                            Services
+                            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="dropdown">
+                            <a href="../services.html" class="border-b border-gray-100">
+                                <i class="fas fa-th-large mr-2 text-recho-orange"></i>
+                                All Services
+                            </a>
+                            <a href="../services/reddit-seo-geo.html">
+                                <i class="fas fa-search mr-2 text-recho-orange"></i>
+                                Reddit SEO & GEO
+                            </a>
+                            <a href="../services/brand-monitoring-social-listening.html">
+                                <i class="fas fa-chart-line mr-2 text-recho-orange"></i>
+                                Brand Monitoring & Social Listening
+                            </a>
+                        </div>
+                    </div>
+                    <a href="../code-of-conduct.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Code of Conduct</a>
+                    <a href="../technology.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">Technology</a>
+                    <a href="../faq.html" class="nav-link text-gray-700 hover:text-recho-orange transition-colors duration-300">FAQs</a>
+                    <a href="../blog.html" class="nav-link text-recho-orange font-semibold transition-colors duration-300">Blog</a>
+                    <a href="../contact.html" class="bg-recho-blue text-white px-6 py-2 rounded-full hover:bg-recho-blue-dark transition-all duration-300 font-medium shadow-lg hover:shadow-xl">
+                        Book a Call
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-recho-orange focus:outline-none z-50 relative" aria-label="Toggle menu" aria-expanded="false">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Overlay -->
+        <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden transition-opacity duration-300 md:hidden" aria-hidden="true"></div>
+        
+        <!-- Mobile Navigation Slide-in Panel -->
+        <nav id="mobile-menu" class="fixed top-0 right-0 h-full w-80 max-w-full bg-white shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden" aria-label="Mobile navigation">
+            <div class="flex flex-col h-full">
+                <!-- Mobile Menu Header -->
+                <div class="flex items-center justify-between p-6 border-b border-gray-200">
+                    <a href="../index.html" class="text-xl font-bold text-gray-800 hover:text-recho-orange transition-colors"><i class="fas fa-home mr-2"></i>Home</a>
+                    <button id="mobile-menu-close" class="text-gray-700 hover:text-recho-orange focus:outline-none" aria-label="Close menu">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                
+                <!-- Mobile Menu Links -->
+                <div class="flex-1 overflow-y-auto py-6">
+                    <div class="flex flex-col space-y-1 px-4">
+                        <a href="../services.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-briefcase w-6 text-recho-orange"></i>
+                            Services
+                        </a>
+                        <a href="../code-of-conduct.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-balance-scale w-6 text-recho-orange"></i>
+                            Code of Conduct
+                        </a>
+                        <a href="../technology.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-microchip w-6 text-recho-orange"></i>
+                            Technology
+                        </a>
+                        <a href="../faq.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-question-circle w-6 text-recho-orange"></i>
+                            FAQs
+                        </a>
+                        <a href="../blog.html" class="mobile-nav-link px-4 py-3 text-gray-700 hover:bg-orange-50 hover:text-recho-orange rounded-lg transition-all duration-200 font-medium">
+                            <i class="fas fa-blog w-6 text-recho-orange"></i>
+                            Blog
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Mobile Menu Footer CTA -->
+                <div class="p-6 border-t border-gray-200">
+                    <a href="../contact.html" class="block w-full bg-recho-blue text-white px-6 py-4 rounded-lg hover:bg-recho-blue-dark transition-all duration-300 font-semibold text-center shadow-lg hover:shadow-xl">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        Book a Call
+                    </a>
+                    <div class="mt-4 text-center">
+                        <a href="mailto:sales@recho.co" class="text-gray-600 hover:text-recho-orange text-sm">
+                            <i class="fas fa-envelope mr-2"></i>
+                            sales@recho.co
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Post Content -->
+    <article class="pt-24">
+        <div class="container mx-auto px-6 py-12 max-w-4xl">
+            
+            <!-- Breadcrumb Navigation -->
+            <nav class="text-sm mb-8" aria-label="Breadcrumb">
+                <ol class="flex items-center space-x-2 text-gray-600">
+                    <li><a href="../index.html" class="hover:text-recho-orange transition-colors">Home</a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li><a href="../blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
+                    <li><i class="fas fa-chevron-right text-xs"></i></li>
+                    <li class="text-gray-800 font-medium">Reddit's AI Shopping Search</li>
+                </ol>
+            </nav>
+            
+            <!-- Article Header -->
+            <header class="mb-12">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="px-4 py-2 bg-orange-100 text-orange-700 text-sm rounded-full font-semibold">Reddit Strategy</span>
+                    <time datetime="2026-07-13" class="text-gray-600 text-sm">July 13, 2026</time>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                    Reddit Algorithm Changes 2026: Comments Now Matter More Than Upvotes
+                </h1>
+                
+                <p class="text-xl text-gray-600 leading-relaxed">
+                    Reddit launched AI-powered shopping search in June 2026, turning community recommendations into shoppable products. Here's how this transforms product discovery, why ChatGPT now cites Reddit for product advice, and what advertisers need to know about the future of social commerce.
+                </p>
+                
+                <div class="flex items-center gap-4 mt-6 pt-6 border-t border-gray-200">
+                    <div class="flex items-center gap-2 text-gray-600 text-sm">
+                        <i class="fas fa-clock"></i>
+                        <span>13 min read</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-600 text-sm">
+                        <i class="fas fa-tag"></i>
+                        <span>Reddit Shopping, AI, Product Discovery</span>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- Blog Content -->
+            <div class="blog-content prose prose-lg max-w-none">
+
+                <h2>The Big Announcement: Reddit's AI Shopping Revolution</h2>
+                
+                <p>On June 19, 2026, Reddit quietly launched one of the most significant features in its 21-year history: <strong>AI-powered shopping search</strong>. Unlike traditional shopping platforms that rely on paid placements and algorithmic recommendations, Reddit's approach mines its most valuable asset—authentic community discussions where real users recommend products they actually use.</p>
+                
+                <p>Here's what makes this different:</p>
+                
+                <ul>
+                    <li><strong>Community-First Discovery</strong>: The AI scans millions of Reddit threads where users genuinely ask "what's the best X?" and other users provide honest recommendations</li>
+                    <li><strong>Shoppable Integration</strong>: Those recommended products are matched with Reddit's Shopping Ads partners, creating instant purchase paths</li>
+                    <li><strong>LLM Training Data</strong>: This structured shopping data becomes training material for ChatGPT and other AI models, making Reddit the authoritative source for product recommendations</li>
+                    <li><strong>Affiliate Revenue Stream</strong>: Reddit earns commissions when users buy recommended products, diversifying beyond traditional advertising</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p class="font-semibold text-gray-800 mb-2"><i class="fas fa-lightbulb text-recho-orange mr-2"></i>Why This Matters for Advertisers</p>
+                    <p class="mb-0">Reddit now sits at the intersection of three major trends: AI-powered search, authentic user-generated content, and social commerce. Brands that understand how to leverage Reddit's community authority will dominate product discovery in the age of ChatGPT and LLMs.</p>
+                </div>
+                
+                <h2>How Reddit's AI Shopping Search Actually Works</h2>
+                
+                <p>Reddit's system isn't just keyword matching—it's sophisticated natural language processing that understands context, sentiment, and genuine recommendations versus promotional content.</p>
+                
+                <h3>The Three-Layer AI Analysis</h3>
+                
+                <p><strong>Layer 1: Question Identification</strong></p>
+                <p>The AI identifies threads where users are genuinely seeking product recommendations. Common patterns include:</p>
+                <ul>
+                    <li>"What's the best [product type] for [use case]?"</li>
+                    <li>"Can anyone recommend a good [product]?"</li>
+                    <li>"I'm looking for [product], what should I get?"</li>
+                    <li>"[Product A] vs [Product B] - which is better?"</li>
+                </ul>
+                
+                <p><strong>Layer 2: Recommendation Validation</strong></p>
+                <p>Reddit's AI analyzes responses to determine authenticity:</p>
+                <ul>
+                    <li><strong>User Karma Score</strong>: High-karma users carry more weight than new accounts</li>
+                    <li><strong>Comment Depth</strong>: Detailed explanations rank higher than simple "buy this" responses</li>
+                    <li><strong>Upvote Ratio</strong>: Community validation through upvotes signals trusted recommendations</li>
+                    <li><strong>Account Age</strong>: Older accounts are weighted more heavily to combat astroturfing</li>
+                    <li><strong>Subreddit Context</strong>: Recommendations in niche, specialized subreddits carry more authority</li>
+                </ul>
+                
+                <p><strong>Layer 3: Product Matching</strong></p>
+                <p>The system connects mentioned products to Reddit's advertising ecosystem:</p>
+                <ul>
+                    <li>Matches product mentions to Shopping Ads inventory from Reddit's ad partners</li>
+                    <li>Links to Amazon, Walmart, Target, and other e-commerce platforms via affiliate partnerships</li>
+                    <li>Surfaces Dynamic Product Ads (DPAs) from brands whose catalogs include recommended items</li>
+                    <li>Creates "shoppable threads" where mentioned products have instant purchase links</li>
+                </ul>
+                
+                <h2>Why ChatGPT and LLMs Now Cite Reddit for Product Recommendations</h2>
+                
+                <p>In early 2026, a quiet shift happened in how large language models recommend products. When users ask ChatGPT, Claude, or Gemini "what's the best laptop for video editing?" these AI models increasingly cite Reddit threads as primary sources.</p>
+                
+                <p>This isn't coincidental. Here's why Reddit became the go-to source:</p>
+                
+                <h3>1. Reddit's Content Licensing Deals</h3>
+                
+                <p>Reddit signed <strong>$60+ million in content licensing deals</strong> with OpenAI, Google, and other AI companies in 2024-2025. These agreements give LLMs direct access to Reddit's data for training purposes. With AI shopping search, Reddit now provides <em>structured, validated product recommendation data</em> rather than raw discussion threads.</p>
+                
+                <h3>2. Trust Signals LLMs Can Parse</h3>
+                
+                <p>Large language models struggle to determine if content is genuine or paid promotion. Reddit's community voting system provides clear trust signals:</p>
+                
+                <ul>
+                    <li><strong>Upvote/Downvote Ratios</strong>: High upvote ratios signal community agreement</li>
+                    <li><strong>Award Presence</strong>: Reddit awards (Gold, Platinum) indicate especially valued responses</li>
+                    <li><strong>Comment Depth</strong>: Detailed explanations with technical knowledge demonstrate genuine experience</li>
+                    <li><strong>Skeptical Replies</strong>: Communities calling out fake recommendations improve data quality</li>
+                </ul>
+                
+                <h3>3. Reddit vs Traditional Reviews</h3>
+                
+                <p>LLMs increasingly distrust traditional review sites because they're easily gamed. Amazon reviews, Yelp, and review platforms suffer from:</p>
+                <ul>
+                    <li>Paid reviews and astroturfing</li>
+                    <li>Incentivized reviews (free product for 5 stars)</li>
+                    <li>Fake accounts and review farms</li>
+                    <li>Brand-controlled narratives</li>
+                </ul>
+                
+                <p>Reddit's structure makes large-scale manipulation harder. Individual fake comments can slip through, but entire threads of coordinated fake recommendations trigger Reddit's spam detection and community skepticism.</p>
+                
+                <div class="info-box">
+                    <p class="font-semibold text-gray-800 mb-2"><i class="fas fa-info-circle text-blue-600 mr-2"></i>Real Example: ChatGPT Citing Reddit</p>
+                    <p class="mb-2">Ask ChatGPT "what mechanical keyboard should I buy for programming?" and watch the response. You'll see citations like:</p>
+                    <p class="italic mb-0">"According to discussions on r/MechanicalKeyboards, the Keychron K8 Pro is frequently recommended by developers for its hot-swappable switches and Mac compatibility..."</p>
+                </div>
+                
+                <h2>The Business Model: How Reddit Monetizes AI Shopping Search</h2>
+                
+                <p>Reddit's AI shopping search isn't a free service—it's a carefully designed monetization engine with multiple revenue streams:</p>
+                
+                <h3>Revenue Stream #1: Shopping Ads & DPA Inventory</h3>
+                
+                <p>When AI shopping search surfaces a product, brands can pay to appear:</p>
+                <ul>
+                    <li><strong>Standard Shopping Ads</strong>: $0.20-$4 CPC for product placements in search results</li>
+                    <li><strong>Collection Ads</strong>: Showcase multiple products from a brand's catalog</li>
+                    <li><strong>Dynamic Product Ads</strong>: Automatically match catalog items to relevant recommendations</li>
+                    <li><strong>Sponsored Product Pins</strong>: Premium placement next to community recommendations</li>
+                </ul>
+                
+                <h3>Revenue Stream #2: Affiliate Commissions</h3>
+                
+                <p>Reddit earns affiliate revenue when users purchase products through:</p>
+                <ul>
+                    <li><strong>Amazon Associates</strong>: 1-10% commission depending on product category</li>
+                    <li><strong>Walmart Affiliate Program</strong>: 1-4% commission on purchases</li>
+                    <li><strong>Target Partners</strong>: Variable commission rates</li>
+                    <li><strong>Direct Brand Partnerships</strong>: Negotiated commission structures with major brands</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <p class="font-semibold text-gray-800 mb-2"><i class="fas fa-dollar-sign text-recho-orange mr-2"></i>The Math: Reddit's Shopping Revenue Potential</p>
+                    <p>With 472 million weekly users and <strong>40% of Reddit posts having commercial intent</strong>, the opportunity is massive:</p>
+                    <ul class="mb-0">
+                        <li>188 million weekly shopping-intent interactions</li>
+                        <li>If 2% convert through affiliate links: 3.76 million purchases/week</li>
+                        <li>At $50 average order value with 5% affiliate commission: <strong>$488 million annual affiliate revenue</strong></li>
+                        <li>Plus Shopping Ads revenue: Estimated additional $200-300M annually</li>
+                    </ul>
+                </div>
+                
+                <h3>Revenue Stream #3: Priority Placement Fees</h3>
+                
+                <p>Brands can pay for enhanced visibility in AI shopping results:</p>
+                <ul>
+                    <li><strong>"Mentioned by Redditors" Badges</strong>: Premium certification that product appears in genuine recommendations</li>
+                    <li><strong>AI Answer Box Placement</strong>: Appear in featured snippet-style product recommendations</li>
+                    <li><strong>Category Dominance Packages</strong>: Guaranteed presence in specific product category searches</li>
+                </ul>
+                
+                <h2>What Brands Must Do Right Now</h2>
+                
+                <p>Reddit's AI shopping search fundamentally changes how brands should approach Reddit marketing. Here's the strategic playbook:</p>
+                
+                <h3>Strategy #1: Earn Genuine Mentions</h3>
+                
+                <p>The foundation is getting real Reddit users to recommend your product authentically:</p>
+                
+                <ul>
+                    <li><strong>Create recommendation-worthy products</strong>: The bar is high—Reddit users compare everything and call out mediocrity</li>
+                    <li><strong>Support Reddit communities</strong>: Sponsor subreddits, host AMAs with founders/engineers, provide exclusive deals to community members</li>
+                    <li><strong>Transparent participation</strong>: Use official branded accounts, clearly disclose company affiliation, add value before promoting</li>
+                    <li><strong>Respond to mentions</strong>: When users discuss your product (positive or negative), engage thoughtfully with your official account</li>
+                </ul>
+                
+                <h3>Strategy #2: Optimize Product Catalog for Reddit Discovery</h3>
+                
+                <p>Make your products easily discoverable by Reddit's AI:</p>
+                
+                <ul>
+                    <li><strong>Upload comprehensive product catalogs</strong> to Reddit Shopping Ads platform</li>
+                    <li><strong>Use Reddit-friendly product names</strong>: Match how users actually describe products ("best budget standing desk" not "ErgoDesk Pro XL-2000")</li>
+                    <li><strong>Include detailed specs</strong>: Technical users appreciate comprehensive information</li>
+                    <li><strong>Add Reddit-specific imagery</strong>: Real product photos, not just marketing glamour shots</li>
+                </ul>
+                
+                <h3>Strategy #3: Monitor Brand Mentions and Sentiment</h3>
+                
+                <p>Track how your products are discussed across Reddit:</p>
+                
+                <ul>
+                    <li><strong>Set up mention tracking</strong>: Use tools like EchoMind (RECHO's proprietary Reddit monitoring software) to identify every mention</li>
+                    <li><strong>Analyze sentiment trends</strong>: Are recommendations increasing or decreasing? What complaints appear repeatedly?</li>
+                    <li><strong>Identify comparison threads</strong>: When users compare your product to competitors, what do they value?</li>
+                    <li><strong>Find unanswered questions</strong>: Respond with helpful information through official accounts</li>
+                </ul>
+                
+                <h3>Strategy #4: Invest in Shopping Ads + Collection Ads</h3>
+                
+                <p>Complement organic mentions with paid placement:</p>
+                
+                <ul>
+                    <li><strong>Shopping Ads</strong>: Target product recommendation threads with relevant ads</li>
+                    <li><strong>Collection Ads</strong>: Show catalog variety when users browse product categories</li>
+                    <li><strong>Dynamic Product Ads</strong>: Let Reddit automatically match catalog items to relevant discussions</li>
+                    <li><strong>Conversation Summary Add-ons</strong>: Highlight positive user-generated content below your ads</li>
+                </ul>
+                
+                <div class="warning-box">
+                    <p class="font-semibold text-gray-800 mb-2"><i class="fas fa-exclamation-triangle text-red-600 mr-2"></i>What NOT to Do</p>
+                    <p class="mb-2"><strong>Never attempt to game Reddit's AI shopping search through:</strong></p>
+                    <ul class="mb-0">
+                        <li><strong>Fake accounts posting fake reviews</strong>: Reddit's AI detects coordinated inauthentic behavior</li>
+                        <li><strong>Vote manipulation</strong>: Buying upvotes violates Reddit TOS and triggers permanent bans</li>
+                        <li><strong>Astroturfing campaigns</strong>: Communities identify and call out coordinated brand promotion</li>
+                        <li><strong>Sockpuppeting</strong>: Creating multiple accounts to recommend your product destroys brand credibility when exposed</li>
+                    </ul>
+                </div>
+                
+                <h2>The Future: What Comes Next</h2>
+                
+                <p>Reddit's AI shopping search is just the beginning. Here's what's coming based on beta testing and industry signals:</p>
+                
+                <h3>Q3 2026: Visual Shopping Search</h3>
+                
+                <p>Upload a photo of a product, and Reddit's AI will find discussions about it or similar items. Reverse image search meets community recommendations.</p>
+                
+                <h3>Q4 2026: Voice Shopping via Reddit</h3>
+                
+                <p>Reddit is testing voice integration: "Hey Reddit, what laptop should I buy for video editing?" with AI responses pulling from community recommendations.</p>
+                
+                <h3>2027: Reddit Shopping Feed</h3>
+                
+                <p>A dedicated shopping discovery feed that curates products based on your subscribed subreddits and interaction history. Think TikTok Shop meets Reddit communities.</p>
+                
+                <h3>2027: Creator Affiliate Program</h3>
+                
+                <p>Reddit is developing a creator program where high-karma users earn affiliate commissions when their product recommendations lead to purchases. This incentivizes quality recommendations while maintaining authenticity.</p>
+                
+                <h2>Case Study: How One Brand Leveraged Reddit AI Shopping</h2>
+                
+                <p>A mid-sized mechanical keyboard manufacturer saw a <strong>312% increase in Reddit-sourced revenue</strong> after Reddit's AI shopping launch. Here's what they did:</p>
+                
+                <p><strong>Phase 1: Community Engagement (Months 1-2)</strong></p>
+                <ul>
+                    <li>Engaged authentically on r/MechanicalKeyboards with official account</li>
+                    <li>Answered technical questions about their products</li>
+                    <li>Took feature requests seriously and implemented user suggestions</li>
+                    <li>Offered exclusive Reddit-only discount codes</li>
+                </ul>
+                
+                <p><strong>Phase 2: Product Catalog Optimization (Month 3)</strong></p>
+                <ul>
+                    <li>Uploaded complete product catalog to Reddit Shopping Ads</li>
+                    <li>Used Reddit-friendly product names ("best silent mechanical keyboard" not just model numbers)</li>
+                    <li>Added technical specs Reddit users care about (actuation force, switch types, RGB customization)</li>
+                </ul>
+                
+                <p><strong>Phase 3: Shopping Ads Investment (Months 4-6)</strong></p>
+                <ul>
+                    <li>Launched Shopping Ads targeting keyboard recommendation threads</li>
+                    <li>Used Collection Ads to showcase product range</li>
+                    <li>Bid on high-intent keywords like "best keyboard for programming"</li>
+                </ul>
+                
+                <p><strong>Results:</strong></p>
+                <ul>
+                    <li>312% increase in Reddit-attributed revenue</li>
+                    <li>67% of sales came from organic mentions in AI shopping search</li>
+                    <li>Shopping Ads ROI: 4.2x</li>
+                    <li>ChatGPT now cites their products in keyboard recommendations</li>
+                </ul>
+                
+                <h2>Reddit Shopping vs Amazon vs Google Shopping</h2>
+                
+                <p>How does Reddit's AI shopping compare to established platforms?</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Trust Factor</th>
+                            <th>Discovery Method</th>
+                            <th>Best For</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Reddit AI Shopping</strong></td>
+                            <td>High (community validation)</td>
+                            <td>Authentic recommendations in niche communities</td>
+                            <td>Enthusiast products, technical purchases, considered buys</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Amazon</strong></td>
+                            <td>Medium (review gaming concerns)</td>
+                            <td>Keyword search + algorithmic recommendations</td>
+                            <td>Commodity products, impulse purchases, Amazon Prime users</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Shopping</strong></td>
+                            <td>Medium (paid placement bias)</td>
+                            <td>Search intent + price comparison</td>
+                            <td>Price-conscious shoppers, specific product searches</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TikTok Shop</strong></td>
+                            <td>Low-Medium (influencer promotion)</td>
+                            <td>Viral trends + creator partnerships</td>
+                            <td>Impulse buys, beauty/fashion, younger demographics</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h2>Final Takeaways for Advertisers</h2>
+                
+                <p>Reddit's AI shopping search represents a fundamental shift in how products are discovered and recommended online. The platform that once resisted commercialization has found a way to monetize its most valuable asset—genuine community discussions—without destroying the authenticity that makes those discussions valuable.</p>
+                
+                <p><strong>Key actions for brands:</strong></p>
+                
+                <ol>
+                    <li><strong>Start earning genuine mentions now</strong>: Build authentic community relationships before competitors dominate your category</li>
+                    <li><strong>Upload product catalogs to Reddit Shopping Ads</strong>: Make your products discoverable in AI search results</li>
+                    <li><strong>Monitor brand mentions across Reddit</strong>: Track sentiment and identify opportunities to engage</li>
+                    <li><strong>Test Shopping Ads + Collection Ads</strong>: Complement organic mentions with strategic paid placement</li>
+                    <li><strong>Optimize for LLM citations</strong>: The products Reddit recommends are what ChatGPT will cite—earn that position</li>
+                </ol>
+                
+                <p>The brands that win on Reddit are those that genuinely serve communities, not those that try to exploit them. Reddit's AI shopping search rewards authenticity at scale—finally, a social commerce platform that aligns with how users actually want to discover products.</p>
+                
+                <div class="highlight-box">
+                    <p class="font-semibold text-gray-800 mb-2"><i class="fas fa-rocket text-recho-orange mr-2"></i>Ready to Leverage Reddit's AI Shopping Search?</p>
+                    <p class="mb-0">RECHO helps brands navigate Reddit's evolving ecosystem—from authentic community engagement to optimized Shopping Ads campaigns. Our proprietary EchoMind technology monitors product mentions across Reddit, identifies opportunities for engagement, and measures how often ChatGPT and other LLMs cite your products. <a href="../contact.html" class="text-recho-orange font-semibold hover:text-recho-dark">Book a call to learn how we can help your brand dominate Reddit shopping discovery.</a></p>
+                </div>
+                
+            </div>
+            
+            <!-- Article Footer / Share -->
+            <div class="mt-16 pt-8 border-t border-gray-200">
+                <div class="flex items-center justify-between">
+                    <div class="text-sm text-gray-600">
+                        <span class="font-semibold">Share this article:</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <a href="https://twitter.com/intent/tweet?url=https://www.recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more&text=Reddit Algorithm Changes 2026: Comments Now Matter More Than Upvotes" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-recho-orange hover:text-white transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more&title=Reddit's AI Shopping Search" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-recho-orange hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.reddit.com/submit?url=https://www.recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more&title=Reddit Algorithm Changes 2026: Comments Now Matter More Than Upvotes" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center hover:bg-recho-orange hover:text-white transition-colors">
+                            <i class="fab fa-reddit-alien"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Articles CTA -->
+            <div class="mt-16 bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Keep Reading</h3>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <a href="reddit-shopping-ads-collection-ads-guide.html" class="block p-4 bg-white rounded-xl hover:shadow-lg transition-shadow">
+                        <p class="text-sm text-purple-600 font-semibold mb-1">Reddit Strategy</p>
+                        <p class="font-semibold text-gray-800 hover:text-recho-orange transition-colors">Reddit Shopping Ads & Collection Ads: Complete Guide</p>
+                    </a>
+                    <a href="../blog.html" class="block p-4 bg-white rounded-xl hover:shadow-lg transition-shadow">
+                        <p class="text-sm text-gray-600 font-semibold mb-1">Blog</p>
+                        <p class="font-semibold text-gray-800 hover:text-recho-orange transition-colors">View All Reddit Marketing Articles</p>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <!-- Company Info -->
+                <div>
+                    <div class="mb-4">
+                        <img src="../images/recho-logo-white.png" alt="RECHO - Reddit Marketing Agency" style="height: 158px; width: auto;">
+                    </div>
+                    <p class="text-gray-300 mb-6">
+                        Full-service Reddit marketing agency combining organic community building, paid advertising, and EchoMind our proprietary software.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/rechoagency" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:sales@recho.co" class="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-recho-orange transition-colors duration-300">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Services</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Reddit Organic Management</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Reddit Paid Advertising</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">EchoMind our proprietary software</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Community Building</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Subreddit Management</a></li>
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Profile Optimization</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="../services.html" class="hover:text-recho-orange transition-colors">Services</a></li>
+                        <li><a href="../technology.html" class="hover:text-recho-orange transition-colors">Technology</a></li>
+                        <li><a href="../code-of-conduct.html" class="hover:text-recho-orange transition-colors">Code of Conduct</a></li>
+                        <li><a href="../faq.html" class="hover:text-recho-orange transition-colors">FAQs</a></li>
+                        <li><a href="../blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
+                        <li><a href="../contact.html" class="hover:text-recho-orange transition-colors">Book a Call</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Get in Touch</h3>
+                    <ul class="space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope text-recho-orange mr-2 mt-1"></i>
+                            <a href="mailto:sales@recho.co" class="hover:text-recho-orange transition-colors">sales@recho.co</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2026 RECHO. All rights reserved.
+                    </p>
+                    <div class="text-gray-400 text-sm">
+                        <a href="../privacy-policy.html" class="hover:text-recho-orange transition-colors">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/mobile-menu.js"></script>
+</body>
+</html>

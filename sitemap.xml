@@ -44,7 +44,7 @@
   </url>
   <url>
     <loc>https://recho.co/blog</loc>
-    <lastmod>2026-06-22</lastmod>
+    <lastmod>2026-07-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -63,6 +63,30 @@
   <url>
     <loc>https://recho.co/blog/reddit-ai-shopping-search-chatgpt-recommendations</loc>
     <lastmod>2026-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://recho.co/blog/54-percent-brands-shifting-budget-reddit-late-2026</loc>
+    <lastmod>2026-07-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://recho.co/blog/reddit-algorithm-changes-2026-comments-matter-more</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://recho.co/blog/authentic-community-building-reddit-2026-beyond-algorithm</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://recho.co/blog/reddit-ai-crackdown-bulk-marketing-accounts-banned</loc>
+    <lastmod>2026-06-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

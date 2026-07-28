@@ -445,6 +445,7 @@
                                     <option value="">Select a service...</option>
                                     <option value="organic">Reddit Organic Management</option>
                                     <option value="advertising">Reddit Paid Advertising</option>
+                                    <option value="reddit-geo">Reddit GEO / AI Visibility</option>
                                     <option value="technology">EchoMind our proprietary software</option>
                                     <option value="full-service">Full-Service Package (All Services)</option>
                                     <option value="consultation">Just Exploring / Consultation</option>
@@ -623,6 +624,9 @@
                         <li><a href="services.html" class="hover:text-recho-orange transition-colors">Community Building</a></li>
                         <li><a href="services.html" class="hover:text-recho-orange transition-colors">Subreddit Management</a></li>
                         <li><a href="services.html" class="hover:text-recho-orange transition-colors">Profile Optimization</a></li>
+                        <li><a href="reddit-geo.html" class="hover:text-recho-orange transition-colors">Reddit GEO</a></li>
+                        <li><a href="reddit-marketing-agency.html" class="hover:text-recho-orange transition-colors">Reddit Marketing Agency</a></li>
+                        <li><a href="reddit-advertising-agency.html" class="hover:text-recho-orange transition-colors">Reddit Advertising Agency</a></li>
                     </ul>
                 </div>
                 
@@ -634,9 +638,6 @@
                         <li><a href="faq.html" class="hover:text-recho-orange transition-colors">FAQs</a></li>
                         <li><a href="blog.html" class="hover:text-recho-orange transition-colors">Blog</a></li>
                         <li><a href="contact.html" class="hover:text-recho-orange transition-colors">Book a Call</a></li>
-                        <li><a href="reddit-geo.html" class="hover:text-recho-orange transition-colors text-gray-400 text-sm">Reddit GEO</a></li>
-                        <li><a href="reddit-marketing-agency.html" class="hover:text-recho-orange transition-colors text-gray-400 text-sm">Reddit Marketing Agency</a></li>
-                        <li><a href="reddit-advertising-agency.html" class="hover:text-recho-orange transition-colors text-gray-400 text-sm">Reddit Advertising Agency</a></li>
                     </ul>
                 </div>
                 
@@ -705,30 +706,8 @@
                     });
                     
                     if (response.ok) {
-                        // Success! Show success message
-                        successMessage.classList.add('show');
-                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        
-                        // Track form submission in Google Analytics 4
-                        if (typeof gtag !== 'undefined') {
-                            gtag('event', 'form_submission', {
-                                'event_category': 'Contact',
-                                'event_label': 'Contact Form',
-                                'value': 1
-                            });
-                        }
-                        
-                        // Reset form
-                        form.reset();
-                        
-                        // Hide success message after 15 seconds
-                        setTimeout(function() {
-                            successMessage.classList.remove('show');
-                        }, 15000);
-                        
-                        // Re-enable button
-                        submitButton.disabled = false;
-                        submitButton.innerHTML = originalButtonText;
+                        // Redirect to thank you page
+                        window.location.href = 'thank-you.html';
                         
                     } else {
                         // Error from Formspree

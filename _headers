@@ -20,7 +20,12 @@
   # Strict Transport Security (HTTPS only)
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
   
-  # Content Security Policy - Allow trusted sources only
+  # Content Security Policy is set by a Cloudflare Response Header
+  # Transform Rule on the recho.co zone, not here, so that it also
+  # applies to responses served through Pages Functions. Do not add a
+  # Content-Security-Policy line to this file - two sources would
+  # conflict. Edit the rule in the Cloudflare dashboard under
+  # Rules > Transform Rules > Modify Response Header.
   
   # Indicate this is a legitimate business website
   X-Robots-Tag: index, follow

@@ -1,8 +1,10 @@
 /**
- * utm-tracking.js — RECHO attribution capture (v2)
- * Sender Digital · July 2026 · replaces the previous /js/utm-tracking.js
+ * utm-tracking.js — RECHO attribution capture (v3)
+ * Sender Digital · August 2026 · replaces the previous /js/utm-tracking.js
  *
  * Drop-in replacement. Same filename, no dependencies, safe to load on every page.
+ * Load it as /js/utm-tracking.js?v=3 — /js/* is cached immutable for a year,
+ * so the ?v= query must be bumped whenever this file changes.
  *
  * What it does:
  *  1. On every page load, reads tracking parameters from the URL:
@@ -18,6 +20,11 @@
  *  4. Guards against double-loading (the tag may appear twice on /contact).
  *  5. Pushes the captured values to the dataLayer so Tag Manager reuses the
  *     exact same values instead of computing its own.
+ *  6. v3: also carries the HubSpot visitor cookie (hubspotutk) and the page
+ *     title (page_name) so make.com can submit to the HubSpot Forms API with
+ *     context.hutk and tie the contact to its analytics session. The cookie
+ *     is (re)captured at submit time because the HubSpot tracking code loads
+ *     via GTM after this script has already filled the forms.
  *
  * Legacy compatibility: if a form already has hidden inputs named
  * utm_source / utm_medium / utm_campaign / utm_term / utm_content (the old
@@ -139,6 +146,10 @@
     f.msclkid = last.msclkid || first.msclkid || '';
     // context
     f.form_page = pageUrl;
+    f.page_name = document.title || '';
+    // HubSpot visitor token — usually empty at page load (the HubSpot
+    // tracking code arrives via GTM later); re-captured at submit time below.
+    f.hubspotutk = getCookie('hubspotutk') || '';
     return f;
   }
 
@@ -186,6 +197,18 @@
   } else {
     fillForms();
   }
+
+  // Re-capture the HubSpot cookie the moment a form is submitted: capture
+  // phase runs before the pages' own submit handlers build their FormData,
+  // and by then the GTM-loaded HubSpot tracking code has set hubspotutk.
+  // upsertHidden never blanks an already-filled field, so a missing cookie
+  // can't erase a value captured earlier.
+  document.addEventListener('submit', function (e) {
+    var form = e.target;
+    if (!form || !isFormspreeForm(form)) return;
+    upsertHidden(form, 'hubspotutk', getCookie('hubspotutk') || '');
+    upsertHidden(form, 'page_name', document.title || '');
+  }, true);
 
   // ---- share with Tag Manager -------------------------------------------
   // GTM reads these instead of computing its own, so both layers always

@@ -18,6 +18,14 @@
             'anonymize_ip': false
         });
     </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5B67MTB8');</script>
+    <!-- End Google Tag Manager -->
+    <script src="/js/utm-tracking.js?v=3" defer></script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -132,6 +140,10 @@
     </style>
 </head>
 <body class="font-poppins bg-gray-50">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5B67MTB8"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Header Navigation -->
     <header class="fixed w-full bg-white shadow-md z-50">
         <div class="container mx-auto" style="padding: 0px 24px; height: 84px; display: flex; align-items: center;">
@@ -334,7 +346,6 @@
                             <!-- Go to: https://formspree.io/forms/mpwowyrn/settings and add email rule -->
                             <input type="hidden" name="_subject" value="New Contact Form Submission from RECHO Website">
                             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                            <input type="hidden" name="_next" value="https://www.recho.co/contact.html?success=true">
                             
                             <!-- UTM Tracking Parameters (auto-populated by utm-tracking.js) -->
                             <input type="hidden" name="utm_source" value="">
@@ -671,7 +682,6 @@
     <script src="js/main.js"></script>
     
     <!-- UTM Tracking Script -->
-    <script src="js/utm-tracking.js"></script>
     
     <!-- GA4 Custom Event Tracking -->
     <script src="js/ga4-events.js"></script>
@@ -706,8 +716,11 @@
                     });
                     
                     if (response.ok) {
+                        // GA4/Ads tags use sendBeacon, so this survives the redirect
+                        window.dataLayer = window.dataLayer || [];
+                        window.dataLayer.push({ event: 'sd_form_submit_success', form_id: form.id, form_page: location.pathname });
                         // Redirect to thank you page
-                        window.location.href = 'thank-you.html';
+                        window.location.href = '/thank-you.html';
                         
                     } else {
                         // Error from Formspree
@@ -740,15 +753,15 @@
       "@graph": [
         {
           "@type": "Organization",
-          "@id": "https://www.recho.co/#organization",
+          "@id": "https://recho.co/#organization",
           "name": "RECHO",
           "legalName": "RECHO - Full Service Reddit Marketing Agency",
-          "url": "https://www.recho.co",
+          "url": "https://recho.co",
           "logo": {
             "@type": "ImageObject",
-            "@id": "https://www.recho.co/#logo",
-            "url": "https://www.recho.co/images/recho-logo.png",
-            "contentUrl": "https://www.recho.co/images/recho-logo.png",
+            "@id": "https://recho.co/#logo",
+            "url": "https://recho.co/images/recho-logo.png",
+            "contentUrl": "https://recho.co/images/recho-logo.png",
             "caption": "RECHO Logo",
             "inLanguage": "en-US",
             "width": "200",
@@ -767,44 +780,44 @@
         },
         {
           "@type": "WebSite",
-          "@id": "https://www.recho.co/#website",
-          "url": "https://www.recho.co",
+          "@id": "https://recho.co/#website",
+          "url": "https://recho.co",
           "name": "RECHO - Reddit Marketing Agency",
           "description": "Full-service Reddit marketing agency specializing in organic management, paid advertising, and EchoMind technology",
           "publisher": {
-            "@id": "https://www.recho.co/#organization"
+            "@id": "https://recho.co/#organization"
           },
           "inLanguage": "en-US"
         },
         {
           "@type": "ContactPage",
-          "@id": "https://www.recho.co/contact.html#contactpage",
-          "url": "https://www.recho.co/contact.html",
+          "@id": "https://recho.co/contact.html#contactpage",
+          "url": "https://recho.co/contact.html",
           "name": "Contact RECHO | Reddit Marketing Experts",
           "description": "Book a free Reddit marketing strategy call with RECHO. Talk to our Reddit ads and organic management experts to grow your brand on Reddit today.",
           "isPartOf": {
-            "@id": "https://www.recho.co/#website"
+            "@id": "https://recho.co/#website"
           },
           "about": {
-            "@id": "https://www.recho.co/#organization"
+            "@id": "https://recho.co/#organization"
           },
           "inLanguage": "en-US"
         },
         {
           "@type": "BreadcrumbList",
-          "@id": "https://www.recho.co/contact.html#breadcrumb",
+          "@id": "https://recho.co/contact.html#breadcrumb",
           "itemListElement": [
             {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.recho.co"
+              "item": "https://recho.co"
             },
             {
               "@type": "ListItem",
               "position": 2,
               "name": "Contact",
-              "item": "https://www.recho.co/contact.html"
+              "item": "https://recho.co/contact.html"
             }
           ]
         }

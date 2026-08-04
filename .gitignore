@@ -37,3 +37,12 @@ Thumbs.db
 .idea/
 *.swp
 *.swo
+
+# Secrets — never commit tokens (the old .cloudflare-token.txt was public)
+.cloudflare-token.txt
+*.token
+
+# Local tooling output
+.wrangler/
+__pycache__/
+*.pyc

@@ -1,0 +1,40 @@
+# Guarantees every HTML page carries GTM + the attribution script, forever.
+# New pages (or pages that drift) are fixed automatically on push: the guard
+# runs scripts/ensure_tracking.py and commits whatever it changes. The script
+# is idempotent, so the fixup commit's own run finds nothing to change (the
+# actor guard below makes that explicit and prevents loops).
+#
+# Note: commits pushed with GITHUB_TOKEN don't retrigger other workflows
+# (there are none) and can't push to protected branches (main is unprotected).
+
+name: Tracking guard
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: write
+
+jobs:
+  ensure-tracking:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+
+      - name: Inject/verify tracking tags on all HTML pages
+        run: python3 scripts/ensure_tracking.py
+
+      - name: Auto-commit fixes
+        run: |
+          if ! git diff --quiet; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add -A
+            git commit -m "chore: inject tracking tags into new or drifted pages"
+            git push
+          fi
